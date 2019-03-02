@@ -1,0 +1,1349 @@
+################################################################################
+#            COPYRIGHT 1995 Analytical Graphics, Inc.                          #
+#            This data is intended for use with Satellite Tool Kit (TM)        #
+#            products only.  Any other use is expressly forbidden.             #
+################################################################################
+#Model Builder:Jim Poland
+#DOM 21 Mar '98_sc
+#Manufacturer/Contractor:n/a 
+#Name:Sa10 Mobile
+#Width:2.65 m 
+#Length:5.7 m 
+#Height:3.65 m 
+#Articulations:(Yes)
+
+Component TankUpBody
+	Extrusion
+		FaceColor DarkOliveGreen4
+		Length 8.0
+		NumVerts 6
+		Data
+			0.0 0.88 4.0
+			0.0 18.0 4.0
+			0.0 18.0 6.0
+			0.0 14.0 6.0
+			0.0 13.5 6.5
+			0.0 3.0 6.5
+	EndExtrusion
+EndComponent
+Component TankUpBodyFt
+	Polygon
+		Translate 8.0 0.0 0.0
+		FaceColor DarkOliveGreen4
+		NumVerts 6
+		Data
+			0.0 0.88 4.0
+			0.0 18.0 4.0
+			0.0 18.0 6.0
+			0.0 14.0 6.0
+			0.0 13.5 6.5
+			0.0 3.0 6.5
+	EndPolygon
+EndComponent
+Component TankUpBodyBk
+	Polygon
+		FaceColor DarkOliveGreen4
+		NumVerts 6
+		Data
+			0.0 0.88 4.0
+			0.0 18.0 4.0
+			0.0 18.0 6.0
+			0.0 14.0 6.0
+			0.0 13.5 6.5
+			0.0 3.0 6.5
+	EndPolygon
+EndComponent
+Component SideDoorSm
+	Extrusion
+		FaceColor gray20
+		Length 0.05
+		NumVerts 8
+		Data
+			0.0 1.4 0.1
+			0.0 1.5 0.2
+			0.0 1.5 0.9
+			0.0 1.4 1.0
+			0.0 0.1 1.0
+			0.0 0.0 0.9
+			0.0 0.0 0.2
+			0.0 0.1 0.1
+	EndExtrusion
+EndComponent
+Component SideDoorSmFt
+	Polygon
+		Translate 0.025 0.0 0.0
+		FaceColor DarkOliveGreen3
+		NumVerts 16
+		Data
+			0.0 1.4 0.1
+			0.0 1.5 0.2
+			0.0 1.5 0.9
+			0.0 1.4 1.0
+			0.0 0.1 1.0
+			0.0 0.0 0.9
+			0.0 0.0 0.2
+			0.0 0.1 0.1
+			0.0 0.2 0.1
+			0.0 0.2 0.0
+			0.0 0.3 0.0
+			0.0 0.3 0.1
+			0.0 1.2 0.1
+			0.0 1.2 0.0
+			0.0 1.3 0.0
+			0.0 1.3 0.1
+	EndPolygon
+EndComponent
+Component SideDoorSmStr
+	Refer
+		Component SideDoorSm
+	EndRefer
+	Refer
+		Component SideDoorSmFt
+	EndRefer
+EndComponent
+Component SideDoorLrg
+	Extrusion
+		FaceColor gray20
+		Length 0.05
+		NumVerts 8
+		Data
+			0.0 2.9 0.1
+			0.0 3.0 0.2
+			0.0 3.0 1.9
+			0.0 2.9 2.0
+			0.0 0.1 2.0
+			0.0 0.0 1.9
+			0.0 0.0 0.2
+			0.0 0.1 0.1
+	EndExtrusion
+EndComponent
+Component SideDoorLrgFt
+	Polygon
+		Translate 0.025 0.0 0.0
+		FaceColor DarkOliveGreen3
+		NumVerts 16
+		Data
+			0.0 2.9 0.1
+			0.0 3.0 0.2
+			0.0 3.0 1.9
+			0.0 2.9 2.0
+			0.0 0.1 2.0
+			0.0 0.0 1.9
+			0.0 0.0 0.2
+			0.0 0.1 0.1
+			0.0 0.7 0.1
+			0.0 0.7 0.0
+			0.0 0.8 0.0
+			0.0 0.8 0.1
+			0.0 2.3 0.1
+			0.0 2.3 0.0
+			0.0 2.4 0.0
+			0.0 2.4 0.1
+	EndPolygon
+EndComponent
+Component SideDoorLrgStr
+	Refer
+		Component SideDoorLrg
+	EndRefer
+	Refer
+		Component SideDoorLrgFt
+	EndRefer
+EndComponent
+Component FntAngles
+	Skin
+		Rotate 0.0 0.0 -90.0
+		FaceColor gray40
+		NumFrames 2
+		NumFramePts 6
+		Data
+			0.0 1.5 0.0
+			-0.8 1.5 0.8
+			-0.9 1.3 1.0
+			-0.9 0.2 1.0
+			-0.8 0.0 0.8
+			0.0 0.0 0.0
+			
+			0.0 1.5 0.0
+			0.4 1.5 0.8
+			0.5 1.3 1.0
+			0.5 0.2 1.0
+			0.4 0.0 0.8
+		0.0 0.0 0.0
+	EndSkin
+EndComponent
+Component LiteCover
+	Revolve
+		Rotate 0.0 0.0 -90.0
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 180.0
+		NumRevolve 4
+		NumVerts 2
+		Data
+			0.0 0.35 0.0
+			0.7 0.45 0.0
+	EndRevolve
+EndComponent
+Component Lite
+	Revolve
+		Rotate 0.0 0.0 -90.0
+		FaceColor linen
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 10
+		NumVerts 3
+		Data
+			0.0 0.22 0.0
+			0.5 0.22 0.0
+			0.5 0.005 0.0
+	EndRevolve
+EndComponent
+Component TankUpBodyStr
+	Refer
+		Component TankUpBody
+	EndRefer
+	Refer
+		Component TankUpBodyFt
+	EndRefer
+	Refer
+		Component TankUpBodyBk
+	EndRefer
+	Refer
+		Translate 8.0 1.8 4.05
+		Component SideDoorSmStr
+	EndRefer
+	Refer
+		Translate 8.0 3.4 4.05
+		Component SideDoorLrgStr
+	EndRefer
+	Refer
+		Translate 8.0 6.5 4.05
+		Component SideDoorLrgStr
+	EndRefer
+	Refer
+		Translate 6.5 0.9 4.05
+		Component FntAngles
+	EndRefer
+	Refer
+		Translate 0.0 0.9 4.05
+		Component FntAngles
+	EndRefer
+	Refer
+		Translate 7.5 2.45 5.5
+		Component LiteCover
+	EndRefer
+	Refer
+		Translate 7.5 2.3 5.5
+		Component Lite
+	EndRefer
+	Refer
+		Translate 0.5 2.45 5.5
+		Component LiteCover
+	EndRefer
+	Refer
+		Translate 0.5 2.3 5.5
+		Component Lite
+	EndRefer
+EndComponent
+Component TankLwrBody
+	Extrusion
+		FaceColor DarkOliveGreen4
+		Length 4.0
+		NumVerts 7
+		Data
+			0.0 1.0 1.5
+			0.0 15.0 1.5
+			0.0 18.0 2.5
+			0.0 18.0 4.0
+			0.0 0.88 4.0
+			0.0 0.0 3.0
+			0.0 0.0 2.5
+	EndExtrusion
+EndComponent
+Component TankLwrBodyFt
+	Polygon
+		Translate 4.0 0.0 0.0
+		FaceColor DarkOliveGreen4
+		NumVerts 7
+		Data
+			0.0 1.0 1.5
+			0.0 15.0 1.5
+			0.0 18.0 2.5
+			0.0 18.0 4.0
+			0.0 0.88 4.0
+			0.0 0.0 3.0
+			0.0 0.0 2.5
+	EndPolygon
+EndComponent
+Component TankLwrBodyBk
+	Polygon
+		FaceColor DarkOliveGreen4
+		NumVerts 7
+		Data
+			0.0 1.0 1.5
+			0.0 15.0 1.5
+			0.0 18.0 2.5
+			0.0 18.0 4.0
+			0.0 0.88 4.0
+			0.0 0.0 3.0
+			0.0 0.0 2.5
+	EndPolygon
+EndComponent
+Component TankLwrBodyStr
+	Refer
+		Component TankLwrBody
+	EndRefer
+	Refer
+		Component TankLwrBodyFt
+	EndRefer
+	Refer
+		Component TankLwrBodyBk
+	EndRefer
+EndComponent
+Component FenderFrnt
+	Extrusion
+		Rotate 0.0 -45.0 0.0
+		FaceColor DarkOliveGreen4
+		Length 1.3
+		NumVerts 5
+		Data
+			0.0 -1.2 0.0
+			0.0 1.0 0.0
+			0.0 1.05 -0.25
+			0.0 1.0 -0.25
+			0.0 0.95 -0.05
+	EndExtrusion
+EndComponent
+Component Fender
+	Extrusion
+		FaceColor DarkOliveGreen4
+		Length 17.8
+		NumVerts 5
+		Data
+			0.0 -1.2 0.0
+			0.0 1.0 0.0
+			0.0 1.05 -0.25
+			0.0 1.0 -0.25
+			0.0 0.95 -0.05
+	EndExtrusion
+EndComponent
+Component FenderStrLt
+	Refer
+		Translate -0.9 -0.1 -0.95
+		Component FenderFrnt
+	EndRefer
+	Refer
+		Component Fender
+	EndRefer
+EndComponent
+Component FenderStrRt
+	Refer
+		Scale 1.0 -1.0 1.0
+		Component FenderStrLt
+	EndRefer
+EndComponent
+SComponent LargeTruckWheel
+	Revolve
+		FaceColor gray9
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 8
+		NumVerts 18
+		Data
+			-0.25 0.005 0.0
+			-0.25 0.1 0.0
+			-0.15 0.15 0.0
+			-0.15 0.7 0.0
+			-0.3 0.80 0.0
+			-0.3 0.90 0.0
+			-0.2 1.2 0.0
+			0.2 1.2 0.0
+			0.3 0.8 0.0
+			0.7 0.8 0.0
+			0.8 1.2 0.0
+			1.2 1.2 0.0
+			1.3 0.9 0.0
+			1.3 0.8 0.0
+			1.15 0.7 0.0
+			1.15 0.15 0.0
+			1.25 0.1 0.0
+			1.25 0.005 0.0
+	EndRevolve
+EndComponent
+DComponent LargeTruckWheel
+	Revolve
+		FaceColor gray9
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 16
+		NumVerts 18
+		Data
+			-0.25 0.005 0.0
+			-0.25 0.1 0.0
+			-0.15 0.15 0.0
+			-0.15 0.7 0.0
+			-0.3 0.80 0.0
+			-0.3 0.90 0.0
+			-0.2 1.2 0.0
+			0.2 1.2 0.0
+			0.3 0.8 0.0
+			0.7 0.8 0.0
+			0.8 1.2 0.0
+			1.2 1.2 0.0
+			1.3 0.9 0.0
+			1.3 0.8 0.0
+			1.15 0.7 0.0
+			1.15 0.15 0.0
+			1.25 0.1 0.0
+			1.25 0.005 0.0
+	EndRevolve
+EndComponent
+SComponent SmallTruckWheel
+	Revolve
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 8
+		NumVerts 16
+		Data
+			-0.15 0.005 0.0
+			-0.15 0.08 0.0
+			-0.05 0.1 0.0
+			-0.05 0.2 0.0
+			-0.2 0.30 0.0
+			-0.2 0.60 0.0
+			0.2 0.6 0.0
+			0.3 0.4 0.0
+			0.7 0.4 0.0
+			0.8 0.6 0.0
+			1.2 0.6 0.0
+			1.2 0.3 0.0
+			1.05 0.2 0.0
+			1.05 0.1 0.0
+			1.15 0.08 0.0
+			1.15 0.005 0.0
+	EndRevolve
+EndComponent
+DComponent SmallTruckWheel
+	Revolve
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 16
+		NumVerts 16
+		Data
+			-0.15 0.005 0.0
+			-0.15 0.08 0.0
+			-0.05 0.1 0.0
+			-0.05 0.2 0.0
+			-0.2 0.30 0.0
+			-0.2 0.60 0.0
+			0.2 0.6 0.0
+			0.3 0.4 0.0
+			0.7 0.4 0.0
+			0.8 0.6 0.0
+			1.2 0.6 0.0
+			1.2 0.3 0.0
+			1.05 0.2 0.0
+			1.05 0.1 0.0
+			1.15 0.08 0.0
+			1.15 0.005 0.0
+	EndRevolve
+EndComponent
+DComponent TreadPc
+	Extrusion
+		FaceColor gray40
+		Length 1.8
+		NumVerts 13
+		Data
+			0.0 0.5 0.0
+			0.0 0.5 0.1
+			0.0 0.42 0.1
+			0.0 0.40 0.12
+			0.0 0.38 0.1
+			0.0 0.27 0.1
+			0.0 0.25 0.12
+			0.0 0.23 0.1
+			0.0 0.12 0.1
+			0.0 0.1 0.12
+			0.0 0.08 0.1
+			0.0 0.0 0.1
+			0.0 0.001 0.0
+	EndExtrusion
+EndComponent
+DComponent TreadPcFt
+	Polygon
+		FaceColor green4
+		NumVerts 13
+		Data
+			0.0 0.5 0.0
+			0.0 0.5 0.1
+			0.0 0.42 0.1
+			0.0 0.40 0.12
+			0.0 0.38 0.1
+			0.0 0.27 0.1
+			0.0 0.25 0.12
+			0.0 0.23 0.1
+			0.0 0.12 0.1
+			0.0 0.1 0.12
+			0.0 0.08 0.1
+			0.0 0.0 0.1
+			0.0 0.001 0.0
+	EndPolygon
+EndComponent
+DComponent TreadPcBk
+	Polygon
+		Translate 1.8 0.0 0.0
+		FaceColor green4
+		NumVerts 13
+		Data
+			0.0 0.5 0.0
+			0.0 0.5 0.1
+			0.0 0.42 0.1
+			0.0 0.40 0.12
+			0.0 0.38 0.1
+			0.0 0.27 0.1
+			0.0 0.25 0.12
+			0.0 0.23 0.1
+			0.0 0.12 0.1
+			0.0 0.1 0.12
+			0.0 0.08 0.1
+			0.0 0.0 0.1
+			0.0 0.001 0.0
+	EndPolygon
+EndComponent
+DComponent TreadBot
+	Revolve
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 4
+		NumVerts 4
+		Data
+			0.0 0.005 0.0
+			0.0 0.15 0.0
+			0.5 0.15 0.0
+			0.5 0.005 0.0
+	EndRevolve
+EndComponent
+DComponent TreadPcStr
+	Refer
+		Component TreadPc
+	EndRefer
+	Refer
+		Component TreadPcFt
+	EndRefer
+	Refer
+		Component TreadPcBk
+	EndRefer
+	Refer
+		Translate 0.65 0.25 0.0
+		Component TreadBot
+	EndRefer
+EndComponent
+SComponent TreadPc
+	Extrusion
+		FaceColor gray40
+		Length 1.8
+		NumVerts 4
+		Data
+			0.0 0.5 0.0
+			0.0 0.5 0.1
+			0.0 0.0 0.1
+			0.0 0.0 0.0
+	EndExtrusion
+EndComponent
+SComponent TreadPcFt
+	Polygon
+		FaceColor green4
+		NumVerts 4
+		Data
+			0.0 0.5 0.0
+			0.0 0.5 0.1
+			0.0 0.0 0.1
+			0.0 0.0 0.0
+	EndPolygon
+EndComponent
+SComponent TreadPcBk
+	Polygon
+		Translate 1.8 0.0 0.0
+		FaceColor green4
+		NumVerts 4
+		Data
+			0.0 0.5 0.0
+			0.0 0.5 0.1
+			0.0 0.0 0.1
+			0.0 0.0 0.0
+	EndPolygon
+EndComponent
+SComponent TreadBot
+	Revolve
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 4
+		NumVerts 4
+		Data
+			0.0 0.005 0.0
+			0.0 0.15 0.0
+			0.5 0.15 0.0
+			0.5 0.005 0.0
+	EndRevolve
+EndComponent
+SComponent TreadPcStr
+	Refer
+		Component TreadPc
+	EndRefer
+	Refer
+		Component TreadPcFt
+	EndRefer
+	Refer
+		Component TreadPcBk
+	EndRefer
+	Refer
+		Translate 0.65 0.25 0.0
+		Component TreadBot
+	EndRefer
+EndComponent
+Component TreadSection
+	Refer
+		Rotate -9.0 0.0 0.0
+		Translate -0.4 1.8 1.3
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 2.35 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 2.90 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 3.45 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 4.05 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 4.60 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 5.15 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 5.70 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 6.25 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 6.80 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 7.35 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 7.90 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 8.45 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 9.00 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 9.55 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 10.10 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 10.65 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 11.25 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 11.85 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 350.0 0.0 0.0
+		Translate -0.4 12.5 1.1
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 13.1 1.0
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 15.0 0.0 0.0
+		Translate -0.4 13.7 1.0
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 15.0 0.0 0.0
+		Translate -0.4 14.25 1.15
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 30.0.0 0.0 0.0
+		Translate -0.4 14.78 1.3
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 30.0.0 0.0 0.0
+		Translate -0.4 15.25 1.60
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 30.0.0 0.0 0.0
+		Translate -0.4 15.75 1.85
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 16.20 2.10
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 310.0 0.0 0.0
+		Translate -0.4 16.70 2.10
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 260.0 0.0 0.0
+		Translate -0.4 17.0 1.7
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 240.0 0.0 0.0
+		Translate -0.4 16.9 1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 240.0 0.0 0.0
+		Translate -0.4 16.6 0.7
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 240.0 0.0 0.0
+		Translate -0.4 16.3 0.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 240.0 0.0 0.0
+		Translate -0.4 16.0 -0.3
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 220.0 0.0 0.0
+		Translate -0.4 15.70 -0.75
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 190.0 0.0 0.0
+		Translate -0.4 15.25 -1.1
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 14.70 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 14.15 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 13.60 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 13.05 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 12.50 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 11.95 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 11.40 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 10.85 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 10.30 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 9.75 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 9.20 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 8.65 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 8.10 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 7.55 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 7.00 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 6.45 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 5.90 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 5.35 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 4.80 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 4.25 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 3.70 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 3.15 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 180.0 0.0 0.0
+		Translate -0.4 2.6 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 160.0 0.0 0.0
+		Translate -0.4 2.05 -1.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 150.0 0.0 0.0
+		Translate -0.4 1.55 -1.0
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 130.0 0.0 0.0
+		Translate -0.4 1.1 -0.7
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 130.0 0.0 0.0
+		Translate -0.4 0.75 -0.25
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 130.0 0.0 0.0
+		Translate -0.4 0.4 0.2
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 130.0 0.0 0.0
+		Translate -0.4 0.05 0.65
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 115.0 0.0 0.0
+		Translate -0.4 -0.3 1.1
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate 55.0 0.0 0.0
+		Translate -0.4 -0.5 1.6
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Translate -0.4 -0.2 2.1
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate -30.0 0.0 0.0
+		Translate -0.4 0.33 2.08
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate -30.0 0.0 0.0
+		Translate -0.4 0.8 1.8
+		Component TreadPcStr
+	EndRefer
+	Refer
+		Rotate -25.0 0.0 0.0
+		Translate -0.4 1.28 1.5
+		Component TreadPcStr
+	EndRefer
+EndComponent
+Component TreadAssm
+	Refer
+		Translate 0.0 17.4 2.75
+		Component SmallTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 1.1 2.75
+		Component SmallTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 3.25 1.25
+		Component LargeTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 5.75 1.25
+		Component LargeTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 8.25 1.25
+		Component LargeTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 10.75 1.25
+		Component LargeTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 13.25 1.25
+		Component LargeTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 15.75 1.25
+		Component LargeTruckWheel
+	EndRefer
+	Refer
+		Translate 0.0 1.0 1.25
+		Component TreadSection
+	EndRefer
+EndComponent
+DComponent TankAssm
+	Refer
+		Component TankUpBodyStr
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 90.0
+		Translate 0.7 0.85 4.0
+		Component FenderStrLt
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 90.0
+		Translate 7.4 0.85 4.0
+		FrontfaceCCW No
+		Component FenderStrRt
+	EndRefer
+	Refer
+		Translate 2.0 0.0 0.0
+		Component TankLwrBodyStr
+	EndRefer
+EndComponent
+SComponent TankAssm
+	Refer
+		Component TankUpBodyStr
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 90.0
+		Translate 0.7 0.85 4.0
+		Component FenderStrLt
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 90.0
+		Translate 7.4 0.85 4.0
+		FrontfaceCCW No
+		Component FenderStrRt
+	EndRefer
+	Refer
+		Translate 2.0 0.0 0.0
+		Component TankLwrBodyStr
+	EndRefer
+EndComponent
+Component LauncherBody
+	Extrusion
+		FaceColor gray20
+		Length 10.5
+		NumVerts 15
+		Data
+			0.0 4.0 1.8
+			0.0 5.0 2.1
+			0.0 4.9 2.5
+			0.0 5.0 2.9
+			0.0 4.0 3.2
+			0.0 3.25 3.2
+			0.0 2.9 5.0
+			0.0 2.5 4.9
+			0.0 2.1 5.0
+			0.0 1.75 3.2
+			0.0 1.0 3.2
+			0.0 0.0 2.9
+			0.0 0.1 2.5
+			0.0 0.0 2.1
+			0.0 1.0 1.8
+	EndExtrusion
+EndComponent
+Component LauncherBodyFt
+	Polygon
+		FaceColor gray30
+		NumVerts 15
+		Data
+			0.0 4.0 1.8
+			0.0 5.0 2.1
+			0.0 4.9 2.5
+			0.0 5.0 2.9
+			0.0 4.0 3.2
+			0.0 3.25 3.2
+			0.0 2.9 5.0
+			0.0 2.5 4.9
+			0.0 2.1 5.0
+			0.0 1.75 3.2
+			0.0 1.0 3.2
+			0.0 0.0 2.9
+			0.0 0.1 2.5
+			0.0 0.0 2.1
+			0.0 1.0 1.8
+	EndPolygon
+EndComponent
+Component LauncherBodyBk
+	Polygon
+		Translate 10.5 0.0 0.0
+		FaceColor gray30
+		NumVerts 15
+		Data
+			0.0 4.0 1.8
+			0.0 5.0 2.1
+			0.0 4.9 2.5
+			0.0 5.0 2.9
+			0.0 4.0 3.2
+			0.0 3.25 3.2
+			0.0 2.9 5.0
+			0.0 2.5 4.9
+			0.0 2.1 5.0
+			0.0 1.75 3.2
+			0.0 1.0 3.2
+			0.0 0.0 2.9
+			0.0 0.1 2.5
+			0.0 0.0 2.1
+			0.0 1.0 1.8
+	EndPolygon
+EndComponent
+Component LauncherBodyStr
+	Refer
+		Component LauncherBody
+	EndRefer
+	Refer
+		Component LauncherBodyFt
+	EndRefer
+	Refer
+		Component LauncherBodyBk
+	EndRefer
+EndComponent
+Component SA10Body
+	Revolve
+		FaceColor linen
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 16
+		NumVerts 12
+		Data
+			0.0 0.005 0.0
+			0.5 0.26 0.0
+			1.0 0.44 0.0
+			1.5 0.58 0.0
+			2.0 0.68 0.0
+			2.5 0.72 0.0
+			3.0 0.75 0.0
+			19.0 0.75 0.0
+			19.5 0.73 0.0
+			20.0 0.67 0.0
+			20.5 0.58 0.0
+			21.0 0.42 0.0
+	EndRevolve
+EndComponent
+Component Exhaust
+	Revolve
+		FaceColor gray9
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 10
+		NumVerts 4
+		Data
+			18.0 0.1 0.0
+			20.8 0.40 0.0
+			21.0 0.36 0.0
+			21.15 0.40 0.0
+	EndRevolve
+EndComponent
+Component Fin
+	Skin
+		Rotate 0.0 0.0 -90.0
+		Translate 8.0 -0.75 0.0
+		FaceColor gray40
+		NumFrames 3
+		NumFramePts 5
+		Data
+			0.0 8.0 0.0
+			0.0 4.85 0.15
+			0.0 0.0 0.0
+			0.0 4.85 -0.15
+			0.0 8.0 0.0
+			
+			1.0 7.0 0.0
+			1.0 5.42 0.1
+			1.0 3.0 0.0
+			1.0 5.42 -0.1
+			1.0 7.0 0.0
+			
+			1.95 6.02 0.0
+			1.95 5.95 0.01
+			1.95 5.9 0.0
+		1.95 5.95 -0.01
+		1.95 6.02 0.0
+	EndSkin
+EndComponent
+Component TailFin
+	Skin
+		Rotate 0.0 0.0 -90.0
+		Translate 16.0 0.0 0.0
+		FaceColor gray40
+		NumFrames 3
+		NumFramePts 5
+		Data
+			0.42 5.0 0.0
+			0.58 3.5 0.10
+			0.75 2.0 0.0
+			0.58 3.5 -0.10
+			0.42 5.0 0.0
+			
+			1.0 4.9 0.0
+			1.0 3.5 0.06
+			1.0 2.52 0.0
+			1.0 3.5 -0.06
+			1.0 4.9 0.0
+			
+			1.45 3.56 0.0
+			1.45 3.5 0.01
+			1.45 3.48 0.0
+		1.45 3.5 -0.01
+		1.45 3.56 0.0
+	EndSkin
+EndComponent
+Component SA10BodyAssm
+	Refer
+		Component SA10Body
+	EndRefer
+	Refer
+		Component Exhaust
+	EndRefer
+	Refer
+		Component Fin
+	EndRefer
+	Refer
+		Rotate 120.0 0.0 0.0
+		Component Fin
+	EndRefer
+	Refer
+		Rotate 240.0 0.0 0.0
+		Component Fin
+	EndRefer
+	Refer
+		Component TailFin
+	EndRefer
+	Refer
+		Rotate 120.0 0.0 0.0
+		Component TailFin
+	EndRefer
+	Refer
+		Rotate 240.0 0.0 0.0
+		Component TailFin
+	EndRefer
+EndComponent
+Component LauncherSubAssmStr
+	Refer
+		Translate 0.0 -2.5 0.0
+		Component LauncherBodyStr
+	EndRefer
+	Refer
+		Articulation SA101
+			xTranslate MoveX -1000 0 0
+		EndArticulation
+		Rotate 30.0 0.0 180.0
+		Translate 18.0 0.0 5.7
+		Component SA10BodyAssm
+	EndRefer
+	Refer
+		Articulation SA102
+			xTranslate MoveX -1000 0 0
+		EndArticulation
+		Rotate 10.0 0.0 180.0
+		Translate 18.0 3.2 2.5
+		Component SA10BodyAssm
+	EndRefer
+	Refer
+		Articulation SA103
+			xTranslate MoveX -1000 0 0
+		EndArticulation
+		Rotate 170.0 0.0 180.0
+		Translate 18.0 -3.2 2.5
+		Component SA10BodyAssm
+	EndRefer
+EndComponent
+Component LauncherSubAssm
+	Refer
+		Rotate 0.0 70.0 0.0
+		Translate 5.0 -0.0 5.0
+		Component LauncherSubAssmStr
+	EndRefer
+EndComponent
+Component Pedestal
+	Revolve
+		Translate 1.0 0.0 0.0
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 16
+		NumVerts 5
+		Data
+			0.0 3.75 0.0
+			1.0 3.75 0.0
+			1.0 2.5 0.0
+			4.5 2.5 0.0
+			4.5 0.005 0.0
+	EndRevolve
+EndComponent
+Component SprtShaft
+	Revolve
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 10
+		NumVerts 2
+		Data
+			0.0 1.5 0.0
+			5.0 1.5 0.0
+	EndRevolve
+EndComponent
+Component LauncherAssmRot
+	Refer
+		Component LauncherSubAssm
+	EndRefer
+	Refer
+		Component Pedestal
+	EndRefer
+	Refer
+		Translate 4.5 0.0 0.0
+		Component SprtShaft
+	EndRefer
+EndComponent
+Component LauncherAssm
+	Articulation LauncherRotX
+		xRotate XRot 0.0 270.0 360.0
+	EndArticulation
+	Refer
+		Component LauncherAssmRot
+	EndRefer
+EndComponent
+DComponent Body
+	Rotate 0.0 0.0 90.0
+	Translate 8.0 -4.0 0.0
+	Refer
+		Component TankAssm
+	EndRefer
+	Refer
+		Translate 0.2 0.0 0.2
+		Component TreadAssm
+	EndRefer
+	Refer
+		Translate 6.8 0.0 0.2
+		Component TreadAssm
+	EndRefer
+	Refer
+		Scale 0.5 0.5 0.5
+		Rotate 0.0 -90.0 00.0
+		Translate 4.0 10.0 4.0
+		Component LauncherAssm
+	EndRefer
+EndComponent
+SComponent Body
+	Rotate 0.0 0.0 90.0
+	Translate 8.0 -4.0 0.0
+	Refer
+		Component TankAssm
+	EndRefer
+	Refer
+		Translate 0.2 0.0 0.2
+		Component TreadAssm
+	EndRefer
+	Refer
+		Translate 6.8 0.0 0.2
+		Component TreadAssm
+	EndRefer
+EndComponent
+Component CLAMSHELL
+	Root
+	Refer
+		Component Body
+		UniformScale .3048
+	EndRefer
+EndComponent
+
+################################################################################
+#            COPYRIGHT 1995 Analytical Graphics, Inc.                          #
+#            This data is intended for use with Satellite Tool Kit (TM)        #
+#            products only.  Any other use is expressly forbidden.             #
+################################################################################

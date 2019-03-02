@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8A8A7DD-5072-488A-B6D7-E0E383F3B3BF}"
+	ProjectSection(SolutionItems) = preProject
+		EOM Plugins.xml = EOM Plugins.xml
+		WSC\JScript.Example1.EOMFunc.js = WSC\JScript.Example1.EOMFunc.js
+		WSC\JScript.Example1.EOMFunc.wsc = WSC\JScript.Example1.EOMFunc.wsc
+		WSC\ReadMe.txt = WSC\ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.As.EOMFunc.Plugin.CSharp.Examples_VS2017", "CSharp\Gen\Agi.As.EOMFunc.Plugin.CSharp.Examples_VS2017.csproj", "{B2F2FCDC-8D15-4DC4-9724-FA7EC38EEB4F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.As.EOMFunc.Plugin.VB_NET.Examples_VS2017", "VB.NET\Gen\Agi.As.EOMFunc.Plugin.VB_NET.Examples_VS2017.vbproj", "{9DBF088D-F437-414D-872C-55D2660F755E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.As.EOMFunc.Plugin.CPP.Examples", "CPP\Gen\Agi.As.EOMFunc.Plugin.CPP.Examples_VS2017.vcxproj", "{AC74925E-F86B-432F-936D-C4701523F34B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2F2FCDC-8D15-4DC4-9724-FA7EC38EEB4F}.Debug|x64.ActiveCfg = Debug|x64
+		{B2F2FCDC-8D15-4DC4-9724-FA7EC38EEB4F}.Debug|x64.Build.0 = Debug|x64
+		{B2F2FCDC-8D15-4DC4-9724-FA7EC38EEB4F}.Release|x64.ActiveCfg = Release|x64
+		{B2F2FCDC-8D15-4DC4-9724-FA7EC38EEB4F}.Release|x64.Build.0 = Release|x64
+		{9DBF088D-F437-414D-872C-55D2660F755E}.Debug|x64.ActiveCfg = Debug|x64
+		{9DBF088D-F437-414D-872C-55D2660F755E}.Debug|x64.Build.0 = Debug|x64
+		{9DBF088D-F437-414D-872C-55D2660F755E}.Release|x64.ActiveCfg = Release|x64
+		{9DBF088D-F437-414D-872C-55D2660F755E}.Release|x64.Build.0 = Release|x64
+		{AC74925E-F86B-432F-936D-C4701523F34B}.Debug|x64.ActiveCfg = Debug|x64
+		{AC74925E-F86B-432F-936D-C4701523F34B}.Debug|x64.Build.0 = Debug|x64
+		{AC74925E-F86B-432F-936D-C4701523F34B}.Release|x64.ActiveCfg = Release|x64
+		{AC74925E-F86B-432F-936D-C4701523F34B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

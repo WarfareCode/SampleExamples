@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Agi.As.Gator.EngMdl.Plugin.CPP.Examples'
+		'Agi.As.Gator.EngMdl.Plugin.CPP.Examples.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

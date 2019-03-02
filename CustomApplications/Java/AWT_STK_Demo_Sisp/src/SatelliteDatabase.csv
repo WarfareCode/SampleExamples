@@ -1,0 +1,23 @@
+ID,VehicleName,VehicleType,ForceCode,Mission,State,Mass,Fuel,CountryOfOrigin,Size,RCS,DV,Attitude,MinFrequency,MaxFrequency,OpCapacity,Notes,Loaded
+1,EOSat1,Satellite,Blue,EO,8000000 0 45 0 0 40,100,50,United States,27,10,27,Spinning,300,3000,54,NONE,0
+2,EOSat2,Satellite,Blue,EO,8000000 0 45 0 30 40,100,50,United States,16,19,1,Spinning,400,3500,99,NONE,0
+3,EOSat3,Satellite,Blue,EO,8000000 0 45 0 60 40,100,50,United States,12,9,8,Spinning,500,5000,5,NONE,0
+4,IRSAT1,Satellite,Blue,IR,8000000 0 45 0 90 40,100,50,United States,29,28,12,Spinning,300,3000,15,NONE,0
+5,IRSAT2,Satellite,Blue,IR,8000000 0 45 0 120 40,100,50,United States,23,2,5,3Axis,1000,4000,83,NONE,0
+6,IRSAT3,Satellite,Blue,IR,8000000 0 45 0 150 40,200,100,United States,15,26,17,3Axis,800,8000,42,NONE,0
+7,ELINTSAT1,Satellite,Blue,ELINT,8000000 0 45 0 180 40,200,100,United States,4,27,2,3Axis,1500,7000,73,NONE,0
+8,ELINTSAT2,Satellite,Blue,ELINT,9000000 0 45 0 0 40,200,100,United States,28,24,12,3Axis,2000,12000,8,NONE,0
+9,ELINTSAT3,Satellite,Blue,ELINT,9000000 0 45 0 30 40,200,100,United States,11,3,26,3Axis,500,5000,82,NONE,0
+10,Enemy1,Satellite,Red,EO,9000000 0 45 0 60 40,200,100,United States,1,24,26,Gravity Gradient,300,1200,49,NONE,0
+11,Enemy2,Satellite,Red,EO,9000000 0 45 0 90 40,300,150,China,20,19,19,Gravity Gradient,600,3000,49,NONE,0
+12,Enemy3,Satellite,Red,EO,9000000 0 45 0 120 40,300,150,China,9,7,27,Gravity Gradient,900,7000,96,NONE,0
+13,Enemy4,Satellite,Red,IR,9000000 0 45 0  150 40,300,150,China,29,17,19,Sun Aligned,400,3000,20,NONE,0
+14,Enemy5,Satellite,Red,IR,9000000 0 45 0 180 40,300,150,China,26,11,30,Sun Aligned,1200,3500,30,NONE,0
+15,Enemy6,Satellite,Red,IR,10000000 0 45 0 00 40,350,200,China,6,5,29,Sun Aligned,3000,8000,50,NONE,0
+16,Enemy7,Satellite,Red,ELINT,10000000 0 45 0 30 40,350,200,China,20,13,11,3Axis,1000,4000,55,NONE,0
+17,Enemy8,Satellite,Red,ELINT,10000000 0 45 0 60 40,350,200,China,21,17,1,3Axis,600,1400,43,NONE,0
+18,Enemy9,Satellite,Red,ELINT,10000000 0 45 0 90 40,350,200,China,6,10,23,3Axis,1200,6000,29,NONE,0
+19,GEO1,Satellite,White,EO,42164200 0 0 0 350.251 0,300,175,United States,9,12,4,3Axis,1000,6000,90,NONE,1
+20,GEO2,Satellite,White,IR,42164200 0 0 0 339.251 0,280,160,United States,15,10,20,3Axis,5000,20000,99,NONE,1
+21,GEO3,Satellite,White,ELINT,42164200 0 0 0 328.251 0,350,200,United States,17,20,4,3Axis,4000,12000,95,NONE,1
+22,GEO4,Satellite,White,IR,42164200 0 0 0 317.251 0,300,100,United States,12,18,17,Spinning,8000,25000,96,NONE,1

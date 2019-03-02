@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessConstraints_VS2017", "AccessConstraints\AccessConstraints_VS2017.csproj", "{0113576D-C6DE-45EC-A4C7-01E098208B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AreaTarget_VS2017", "AreaTarget\AreaTarget_VS2017.csproj", "{301D7C41-6968-46CE-82DF-414D2C8C84BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_VS2017", "Events\Events_VS2017.csproj", "{F215C932-0EC5-4A76-9E88-5135C0D5247B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScenarioExamples_VS2017", "Scenario\ScenarioExamples_VS2017.csproj", "{22634652-AD30-45C0-805F-0308422C5C88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitPreferences_VS2017", "UnitPreferences\UnitPreferences_VS2017.csproj", "{808F2457-1BDA-45E0-97DB-15A781F24649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STKProTutorial_VS2017", "STKProTutorial\STKProTutorial_VS2017.csproj", "{722DFD31-BA78-4C74-B8F3-B3577BF03E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectToSpecificSTKInstance_VS2017", "ConnectToSpecificSTKInstance\ConnectToSpecificSTKInstance_VS2017.csproj", "{62057181-984D-42DA-8704-6D4A1D283E3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0113576D-C6DE-45EC-A4C7-01E098208B55}.Debug|x64.ActiveCfg = Debug|x64
+		{0113576D-C6DE-45EC-A4C7-01E098208B55}.Debug|x64.Build.0 = Debug|x64
+		{0113576D-C6DE-45EC-A4C7-01E098208B55}.Release|x64.ActiveCfg = Release|x64
+		{0113576D-C6DE-45EC-A4C7-01E098208B55}.Release|x64.Build.0 = Release|x64
+		{301D7C41-6968-46CE-82DF-414D2C8C84BC}.Debug|x64.ActiveCfg = Debug|x64
+		{301D7C41-6968-46CE-82DF-414D2C8C84BC}.Debug|x64.Build.0 = Debug|x64
+		{301D7C41-6968-46CE-82DF-414D2C8C84BC}.Release|x64.ActiveCfg = Release|x64
+		{301D7C41-6968-46CE-82DF-414D2C8C84BC}.Release|x64.Build.0 = Release|x64
+		{F215C932-0EC5-4A76-9E88-5135C0D5247B}.Debug|x64.ActiveCfg = Debug|x64
+		{F215C932-0EC5-4A76-9E88-5135C0D5247B}.Debug|x64.Build.0 = Debug|x64
+		{F215C932-0EC5-4A76-9E88-5135C0D5247B}.Release|x64.ActiveCfg = Release|x64
+		{F215C932-0EC5-4A76-9E88-5135C0D5247B}.Release|x64.Build.0 = Release|x64
+		{22634652-AD30-45C0-805F-0308422C5C88}.Debug|x64.ActiveCfg = Debug|x64
+		{22634652-AD30-45C0-805F-0308422C5C88}.Debug|x64.Build.0 = Debug|x64
+		{22634652-AD30-45C0-805F-0308422C5C88}.Release|x64.ActiveCfg = Release|x64
+		{22634652-AD30-45C0-805F-0308422C5C88}.Release|x64.Build.0 = Release|x64
+		{808F2457-1BDA-45E0-97DB-15A781F24649}.Debug|x64.ActiveCfg = Debug|x64
+		{808F2457-1BDA-45E0-97DB-15A781F24649}.Debug|x64.Build.0 = Debug|x64
+		{808F2457-1BDA-45E0-97DB-15A781F24649}.Release|x64.ActiveCfg = Release|x64
+		{808F2457-1BDA-45E0-97DB-15A781F24649}.Release|x64.Build.0 = Release|x64
+		{722DFD31-BA78-4C74-B8F3-B3577BF03E63}.Debug|x64.ActiveCfg = Debug|x64
+		{722DFD31-BA78-4C74-B8F3-B3577BF03E63}.Debug|x64.Build.0 = Debug|x64
+		{722DFD31-BA78-4C74-B8F3-B3577BF03E63}.Release|x64.ActiveCfg = Release|x64
+		{722DFD31-BA78-4C74-B8F3-B3577BF03E63}.Release|x64.Build.0 = Release|x64
+		{62057181-984D-42DA-8704-6D4A1D283E3F}.Debug|x64.ActiveCfg = Debug|x64
+		{62057181-984D-42DA-8704-6D4A1D283E3F}.Debug|x64.Build.0 = Debug|x64
+		{62057181-984D-42DA-8704-6D4A1D283E3F}.Release|x64.ActiveCfg = Release|x64
+		{62057181-984D-42DA-8704-6D4A1D283E3F}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

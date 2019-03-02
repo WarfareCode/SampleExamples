@@ -1,0 +1,35 @@
+VO_V100
+    IsFilled                    No
+    Translucency                0.700000
+    FillGranularity             0.017453
+    BorderWallShowOnOff              No
+    BorderWallUseTerrainAltFileOnOff No
+    BorderWallTransparencyOnOff      No
+    BorderWallLineTransparencyOnOff  No
+    BorderWallTransparency           0.700000
+    BorderWallLineTransparency       0.700000
+    BorderWallTopCapType             TERRAIN
+    BorderWallTopCap                 0.000000
+    BorderWallBotCapType             TERRAIN
+    BorderWallBotCap                 0.000000
+    BorderWallSampleRate             2.000000
+    UseLabelMaxViewingDist      No
+    LabelMaxViewingDist         1000000000000000000.000000
+    VolumeSwapDist        -2.5000
+    Begin GeneralVectorAxes
+        ArrowPointSize          3.00
+        PersistentLineWidth     2.00
+        Scale                   50000.000000
+    End
+    Begin VectorAngle
+        FractionalScale                1.000000
+        SupportingDihedralArcLineWidth 1.00
+        ArcLineWidth                   2.00
+        PixelThreshold                 2.000000
+    End
+
+    BEGIN VolumesGfx
+
+	Show       Yes
+
+    END VolumesGfx

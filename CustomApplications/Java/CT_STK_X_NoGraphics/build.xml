@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_CT_STK_X_NoGraphics" default="compile">
+	<import file="../CT_STK/common.xml" />
+	
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+	
+	<path id="build.dependentprojects">
+		<pathelement location="../CT_STK/build.xml" />
+	</path>
+	
+	<path id="build.classpath">
+		<path refid="customapp.stk.classpath" />
+	</path>
+	
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<property name="main.classname" value="Main" />
+</project>

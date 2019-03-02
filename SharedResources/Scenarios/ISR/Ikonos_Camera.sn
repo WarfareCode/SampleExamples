@@ -1,0 +1,261 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Sensor
+
+    Name            Ikonos_Camera
+
+BEGIN Pattern
+
+    BEGIN Rectangular
+
+        UpDownAngle             2.000000000000e+000
+        SideToSideAngle         2.000000000000e+000
+        AngularPatternResolution     3.000000000000e+000
+
+    END Rectangular
+
+    DetailedTerrainHorizon     Yes
+
+
+END Pattern
+
+BEGIN Pointing
+
+    BEGIN Targeted
+
+    TargetMode              Tracking
+    Sequence                213
+    TrackingMode            Both
+    AberrationType           Annual
+    TimeDelayConvergence     5.000000e-005
+    MaxTimeStep              3.600000e+002
+    MinTimeStep              1.000000e-002
+    TimeConvergence          5.000000e-003
+    AbsValueConvergence      1.000000e-014
+    RelValueConvergence      1.000000e-008
+    DetectEventsUsingSamplesOnly No
+
+    BEGIN AssignedTargets
+
+    Aircraft/Ikonos_Target_1
+    Aircraft/Ikonos_Target_2
+    Facility/Camera_Target_1
+    Facility/Camera_Target_2
+    Facility/Camera_Target_3
+
+    END AssignedTargets
+
+    BEGIN TargetSchedule
+
+    Aircraft/Ikonos_Target_1  00186.91689810000000  00186.91851850000000
+    Facility/Camera_Target_1  00186.91863430000000  00186.91875000000000
+    Facility/Camera_Target_2  00186.91886570000000  00186.91898150000000
+    Facility/Camera_Target_3  00186.91909720000000  00186.91921300000000
+    Aircraft/Ikonos_Target_2  00186.91956020000000  00186.92175930000000
+
+    END TargetSchedule
+
+    BEGIN TargetInviews
+
+    Facility/Camera_Target_1  2000-07-04T00:39:39.739044437  2000-07-04T00:45:18.481473012
+    Facility/Camera_Target_2  2000-07-04T00:40:16.403725675  2000-07-04T00:45:23.936123442
+    Facility/Camera_Target_3  2000-07-04T00:41:56.428945170  2000-07-04T00:44:15.787961421
+    Facility/Camera_Target_3  2000-07-04T08:24:17.114088459  2000-07-04T08:36:15.655460401
+    Facility/Camera_Target_2  2000-07-04T08:24:44.244941477  2000-07-04T08:36:44.663812186
+    Facility/Camera_Target_1  2000-07-04T08:24:52.339422927  2000-07-04T08:37:07.805663488
+    Facility/Camera_Target_3  2000-07-04T10:00:25.291029872  2000-07-04T10:13:48.537692717
+    Facility/Camera_Target_2  2000-07-04T10:00:51.612430649  2000-07-04T10:14:17.791149994
+    Facility/Camera_Target_1  2000-07-04T10:01:12.819800247  2000-07-04T10:14:34.978012144
+    Facility/Camera_Target_2  2000-07-04T11:44:29.769398359  2000-07-04T11:47:00.823347423
+    Facility/Camera_Target_1  2000-07-04T11:45:24.782030049  2000-07-04T11:46:53.640703946
+    Facility/Camera_Target_1  2000-07-04T20:22:13.521584643  2000-07-04T20:27:59.021019202
+    Facility/Camera_Target_2  2000-07-04T20:22:58.549887837  2000-07-04T20:27:57.740046540
+    Facility/Camera_Target_3  2000-07-04T20:23:10.205755407  2000-07-04T20:28:46.915738664
+    Facility/Camera_Target_1  2000-07-04T21:56:26.301594166  2000-07-04T22:09:57.157348735
+    Facility/Camera_Target_2  2000-07-04T21:56:48.175804669  2000-07-04T22:10:17.616727936
+    Facility/Camera_Target_3  2000-07-04T21:57:10.714615838  2000-07-04T22:10:43.762110379
+    Aircraft/Ikonos_Target_1  2000-07-04T22:00:00.000000000  2000-07-04T22:02:36.522947084
+    Aircraft/Ikonos_Target_2  2000-07-04T22:04:00.000000000  2000-07-04T22:07:28.817066770
+    Facility/Camera_Target_1  2000-07-04T23:34:07.999755656  2000-07-04T23:45:45.039345923
+    Facility/Camera_Target_2  2000-07-04T23:34:30.823328547  2000-07-04T23:46:04.638544794
+    Facility/Camera_Target_3  2000-07-04T23:35:03.752949621  2000-07-04T23:46:10.942169774
+    Facility/Camera_Target_1  2000-07-05T07:24:37.415173524  2000-07-05T07:32:04.759791848
+    Facility/Camera_Target_3  2000-07-05T07:24:39.087006968  2000-07-05T07:30:40.685982543
+    Facility/Camera_Target_2  2000-07-05T07:24:53.796485040  2000-07-05T07:31:22.474277559
+    Facility/Camera_Target_3  2000-07-05T08:56:56.338803974  2000-07-05T09:10:20.362641558
+    Facility/Camera_Target_2  2000-07-05T08:57:24.416344086  2000-07-05T09:10:48.027383892
+    Facility/Camera_Target_1  2000-07-05T08:57:38.729754503  2000-07-05T09:11:07.732322386
+    Facility/Camera_Target_3  2000-07-05T10:35:06.831482550  2000-07-05T10:46:51.328369779
+    Facility/Camera_Target_2  2000-07-05T10:35:29.462225125  2000-07-05T10:47:24.682391266
+    Facility/Camera_Target_1  2000-07-05T10:35:54.618780603  2000-07-05T10:47:41.065293418
+    Facility/Camera_Target_1  2000-07-05T20:53:49.995370435  2000-07-05T21:04:43.585531044
+    Facility/Camera_Target_2  2000-07-05T20:54:17.151630359  2000-07-05T21:04:59.389000423
+    Facility/Camera_Target_3  2000-07-05T20:54:37.135173016  2000-07-05T21:05:34.811012619
+    Facility/Camera_Target_1  2000-07-05T22:30:03.032941416  2000-07-05T22:43:37.920991658
+    Facility/Camera_Target_2  2000-07-05T22:30:24.170769396  2000-07-05T22:43:59.060763546
+    Facility/Camera_Target_3  2000-07-05T22:30:49.015740062  2000-07-05T22:44:19.270295995
+
+    END TargetInviews
+
+    SaveTargetAccesses Yes
+
+    UseTargetSchedule  Yes
+
+    Begin Stable
+        Use          No
+        Mode         NorthStable
+    End Stable
+    AdjustPointingToTargetsDuringAccessToTargets   No
+    UseTrackControl            No
+
+    END Targeted
+
+END Pointing
+
+BEGIN Optics
+
+    FocalLength             0.000000000000e+000
+    DetectorPitch           0.000000000000e+000
+    IQConstant              0.000000000000e+000
+    GsdCoefficient          0.000000000000e+000
+
+END Optics
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+		BEGIN Attributes
+
+			Inherit             Yes
+			Show                Yes
+			LineStyle           0
+			LineWidth           1.000000
+			PatternColor        #00ffff
+
+		END Attributes
+
+		BEGIN Display
+
+			NumberOfPatterns        1
+			PersistenceDuration     3.600000000000e+003
+			PersistenceIgnoreDefChg No
+			MinDisplayAltitude      0.000000000000e+000
+			MaxDisplayAltitude      1.000000000000e+007
+			AltitudeIntersectSense           Either
+			ShowBothAltCrossings           No
+			IntersectType           CentralBody
+			ShowGround          Yes
+			UseProjectionRadii          No
+			ExcludeHorizonArcs           No
+			ForwardPersist          No
+			FillPersist             No
+			SpaceLength             5.000000000000e+007
+			TgtExtLength            0.000000000000e+000
+			FOVHalfAngle            No
+			HalfAngle               0.000000000000e+000
+			ProjDisplay             Sphere
+			DisplayType             ConstantRadius
+			DisplayFOVWithConstraints           No
+			ShowBoresight           No
+			BoresightMarker         4
+			BoresightColor          #ffffff
+			ShowFill                No
+			FillTranslucency        0.500000
+			FillStyle               7
+			ShowOn2DMap             Yes
+
+		END Display
+
+		BEGIN    Swath
+
+			MaxStep            6.000000000000e+001
+			MinStep            1.000000000000e-001
+			CloseSwath    Yes
+			Tolerance          4.000000000000e+000
+			MatchTolerance     9.000000000000e+001
+			ShowSwath    No
+			ComputationalMethod    Numerical
+			Color        #ff69b4
+			LineStyle    0
+			LineWidth    1.000000
+    SwathIntervalPtr
+	BEGIN	EVENTINTERVAL
+			BEGIN Interval
+				Start	4 Jul 2000 00:00:00.000000000
+				Stop	6 Jul 2000 00:00:01.000000000
+			END Interval
+			IntervalState	Explicit
+	END	EVENTINTERVAL
+
+
+		END    Swath
+
+            Begin DisplayTimes
+                ScenarioEpoch	4 Jul 2000 00:00:00.000000000
+                DisplayType	UseIntervals
+                Begin Intervals
+                    79220.000000 79360.000000
+                    79378.000000 79380.000000
+                    79398.000000 79400.000000
+                    79419.000000 79421.000000
+                    79450.000000 79640.000000
+                END Intervals
+            End DisplayTimes
+    END Graphics
+    
+    BEGIN Swath
+    END Swath
+    
+    BEGIN ExternData
+    END ExternData
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN AccessConstraints
+		AtFieldOfView   IncludeIntervals 
+		FieldOfView   IncludeIntervals 
+		LineOfSight   IncludeIntervals 
+    END AccessConstraints
+    
+    BEGIN ObjectCoverage
+    END ObjectCoverage
+    
+    BEGIN Desc
+    END Desc
+    
+    BEGIN Refraction
+		RefractionModel	Effective Radius Method
+
+		UseRefractionInAccess		No
+
+		BEGIN ModelData
+			RefractionCeiling	5.00000000000000e+003
+			MaxTargetAltitude	1.00000000000000e+004
+			EffectiveRadius		1.33333333333333e+000
+
+			UseExtrapolation	 Yes
+
+
+		END ModelData
+    END Refraction
+    
+    BEGIN Crdn
+    END Crdn
+    
+    BEGIN DIS
+    END DIS
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+BEGIN SubObjects
+
+END SubObjects
+
+END Sensor
+

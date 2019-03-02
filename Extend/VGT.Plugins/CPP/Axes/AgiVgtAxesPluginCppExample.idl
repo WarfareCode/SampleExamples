@@ -1,0 +1,50 @@
+/**********************************************************************/
+/*           Copyright 2012, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(351F0669-5B0D-4548-8779-ABA5D50E6E6E),
+	helpstring("CPP VGT Axes Plugin Example1 Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IExample1 : IDispatch
+{
+	[propget, id(1), helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+}
+
+[
+	uuid(6D8D307C-B34D-4E24-966A-6F1344B77465),
+	helpstring("AgiVGTAxesPluginCPPExample 11"), // "Type Library"
+	custom(8CB427C9-89B8-4ac9-9D64-87B8AE452311, "Agi.VGT.Axes.Plugin.Examples.CPP.Example"),
+	version(1.0),
+	hidden
+]
+library AgiVGTAxesPluginCPPExampleLib
+{
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(CF9B60C9-B15E-4EA5-98B9-0CF5F4774651),
+		helpstring("Example1 Class")
+	]
+	coclass Example1
+	{
+		[default] interface IExample1;
+		interface IAgUtPluginConfig;
+		interface IAgCrdnAxesPlugin;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2012, Analytical Graphics, Inc.                */
+/**********************************************************************/

@@ -1,0 +1,517 @@
+VO_V100
+    InitializeSolarPanels     No
+    Modelfile                 Space\gps2.mdl
+    UseCatalogModelFile       Yes
+    ModelDefaultColorFromMarker    No
+    IgnoreModelBoundRadius    No
+    IsShowingModel            Yes
+    ModelScale                10000.000000
+    IsSwapped                 Yes
+    Level0SwapDistance        1258925.411794
+    Level1SwapDistance        10000000.000000
+    Level2SwapDistance        125892541.179417
+    Level3SwapDistance        1584893192.461114
+    Level4SwapDistance        1584893192.461114
+    ShowMarker                Yes
+    Begin Marker
+        Show               Yes
+        Type               LineGraphic
+        Shape              Point
+        IsTransparent      No
+        OneOneBlend        No
+        Rotate             No
+        Angle              0.000000
+        HorizOrigin        Center
+        VertOrigin         Center
+        MinSize            4
+        SizeInMeters       No
+        RotateRelToNorth   No
+        UseDirectionAngle  No
+    End
+    Begin GlintMarker
+        Show               No
+        Type               LineGraphic
+        Shape              Point
+        IsTransparent      No
+        OneOneBlend        No
+        Rotate             No
+        Angle              0.000000
+        HorizOrigin        Center
+        VertOrigin         Center
+        MinSize            -5459
+        SizeInMeters       No
+        RotateRelToNorth   No
+        UseDirectionAngle  No
+    End
+    Begin OrbitFrames
+        InertialCoordFrame     Yes
+        FixedCoordFrame        No
+    End OrbitFrames
+    Begin Covariance
+        UseProbability Yes
+        Probability 95.000000
+        Scale 2.795484
+        NonIntervalLineWidth 1.000000
+        NonIntervalTranslucency 0.000000
+        NonIntervalShow  No
+        NonIntervalColorIndex #00ff00
+        DefaultIntervalLineWidth 1.000000
+        DefaultIntervalTranslucency 0.000000
+        DefaultIntervalShow  Yes
+        DefaultIntervalColorIndex #00ffff
+        UseIntervals No
+    End
+    Begin PointingCovarianceList
+         FixScaleToModel      Yes
+         ConeScale            50000.000000
+    End
+    VolumeSwapDist        -2.5000
+    UseModelFilePosOffset     No
+    UseModelPosOffset         No
+    ModelPosOffset            0.000000000000 0.000000000000 0.000000000000
+    UseModelRotation          No
+    ModelRotation             0.000000000000 0.000000000000 0.000000000000
+    DontSaveArticFile         No
+    ObscurationToObject       No
+    Inherit2DPassGfx          No
+    GtLeadingType             NoPass
+    GtTrailingType            NoPass
+    OrbitLeadingType          NoPass
+    OrbitTrailingType         NoPass
+    GtArcDrawRouteOnSurface   No
+    FixVectorAxesScaleToModel Yes
+    FixVectorAxesScaleToAttSph No
+    VectorAxesAngleSwapDist    -0.500000
+    PlaneSwapDist              -2.500000
+    Begin GeneralVectorAxes
+        ArrowPointSize          3.00
+        PersistentLineWidth     2.00
+        Scale                   500000.000000
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector No
+            IsCentralBodyFrame No
+            Name "Body"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #4d4d4d
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector No
+            IsCentralBodyFrame No
+            Name "VVLH"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #00ff00
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector No
+            IsCentralBodyFrame No
+            Name "VVLH_CBF"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #00ffff
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #ff00ff
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector Yes
+            IsCentralBodyFrame No
+            Name "Velocity"
+            MagUnit nm/sec
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #ff00ff
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector Yes
+            IsCentralBodyFrame No
+            Name "Nadir(Centric)"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #00ced1
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector Yes
+            IsCentralBodyFrame No
+            Name "Sun"
+            MagUnit m
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #ffff00
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector Yes
+            IsCentralBodyFrame No
+            Name "Moon"
+            MagUnit m
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #ffffff
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAngle
+        FractionalScale                1.000000
+        SupportingDihedralArcLineWidth 1.00
+        ArcLineWidth                   2.00
+        PixelThreshold                 1.000000
+    End
+    Begin Plane
+    End
+
+    BEGIN VolumesGfx
+
+	Show       Yes
+
+    END VolumesGfx
+    SetModelColorArtic    No
+    SaveArticStateAsDef       No
+    ShowElevFov               No
+    ShowElevFovCones          Yes
+    ElevFovTranslucency       0.700
+    ShowElevContourFill       No
+    ElevContourFillTranslucency  0.500
+    ShowRangeContours         No
+    TranslRangeCntrLines      No
+    RangeCntrLineTransl       0.7000
+    RangeLblSwapDist          -2.5000
+    AOULblSwapDist            -1.5000
+    BorderWallShowOnOff              No
+    BorderWallUseTerrainAltFileOnOff No
+    BorderWallTransparencyOnOff      No
+    BorderWallLineTransparencyOnOff  No
+    BorderWallTransparency           0.700000
+    BorderWallLineTransparency       0.700000
+    BorderWallTopCapType             WGS84
+    BorderWallTopCap                 0.000000
+    BorderWallBotCapType             WGS84
+    BorderWallBotCap                 0.000000
+    BorderWallSampleRate             2.000000
+    ShowSAAContour            No
+    IsShowingGeoBox           No
+    GeoBoxColorIndex          #ff0000
+    GeoBoxNS                  0.01745329252
+    GeoBoxEW                  0.01745329252
+    GeoBoxTickSpacing         0.00349065850
+    TrkTickFrequencyTime      120.000000
+    ShowOrbTrkTicks           No
+    OrbTrkTickWidth           50000.000000
+    OrbTrkPointSize           3.000000
+    OrbTrkLinWidth            1.000000
+    OrbTrkStyle               Radial
+    ShowGrdTrkTicks           No
+    GrdTrkTickWidth           50000.000000
+    GrdTrkPointSize           3.000000
+    GrdTrkLinWidth            1.000000
+    GrdTrkStyle               CrossTrack
+    Begin ControlBox
+        Show             No
+        ShowLabels       No
+        ShowUserText     No
+        ColorIndex       #00ffff
+        LineStyle        0
+        LineWidth        1.000000
+        Begin RefFrame
+		VNC(CBF)
+        End
+        UseTranslucency  No
+        Translucency     0.900000
+        XLength          60000.000000
+        YLength          50000.000000
+        ZLength          20000.000000
+        XOffset          0.000000
+        YOffset          0.000000
+        ZOffset          0.000000
+        BorderWallShowOnOff              No
+        BorderWallUseTerrainAltFileOnOff No
+        BorderWallTransparencyOnOff      No
+        BorderWallLineTransparencyOnOff  No
+        BorderWallTransparency           0.700000
+        BorderWallLineTransparency       0.700000
+        BorderWallTopCapType             WGS84
+        BorderWallTopCap                 0.000000
+        BorderWallBotCapType             WGS84
+        BorderWallBotCap                 0.000000
+        BorderWallSampleRate             2.000000
+    End
+    Begin DropLines
+        Begin PosDropLine
+            Type        0
+            Show        No
+            LineWidth   1.000000
+            LineStyle   0
+            Color       #87cefa
+        End
+        Begin EphemDropLine
+            Type        0
+            Show        No
+            LineWidth   1.000000
+            LineStyle   0
+            Color       #87cefa
+            Interval    60.000000
+        End
+    End
+    UseObjLineAttachPt        No
+    DropLinesTo               Ellipsoid
+    IsShowingVaporTrail       No
+    VaporMaxPuffs             100
+    VaporColorIndex           #ffffff
+    VaporTransPriority        1
+    VaporWindSpeed            0.000000 0.000000 0.000000
+    VaporIsInSpace            No
+    VaporUseAttachPoint       No
+    VaporOutputRate           0.500000000000
+    VaporRadius               1000.000000
+    VaporExpansionRate        0.010000
+    VaporStartTime            0.000000
+    VaporEndTime              172801.000000
+    VaporIntervalPtr
+	BEGIN	EVENTINTERVAL
+			EventInterval
+				BEGIN	EVENTINTERVAL
+					Type	EVENTINTERVAL_LINKTO
+					Name	AnalysisInterval
+					AbsolutePath	Scenario
+				END	EVENTINTERVAL
+			IntervalState	Implicit
+	END	EVENTINTERVAL
+
+    VaporTexturemap           smoke.pgm
+    Begin AttitudeSphere
+        Begin LatLonSphere
+            Show                  No
+            FixScaleToModel       Yes
+            Scale                 50000.000000
+            MinDegDim             0.100000
+            MaxDegDim             90.000000
+            DegDim                90.000000
+            FogDistanceFactor     50
+            LabelType             None
+            TransparentLines      Yes
+            FontIndex             0
+            LineColorIndex        #87cefa
+            ZeroDegLineColorIndex #87cefa
+            LabelColorIndex       #87cefa
+            PixelThreshold        180
+            LabelPointSize        2.000000
+            LineWidth             1.0
+            ZeroDegLineWidth      1.0
+            Begin CentralBody
+                Name              Earth
+                Show              Yes
+                ShowLabel         No
+                ShowVolume        No
+                LineWidth         2.0
+                PointSize         1.0
+                ColorIndex        #4169e1
+            End
+            Begin CentralBody
+                Name              Moon
+                Show              Yes
+                ShowLabel         Yes
+                ShowVolume        No
+                LineWidth         2.0
+                PointSize         1.0
+                ColorIndex        #ffffff
+            End
+            Begin CentralBody
+                Name              Sun
+                Show              Yes
+                ShowLabel         Yes
+                ShowVolume        No
+                LineWidth         2.0
+                PointSize         1.0
+                ColorIndex        #ffff00
+            End
+            Begin AttSphRefCrdnAxes
+				BEGIN	AXES
+					Type	AXES_LINKTO
+					Name	Body
+					RelativePath	Satellite/GPS_2-12
+				END	AXES
+            End
+        End
+    End
+    Begin Point
+        Show No
+        Size 5.000000
+    End Point
+    UseSolarToolOnjIntvl      Yes
+    SolarTimeStep             0.1
+    UseSolarToolBoundRadius   No
+    SolarPowerEquation        Basic
+    SolarToolBoundRadius      1.000000
+    UseLabelOffset            No
+    LabelOffsetInPixels       No
+    LabelXYZ                  0.000000 10.000000 10.000000
+    Begin PointingArticTargets
+        Begin PointingArtic
+            Name SolarArrays-000000 Sun
+        End
+    End
+    ShowGroundMarker          No
+    Begin GroundMarker
+        Show               No
+        Type               LineGraphic
+        Shape              Point
+        IsTransparent      No
+        OneOneBlend        No
+        Rotate             No
+        Angle              0.000000
+        HorizOrigin        Center
+        VertOrigin         Center
+        MinSize            -5459
+        SizeInMeters       No
+        RotateRelToNorth   No
+        UseDirectionAngle  No
+    End

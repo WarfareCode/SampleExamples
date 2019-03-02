@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Agi.VGT.Vector.Plugin.Examples.CPP.Example'
+		'Agi.VGT.Vector.Plugin.Examples.CPP.Example.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

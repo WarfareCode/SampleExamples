@@ -1,0 +1,64 @@
+/* ==============================================================
+ * This sample was last tested with the following configuration:
+ * ==============================================================
+ * Eclipse SDK Version: 4.2.0 Build id: I20120608-1400
+ * JRE 1.6.0 and greater
+ * STK 10.0
+ * ==============================================================
+ */
+
+// Java API
+import javax.swing.*;
+import javax.swing.plaf.metal.*;
+
+import jsyntaxpane.DefaultSyntaxKit;
+import agi.core.AgCoreException;
+import agi.core.AgCore_JNI;
+// AGI Java API
+import agi.swing.plaf.metal.*;
+
+public class Main
+{
+	public static void main(String[] args)
+	{
+		try
+		{
+			AgCore_JNI.xInitThreads();
+			
+			MetalLookAndFeel.setCurrentTheme(AgMetalThemeFactory.getDefaultMetalTheme());
+			UIManager.setLookAndFeel(MetalLookAndFeel.class.getName());
+			JFrame.setDefaultLookAndFeelDecorated(true);
+			
+			Runnable r = new Runnable()
+			{
+				public void run()
+				{
+					try
+					{
+						DefaultSyntaxKit.initKit();
+						DefaultSyntaxKit.setProperty("JavaSyntaxKit.RightMarginColumn", "0");
+						DefaultSyntaxKit.setProperty("JavaSyntaxKit.Components", "jsyntaxpane.components.PairsMarker, jsyntaxpane.components.TokenMarker");
+
+						MainJFrame mw = new MainJFrame();
+						mw.setVisible(true);
+						mw.setLocationRelativeTo(null);
+					}
+					catch(AgCoreException ce)
+					{
+						ce.printHexHresult();
+						ce.printStackTrace();
+					}
+					catch(Throwable t)
+					{
+						t.printStackTrace();
+					}
+				}
+			};
+			SwingUtilities.invokeLater(r);
+		}
+		catch(Throwable t)
+		{
+			t.printStackTrace();
+		}
+	}
+}

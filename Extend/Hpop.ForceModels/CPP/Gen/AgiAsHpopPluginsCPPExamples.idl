@@ -1,0 +1,105 @@
+/**********************************************************************/
+/*           Copyright 2005, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(BF1A1A32-9386-4BE7-8D48-3B1E8826C01B),
+	helpstring("C++ HPOP Force Model Plugin Example1 Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IExample1 : IDispatch
+{
+	[propget, helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+
+	[propget,helpstring("Plugin Enabled status")] 
+	HRESULT Enabled([out, retval] VARIANT_BOOL *pVal);
+	[propput,helpstring("Plugin Enabled status")] 
+	HRESULT Enabled([in] VARIANT_BOOL Val);
+	
+	[propget,helpstring("The Vector Name used with Crdn Configured Vector")] 
+	HRESULT VectorName([out, retval] BSTR *pVal);
+	[propput,helpstring("The Vector Name used with Crdn Configured Vector")] 
+	HRESULT VectorName([in] BSTR Val);
+
+	[propget,helpstring("Acceleration value in the X axes direction")] 
+	HRESULT AccelX([out, retval] double *pVal);
+	[propput,helpstring("Acceleration value in the X axes direction")] 
+	HRESULT AccelX([in] double Val);
+
+	[propget,helpstring("Acceleration value in the Y axes direction")] 
+	HRESULT AccelY([out, retval] double *pVal);
+	[propput,helpstring("Acceleration value in the Y axes direction")] 
+	HRESULT AccelY([in] double Val);
+
+	[propget,helpstring("Acceleration value in the Z axes direction")] 
+	HRESULT AccelZ([out, retval] double *pVal);
+	[propput,helpstring("Acceleration value in the Z axes direction")]
+	HRESULT AccelZ([in] double Val);
+
+	[propget,helpstring("Acceleration Reference Frame")] 
+	HRESULT AccelRefFrame([out, retval] BSTR *pVal);
+	[propput,helpstring("Acceleration Reference Frame")]
+	HRESULT AccelRefFrame([in] BSTR Val);
+
+	[propget,helpstring("Acceleration Reference Frame Choices")]
+	HRESULT AccelRefFrameChoices([out, retval] SAFEARRAY(VARIANT) *pVal);
+
+	[propget,helpstring("Message Status")] 
+	HRESULT MsgStatus([out, retval] VARIANT_BOOL *pVal);
+	[propput,helpstring("Message Status")] 
+	HRESULT MsgStatus([in] VARIANT_BOOL Val);
+
+	[propget,helpstring("Evaluate Method Msg Interval")] 
+	HRESULT EvalMsgInterval([out, retval] long *pVal);
+	[propput,helpstring("Evaluate Method Msg Interval")]
+	HRESULT EvalMsgInterval([in] long Val);
+
+	[propget,helpstring("PostEvaluate Method Msg Interval")] 
+	HRESULT PostEvalMsgInterval([out, retval] long *pVal);
+	[propput,helpstring("PostEvaluate Method Msg Interval")]
+	HRESULT PostEvalMsgInterval([in] long Val);
+
+	[propget,helpstring("PreNextStep Method Msg Interval")] 
+	HRESULT PreNextMsgInterval([out, retval] long *pVal);
+	[propput,helpstring("PreNextStep Method Msg Interval")]
+	HRESULT PreNextMsgInterval([in] long Val);
+}
+
+[
+	uuid(441473E0-09FC-46FC-A227-7000883991CD),
+	helpstring("AgiAsHpopPluginsCPPExamples 11"), // "Type Library"
+	custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9, "AGI.Hpop.Plugin.Examples.ForceModeling.CPP"),
+	version(1.0),
+	hidden
+]
+library AgiAsHpopPluginsCPPExamplesLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgAsHpopPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(993F5C51-EAF5-492D-BD13-CB1EC0659D42),
+		helpstring("Example1 Class")
+	]
+	coclass Example1
+	{
+		[default] interface IExample1;
+		interface IAgUtPluginConfig;
+		interface IAgAsHpopPlugin;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2005, Analytical Graphics, Inc.                */
+/**********************************************************************/

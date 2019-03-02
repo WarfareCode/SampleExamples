@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_SWT_JavaFX_STK_X_Map_View" default="compile">
+	<import file="../SWT_STK/common.xml" />
+	<import file="../JavaFX_STK/common.xml" />
+
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+
+	<path id="build.classpath">
+		<path refid="customapp.swt.stk.classpath" />
+		<path refid="customapp.javafx.stk.classpath" />
+	</path>
+	
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<property name="main.classname" value="Main" />
+</project>

@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example'
+		'Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!-- ===================================================== -->
+<!--  Copyright 2007, Analytical Graphics, Inc.            -->
+<!-- ===================================================== -->
+<component>
+	<?component error="true" debug="true"?>
+	<registration
+		classid="{E0DA8A9C-F0E6-4de1-A086-B80F0D77BE7C}"
+		progid="AGI.Access.Constraint.Plugin.Examples.JScript.RangeExample"
+		description="AGI.Access.Constraint.Plugin.Examples.JScript.RangeExample"
+		version="1.00"
+	>
+	</registration>
+	<public>
+	
+		<!-- ========== -->
+		<!-- Properties -->
+		<!-- ========== -->
+		
+		<property name="DisplayName" get="GetDisplayName"/>
+
+		<!-- ======= -->
+		<!-- Methods -->
+		<!-- ======= -->
+		
+		<method name="Register">
+			<parameter name="AgAccessConstraintPluginResultRegister"/>
+		</method>
+		<method name="Init">
+			<parameter name="AgStkPluginSite"/>
+		</method>
+		<method name="PreCompute">
+			<parameter name="AgAccessConstraintPluginResultPreCompute"/>
+		</method>
+		<method name="Evaluate">
+			<parameter name="AgAccessConstraintPluginResultEval"/>
+			<parameter name="AgAccessConstraintPluginObjectData"/>
+			<parameter name="AgAccessConstraintPluginObjectData"/>
+		</method>
+		<method name="PostCompute">
+			<parameter name="AgAccessConstraintPluginResultPostCompute"/>
+		</method>
+		<method name="Free"/>
+	</public>
+
+	<script language="JScript" src="AccessConstraint.JScript.RangeExample.js"/>
+
+</component>
+
+<!-- ===================================================== -->
+<!--  Copyright 2007, Analytical Graphics, Inc.            -->
+<!-- ===================================================== -->

@@ -1,0 +1,30 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Constellation
+
+Name  Guardrail
+BEGIN Definition
+
+   Type        Constellation
+   Operator    Or
+   Order       1
+   IsRelay     No
+    Object  Aircraft/Guardrail/Sensor/Left_Side_Guardrail_Sensor
+    Object  Aircraft/Guardrail/Sensor/Right_Side_Guardrail_Sensor
+   SaveMode    0
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+
+END Extensions
+
+END Constellation

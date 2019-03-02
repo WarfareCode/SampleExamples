@@ -1,0 +1,27 @@
+HKCR
+{
+	AGI.Access.Constraint.Plugin.Examples.CPP.RangeExample.1 = s 'RangeExample Class'
+	{
+		CLSID = s '{319EBB5D-C1BE-4E31-B80D-ABB01F0F3E9F}'
+	}
+	AGI.Access.Constraint.Plugin.Examples.CPP.RangeExample = s 'RangeExample Class'
+	{
+		CLSID = s '{319EBB5D-C1BE-4E31-B80D-ABB01F0F3E9F}'
+		CurVer = s 'AGI.Access.Constraint.Plugin.Examples.CPP.RangeExample.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {319EBB5D-C1BE-4E31-B80D-ABB01F0F3E9F} = s 'RangeExample Class'
+		{
+			ProgID = s 'AGI.Access.Constraint.Plugin.Examples.CPP.RangeExample.1'
+			VersionIndependentProgID = s 'AGI.Access.Constraint.Plugin.Examples.CPP.RangeExample'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{462E36A0-7FC6-47FE-8633-E03ACEAB08EF}'
+		}
+	}
+}

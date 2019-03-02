@@ -1,0 +1,27 @@
+HKCR
+{
+	AGI.As.Plugin.Examples.EOMFunc.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{9ADF6B51-0F7F-4734-9BAC-9D40A4F13485}'
+	}
+	AGI.As.Plugin.Examples.EOMFunc.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{9ADF6B51-0F7F-4734-9BAC-9D40A4F13485}'
+		CurVer = s 'AGI.As.Plugin.Examples.EOMFunc.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9ADF6B51-0F7F-4734-9BAC-9D40A4F13485} = s 'Example1 Class'
+		{
+			ProgID = s 'AGI.As.Plugin.Examples.EOMFunc.CPP.Example1.1'
+			VersionIndependentProgID = s 'AGI.As.Plugin.Examples.EOMFunc.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{7F37D8E5-DF8C-444C-AFC2-65C8F4B4D072}'
+		}
+	}
+}

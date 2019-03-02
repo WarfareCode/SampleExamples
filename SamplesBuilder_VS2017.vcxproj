@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>SamplesBuilder</ProjectName>
+    <ProjectGuid>{AE9D240D-5738-498D-891C-020EC334F866}</ProjectGuid>
+    <RootNamespace>SamplesBuilder</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="Automation\CSharp\AccessConstraints\AccessConstraints_VS2017.csproj">
+      <Project>{0113576d-c6de-45ec-a4c7-01e098208b55}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Automation\CSharp\AreaTarget\AreaTarget_VS2017.csproj">
+      <Project>{301d7c41-6968-46ce-82df-414d2c8c84bc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Automation\CSharp\Events\Events_VS2017.csproj">
+      <Project>{f215c932-0ec5-4a76-9e88-5135c0d5247b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Automation\CSharp\Scenario\ScenarioExamples_VS2017.csproj">
+      <Project>{22634652-ad30-45c0-805f-0308422c5c88}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Automation\CSharp\STKProTutorial\STKProTutorial_VS2017.csproj">
+      <Project>{722dfd31-ba78-4c74-b8f3-b3577bf03e63}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Automation\CSharp\UnitPreferences\UnitPreferences_VS2017.csproj">
+      <Project>{808f2457-1bda-45e0-97db-15a781f24649}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\C++\Events\Events_VS2017.vcxproj">
+      <Project>{9b313801-a4bc-416d-a4e8-eee4ee568ba7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\C++\Tutorial\Tutorial_VS2017.vcxproj">
+      <Project>{0db139da-ea1b-459f-a3c1-b69ddc5977ec}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\MapView\MapView_VS2017.csproj">
+      <Project>{8302d9ec-ecf4-44bf-a2fa-5aee09b74dbe}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\AreaTool\AreaTool_VS2017.csproj">
+      <Project>{60cdb528-fcba-4644-b7ae-a7f939148e8d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\AzElMaskTool\AzElMaskTool_VS2017.csproj">
+      <Project>{7b915c39-570a-4616-9428-b76956c963bd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\DataProviders\DataProviders_VS2017.csproj">
+      <Project>{1ef15180-f738-4ac9-884e-e68c1b40d998}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\DragAndDrop\DragAndDrop_VS2017.csproj">
+      <Project>{5a262372-780d-4137-ad77-839cf0674dff}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\DrawRects\DrawRects_VS2017.csproj">
+      <Project>{443672fc-fcbe-4bd9-ac23-143fc97007bd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\Events\Events_VS2017.csproj">
+      <Project>{95445b5b-567e-43dd-8e6a-7d52d9b9b0f0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\ObscurationTool\ObscurationTool_VS2017.csproj">
+      <Project>{8bc388b5-a6fc-407d-afc0-1a2b4b431e44}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\OMDemo\OMDemo_VS2017.csproj">
+      <Project>{f6757f2a-99a6-47cf-b347-09f79578a700}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\OnAnimUpdate\OnAnimUpdate_VS2017.csproj">
+      <Project>{4af47b6a-1176-437c-888e-3103e3e436de}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\PlaceFinder\PlaceFinder_VS2017.csproj">
+      <Project>{280895e7-c64a-401f-82f4-b850d10876ea}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\RubberBandSelect\RubberBandSelect_VS2017.csproj">
+      <Project>{604d1efd-b525-472a-ae3b-b7599e188f41}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\SolarPanelTool\SolarPanelTool_VS2017.csproj">
+      <Project>{f52ecb18-575e-4d16-9b0e-8a88717e26f8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\STKProTutorial\STKProTutorial_VS2017.csproj">
+      <Project>{00bbf9a8-0abd-422a-8621-8ec2f6b7e5dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\CSharp\Tutorial\Tutorial_VS2017.csproj">
+      <Project>{fc0c19d7-789f-47d0-ac45-379faac9a65e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\MapView\MapView_VS2017.vbproj">
+      <Project>{a5edcadf-463e-437b-8a97-dfa90492157a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\AreaTool\AreaTool_VS2017.vbproj">
+      <Project>{d113f37a-9288-4605-82c8-695eaecd47d4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\AzElMaskTool\AzElMaskTool_VS2017.vbproj">
+      <Project>{1334fd21-753e-41e2-980f-89ba90f3ffaa}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\DragAndDrop\DragAndDrop_VS2017.vbproj">
+      <Project>{e85fed64-5332-4d6a-8c47-507478c9efbd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\DrawRects\DrawRects_VS2017.vbproj">
+      <Project>{d1cade80-e823-4543-9471-738a78e848ee}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\Events\Events_VS2017.vbproj">
+      <Project>{3745342c-54e2-4631-94b5-79136b61589f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\ObscurationTool\ObscurationTool_VS2017.vbproj">
+      <Project>{e70b7882-a8e2-4e79-b05b-6c529fc73e79}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\OnAnimUpdate\OnAnimUpdate_VS2017.vbproj">
+      <Project>{3a102ed5-75fa-4c70-bfda-4e7d694cceb9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\RubberBandSelect\RubberBandSelect_VS2017.vbproj">
+      <Project>{180d5a9b-8369-45c0-a737-26a9e0e7b19b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\SolarPanelTool\SolarPanelTool_VS2017.vbproj">
+      <Project>{fbc53e5f-03a6-4d20-bddb-5bdaa9a98379}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="CustomApplications\VB.Net\Tutorial\Tutorial_VS2017.vbproj">
+      <Project>{8243b351-233f-4213-9ea5-f78dccd0372d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Constraints\CPP\Range\AGI.Access.Constraint.Plugin.Examples.CPP_VS2017.vcxproj">
+      <Project>{dd8b601e-eedc-4716-92e2-39f4878121ea}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Constraints\CSharp\NIIRS\AGI.Access.Constraint.Plugin.Examples.CSharp.NIIRS_VS2017.csproj">
+      <Project>{3f001d88-79ed-424e-8328-f245b447fd01}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Constraints\CSharp\Range\AGI.Access.Constraint.Plugin.Examples.CSharp.RangeExample_VS2017.csproj">
+      <Project>{52f2c42e-a9b5-404b-98b4-852ff10d5268}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Constraints\VB.NET\Range\AGI.Access.Constraint.Plugin.Examples.VB_NET.RangeExample_VS2017.vbproj">
+      <Project>{718202d1-36cb-4c04-b27b-1b6ca01eb61e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Gator.AttitudeControllers\CPP\Gen\Agi.As.Gator.AttCtrl.Plugin.Cpp.Examples_VS2017.vcxproj">
+      <Project>{0754cf75-ce12-4856-9002-b984ca6dc156}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Gator.AttitudeControllers\CSharp\Gen\Agi.As.Gator.AttCtrl.Plugin.CSharp.Examples_VS2017.csproj">
+      <Project>{549dd583-d8cb-4e8a-90c9-4cff77f3a73c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Gator.EngineModels\CPP\Gen\Agi.As.Gator.EngMdl.Plugin.CPP.Examples_VS2017.vcxproj">
+      <Project>{55abb171-38ce-4f92-828c-bdeece87b07e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Gator.EngineModels\CSharp\Gen\Agi.As.Gator.EngMdl.Plugin.CSharp.Examples_VS2017.csproj">
+      <Project>{a8add0fe-7ff6-4642-a453-d173d1896458}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Gator.Search\CPP\Gen\Agi.Search.Plugin.CPP.Examples_VS2017.vcxproj">
+      <Project>{c4ffefe6-96db-44c2-b537-91692277b666}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Gator.Search\CSharp\Gen\Agi.Search.Plugin.CSharp.Examples_VS2017.csproj">
+      <Project>{6845effc-f686-4fc2-90cf-eac42a2c97f5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Hpop.ForceModels\CPP\Gen\Agi.As.Hpop.Plugins.CPP.Examples_VS2017.vcxproj">
+      <Project>{e0e0a8ad-35d0-45b2-9c57-a224a8fc18cc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Hpop.ForceModels\CSharp\Gen\Agi.As.Hpop.Plugin.CSharp.Examples_VS2017.csproj">
+      <Project>{df20b59e-6751-4697-b32a-400981b887b6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Hpop.ForceModels\CSharp\MyPlugin\AGI.HPOP.MyPlugin_VS2017.csproj">
+      <Project>{3d05ee3b-3808-4969-ad3e-a76346efb757}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Hpop.ForceModels\CSharp\Srp\Agi.As.Hpop.FrcMdl.Srp.Plugin.CSharp.Examples_VS2017.csproj">
+      <Project>{fcf63d72-ec28-496f-9727-bbdf94c17a47}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Hpop.ForceModels\VB.NET\Gen\Agi.As.Hpop.FrcMdl.Plugin.VB_NET.Examples_VS2017.vbproj">
+      <Project>{acc47301-800c-4eab-894e-99b596a3e1ef}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Extend\Hpop.ForceModels\VB.NET\Srp\Agi.As.Hpop.FrcMdl.Srp.Plugin.VB_NET.Examples_VS2017.vbproj">
+      <Project>{1d720cac-4515-4605-8d27-133c0a212d6b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

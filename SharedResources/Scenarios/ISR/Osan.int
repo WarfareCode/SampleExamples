@@ -1,0 +1,15 @@
+stk.v.4.1.1
+
+BEGIN IntervalList
+
+
+ScenarioEpoch  4 Jul 2000 00:00:00.000000000
+
+BEGIN Intervals
+
+	79443.000000 79563.000000
+	80380.000000 80500.000000
+
+END Intervals
+
+END IntervalList

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<Facility>
+  <InstanceName>AccessFacility</InstanceName>
+  <Position>
+    <Latitude>40.04</Latitude>
+    <Longitude>-75.595</Longitude>
+    <Altitude>0</Altitude>
+  </Position>
+</Facility>

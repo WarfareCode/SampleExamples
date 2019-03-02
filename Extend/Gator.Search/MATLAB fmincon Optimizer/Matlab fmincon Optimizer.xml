@@ -1,0 +1,19 @@
+<?xml version = "1.0"?>
+
+<!--
+      AGI Registry File for COM Servers. 
+-->
+
+<AGIRegistry version = "1.0">
+
+	<CategoryRegistry>
+		
+		<Category Name = "Search">
+				
+			<Plugin DisplayName = "MATLAB fmincon Optimizer" ProgID = "MatlabSearch.WSC"/>
+
+		</Category>
+		
+	</CategoryRegistry>
+
+</AGIRegistry>

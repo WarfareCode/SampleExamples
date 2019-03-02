@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_AWT_STK_Graphics_Globe_HowTo">
+	<import file="../Swing_STK/common.xml" />
+	<import file="../../../Extend/Graphics/Java/Common/common.xml" />
+
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+
+	<path id="build.dependentprojects">
+		<pathelement location="../../../SharedResources/Java/SharedResources/build.xml" />
+		<pathelement location="../Swing_STK/build.xml" />
+		<pathelement location="../AWT_STK_Graphics_Globe_Common/build.xml" />
+		<pathelement location="../../../Extend/Graphics/Java/CustomImageGlobeOverlay/OpenStreetMap/build.xml" />
+		<pathelement location="../../../Extend/Graphics/Java/ProjectionStream/Basic/build.xml" />
+		<pathelement location="../../../Extend/Graphics/Java/RasterStream/Basic/build.xml" />
+	</path>
+
+	<path id="build.classpath">
+		<path refid="customapp.swing.stk.classpath" />
+		<path refid="extend.stk.plugin.graphics.classpath" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/classes" />
+		<pathelement location="../Swing_STK/classes" />
+		<pathelement location="../AWT_STK_Graphics_Globe_Common/classes" />
+		<pathelement location="../../../Extend/Graphics/Java/CustomImageGlobeOverlay/OpenStreetMap/classes" />
+		<pathelement location="../../../Extend/Graphics/Java/ProjectionStream/Basic/classes" />
+		<pathelement location="../../../Extend/Graphics/Java/RasterStream/Basic/classes" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/ThirdParty/jsyntaxpane-0.9.4/jsyntaxpane-0.9.4.jar" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/ThirdParty/joda-time-1.6/joda-time-1.6.jar" />
+	</path>
+
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<property name="main.classname" value="Main" />
+</project>

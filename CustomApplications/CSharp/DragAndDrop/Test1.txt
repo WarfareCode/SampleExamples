@@ -1,0 +1,3 @@
+New / */Facility Facility1
+VO * Annotation Time ShowFPS On
+Animate * Start

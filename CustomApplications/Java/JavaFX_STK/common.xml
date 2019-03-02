@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_JavaFX_STK_common">
+	<path id="customapp.javafx.stk.classpath">
+		<fileset dir="${java.home}">
+			<include name="lib/jfxrt.jar" />
+			<include name="lib/ext/jfxrt.jar" />
+			<include name="lib/jfxswt.jar" />
+		</fileset>
+	</path>
+
+	<available classname="javafx.application.Platform" property="javafx.found">
+		<classpath>
+			<path refid="customapp.javafx.stk.classpath" />
+		</classpath>
+	</available>
+
+	<fail unless="javafx.found" message="This project requires JavaFX, which is installed as part of a Java 1.7 or later installation.  Set JAVA_HOME to a Java 1.7 or later installation." />
+</project>

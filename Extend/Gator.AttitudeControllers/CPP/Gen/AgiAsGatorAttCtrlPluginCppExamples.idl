@@ -1,0 +1,112 @@
+/**********************************************************************/
+/*           Copyright 2005, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(EADF9BB5-0528-4E0C-8186-56EA01AEDD4E),
+	helpstring("C++ Attitude Controller Model Plugin Example1 Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IExample1 : IDispatch
+{
+	[propget, id(1), helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+
+	[propget, id(2), helpstring("property Y0")] 
+	HRESULT Y0([out, retval] DOUBLE* pVal);
+	
+	[propput, id(2), helpstring("property Y0")] 
+	HRESULT Y0([in] DOUBLE newVal);
+	
+	[propget, id(3), helpstring("property Y1")] 
+	HRESULT Y1([out, retval] DOUBLE* pVal);
+	
+	[propput, id(3), helpstring("property Y1")] 
+	HRESULT Y1([in] DOUBLE newVal);
+	
+	[propget, id(4), helpstring("property Y2")] 
+	HRESULT Y2([out, retval] DOUBLE* pVal);
+	
+	[propput, id(4), helpstring("property Y2")] 
+	HRESULT Y2([in] DOUBLE newVal);
+	
+	[propget, id(5), helpstring("property Ys")] 
+	HRESULT Ys([out, retval] DOUBLE* pVal);
+	
+	[propput, id(5), helpstring("property Ys")] 
+	HRESULT Ys([in] DOUBLE newVal);
+
+	[propget, id(6), helpstring("property Yc")] 
+	HRESULT Yc([out, retval] DOUBLE* pVal);
+	
+	[propput, id(6), helpstring("property Yc")] 
+	HRESULT Yc([in] DOUBLE newVal);
+	
+	[propget, id(7), helpstring("property P0")] 
+	HRESULT P0([out, retval] DOUBLE* pVal);
+	
+	[propput, id(7), helpstring("property P0")] 
+	HRESULT P0([in] DOUBLE newVal);
+	
+	[propget, id(8), helpstring("property P1")] 
+	HRESULT P1([out, retval] DOUBLE* pVal);
+	
+	[propput, id(8), helpstring("property P1")] 
+	HRESULT P1([in] DOUBLE newVal);
+	
+	[propget, id(9), helpstring("property P2")] 
+	HRESULT P2([out, retval] DOUBLE* pVal);
+	
+	[propput, id(9), helpstring("property P2")] 
+	HRESULT P2([in] DOUBLE newVal);
+	
+	[propget, id(10), helpstring("property Ps")] 
+	HRESULT Ps([out, retval] DOUBLE* pVal);
+	
+	[propput, id(10), helpstring("property Ps")] 
+	HRESULT Ps([in] DOUBLE newVal);
+
+	[propget, id(11), helpstring("property Pc")] 
+	HRESULT Pc([out, retval] DOUBLE* pVal);
+	
+	[propput, id(11), helpstring("property Pc")] 
+	HRESULT Pc([in] DOUBLE newVal);
+}
+
+[
+	uuid(EF1D5A50-2854-45C8-BE14-411BB47F0DDE),
+	helpstring("AgiAsGatorAttCtrlPluginCppExamples 11"), // "Type Library"
+	custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9, "AGI.Astrogator.Plugin.Examples.AttitudeControl.CPP"),
+	version(1.0),
+	hidden
+]
+library AgiAsGatorAttCtrlPluginCppExamplesLib
+{
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+	importlib("AgGator.tlb");
+	importlib("AgGatorPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(6FFDD517-8F74-4066-AC09-C3AFB53210A7),
+		helpstring("Example1 Class")
+	]
+	coclass Example1
+	{
+		[default] interface IExample1;
+		interface IAgUtPluginConfig;
+		interface IAgGatorPluginAttCtrl;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2005, Analytical Graphics, Inc.                */
+/**********************************************************************/

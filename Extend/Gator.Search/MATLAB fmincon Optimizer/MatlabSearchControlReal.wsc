@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- ===================================================== -->
+<!--  Copyright 2007, Analytical Graphics, Inc.            -->
+<!--                                                       -->
+<!--  Author: Patrick Williams and Jonathan Lowe           -->
+<!-- ===================================================== -->
+<component>
+	<?component error="true" debug="true"?>
+	<registration
+	    description="VBScript.MatlabSearchControlReal"
+	    progid="MatlabSearchControlReal.WSC"
+	    version="1.00"
+	    classid="{73A41770-E0D2-4218-88AD-3F37D13BFAE7}"
+	/>
+	<public>
+
+		<!-- ========== -->
+		<!-- Properties -->
+		<!-- ========== -->
+		<property name="ControlName" 	get="GetControlName"	put="SetControlName"/>
+		<property name="ObjectName" 	get="GetObjectName"	put="SetObjectName"/>
+		<property name="ControlType"	get="GetControlType" 	put="SetControlType"/>
+		<property name="Active"		get="GetActive" 	put="SetActive"/>
+		<property name="CurrentValue" 	get="GetCurrentValue"	put="SetCurrentValue"/>
+		<property name="InitialValue" 	get="GetInitialValue" 	put="SetInitialValue"/>
+		<property name="Dimension"	get="GetDimension"	put="SetDimension"/>
+		<property name="InternalUnit"	get="GetInternalUnit"	put="SetInternalUnit"/>
+    		<property name="ScalingMultiplier" get="GetScalingMultiplier" put="SetScalingMultiplier"/>
+    		<property name="HasUpperBound" 	get="GetHasUpperBound" 	put="SetHasUpperBound"/>
+    		<property name="HasLowerBound" 	get="GetHasLowerBound" 	put="SetHasLowerBound"/>
+    		<property name="UpperBound" 	get="GetUpperBound" 	put="SetUpperBound"/>
+    		<property name="LowerBound" 	get="GetLowerBound" 	put="SetLowerBound"/>
+    		<property name="UpperBoundFlags" get="UpperBoundFlags"/>
+    		<property name="LowerBoundFlags" get="LowerBoundFlags"/>
+    		
+    			<!--<property name="HasEqualityConstraint" get="HasEqualityConstraint" put="SetHasEqualityConstraint"/>
+    			<property name="EqualityConstraint" get="GetEqualityConstraint" put="SetEqualityConstraint"/>
+    			<property name="EqualityConstraintFlags" get="EqualityConstraintFlags"/>-->
+
+		<!-- ======= -->
+		<!-- Methods -->
+		<!-- ======= -->
+		<method name="GetPluginConfig">
+			<parameter name="AgAttrBuilder"/>
+		</method>
+		<method name="VerifyPluginConfig">
+			<parameter name="AgUtPluginCfgVerifyResult"/>
+		</method>
+	</public>
+
+	<script language="VBScript" src="MatlabSearchControlReal.vbs"/>
+
+</component>
+
+<!-- ===================================================== -->
+<!--  Copyright 2006-2007, Analytical Graphics, Inc.       -->
+<!-- ===================================================== -->

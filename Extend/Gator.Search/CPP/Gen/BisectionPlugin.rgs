@@ -1,0 +1,27 @@
+HKCR
+{
+	AGI.Search.Plugin.Examples.CPP.BisectionPlugin.1 = s 'BisectionPlugin Class'
+	{
+		CLSID = s '{15DB7E3F-2D6C-4B0A-AD7D-0AC208187E9E}'
+	}
+	AGI.Search.Plugin.Examples.CPP.BisectionPlugin = s 'BisectionPlugin Class'
+	{
+		CLSID = s '{15DB7E3F-2D6C-4B0A-AD7D-0AC208187E9E}'
+		CurVer = s 'AGI.Search.Plugin.Examples.CPP.BisectionPlugin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {15DB7E3F-2D6C-4B0A-AD7D-0AC208187E9E} = s 'BisectionPlugin Class'
+		{
+			ProgID = s 'AGI.Search.Plugin.Examples.CPP.BisectionPlugin.1'
+			VersionIndependentProgID = s 'AGI.Search.Plugin.Examples.CPP.BisectionPlugin'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{2ACAE769-EB87-43C0-AB31-9897887D1520}'
+		}
+	}
+}

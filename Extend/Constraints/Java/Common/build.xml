@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Extend_STK_Plugin_AccessConstraint_Common" default="compile">
+	<import file="common.xml" />
+
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+
+	<path id="build.classpath">
+		<path refid="extend.stk.plugin.accessconstraint.classpath" />
+	</path>
+	
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<target name="run" description="Not supported. This is not a runnable project.">
+		<fail message="This is not a runnable project." />
+	</target>
+</project>

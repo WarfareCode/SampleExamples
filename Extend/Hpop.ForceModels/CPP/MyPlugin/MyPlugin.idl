@@ -1,0 +1,71 @@
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(38DCA2D5-BEB5-4341-B5F2-34943B1C8AFE),
+	helpstring("MYPLUGIN Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IMYPLUGIN : IDispatch
+{
+	[propget, helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+
+	[propget,helpstring("Plugin Enabled status")] 
+	HRESULT Enabled([out, retval] VARIANT_BOOL *pVal);
+	[propput,helpstring("Plugin Enabled status")] 
+	HRESULT Enabled([in] VARIANT_BOOL Val);
+	
+	[propget,helpstring("Message Status")] 
+	HRESULT DebugMode([out, retval] VARIANT_BOOL *pVal);
+	[propput,helpstring("Message Status")] 
+	HRESULT DebugMode([in] VARIANT_BOOL Val);
+
+	[propget,helpstring("Evaluate Method Msg Interval")] 
+	HRESULT EvalMsgInterval([out, retval] long *pVal);
+	[propput,helpstring("Evaluate Method Msg Interval")]
+	HRESULT EvalMsgInterval([in] long Val);
+
+	[propget,helpstring("PostEvaluate Method Msg Interval")] 
+	HRESULT PostEvalMsgInterval([out, retval] long *pVal);
+	[propput,helpstring("PostEvaluate Method Msg Interval")]
+	HRESULT PostEvalMsgInterval([in] long Val);
+
+	[propget,helpstring("PreNextStep Method Msg Interval")] 
+	HRESULT PreNextMsgInterval([out, retval] long *pVal);
+	[propput,helpstring("PreNextStep Method Msg Interval")]
+	HRESULT PreNextMsgInterval([in] long Val);
+}
+
+[
+	uuid(9CC8AE2E-7035-4B24-999F-720BB50DE106),
+	helpstring("MYPLUGIN 11"), // "Type Library"
+	version(1.0),
+	hidden
+]
+library MYPLUGINLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgAsHpopPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(9737EC62-2E22-405E-B964-41F9292C4313),
+		helpstring("MyPlugin Class")
+	]
+	coclass MYPLUGIN
+	{
+		[default] interface IMYPLUGIN;
+		interface IAgUtPluginConfig;
+		interface IAgAsHpopPlugin;
+	};
+};

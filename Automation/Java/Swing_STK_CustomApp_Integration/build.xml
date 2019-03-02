@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Automation_Swing_STK_CustomApp_Integration">
+	<import file="../../../SharedResources/Java/SharedResources/common.xml" />
+
+	<path id="build.classpath">
+		<fileset dir="${stk.bin.dir}">
+			<include name="agi.jar" />
+			<include name="agi.core.jar" />
+			<include name="agi.core.swing.jar" />
+			<include name="agi.ntvapp.jar" />
+			<include name="agi.ntvapp.swing.jar" />
+			<include name="agi.stk.core.jar" />
+			<include name="agi.stk.core.swing.jar" />
+			<include name="agi.stk.ui.jar" />
+			<include name="agi.stk.ui.application.jar" />
+			<include name="agi.stk.ui.core.jar" />
+			<include name="agi.stkengine.jar" />
+			<include name="agi.stkengine.swing.jar" />
+			<include name="agi.stkgraphics.jar" />
+			<include name="agi.stkobjects.jar" />
+			<include name="agi.stkobjects.astrogator.jar" />
+			<include name="agi.stkutil.jar" />
+			<include name="agi.stkvgt.jar" />
+			<include name="agi.stkx.jar" />
+			<include name="agi.stkx.initialization.jar" />
+			<include name="agi.stkx.swing.jar" />
+			<include name="agi.swing.jar" />
+		</fileset>
+	</path>
+
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+	
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<property name="main.classname" value="Main" />
+</project>

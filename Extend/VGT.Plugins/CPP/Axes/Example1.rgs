@@ -1,0 +1,27 @@
+HKCR
+{
+	Agi.VGT.Axes.Plugin.Examples.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{CF9B60C9-B15E-4EA5-98B9-0CF5F4774651}'
+	}
+	Agi.VGT.Axes.Plugin.Examples.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{CF9B60C9-B15E-4EA5-98B9-0CF5F4774651}'
+		CurVer = s 'Agi.VGT.Axes.Plugin.Examples.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CF9B60C9-B15E-4EA5-98B9-0CF5F4774651} = s 'Example1 Class'
+		{
+			ProgID = s 'Agi.VGT.Axes.Plugin.Examples.CPP.Example1.1'
+			VersionIndependentProgID = s 'Agi.VGT.Axes.Plugin.Examples.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{6D8D307C-B34D-4E24-966A-6F1344B77465}'
+		}
+	}
+}

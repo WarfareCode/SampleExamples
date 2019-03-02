@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Agi.Search.Plugin.Cpp.Examples'
+		'Agi.Search.Plugin.Cpp.Examples.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

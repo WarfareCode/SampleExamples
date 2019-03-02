@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="/SharedResources/JavaFXJar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/SharedResources/JavaFXSwtJar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

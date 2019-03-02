@@ -1,0 +1,117 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DD748AD-3DFF-4BF4-9DF2-20D53FE2555E}"
+	ProjectSection(SolutionItems) = preProject
+		WSC\ReadMe.txt = WSC\ReadMe.txt
+		VGT Plugins.xml = VGT Plugins.xml
+		WSC\VGT.Axes.JScript.Example1.js = WSC\VGT.Axes.JScript.Example1.js
+		WSC\VGT.Axes.JScript.Example1.wsc = WSC\VGT.Axes.JScript.Example1.wsc
+		WSC\VGT.Axes.Perl.Example1.pl = WSC\VGT.Axes.Perl.Example1.pl
+		WSC\VGT.Axes.Perl.Example1.wsc = WSC\VGT.Axes.Perl.Example1.wsc
+		WSC\VGT.Axes.VBScript.Example1.vbs = WSC\VGT.Axes.VBScript.Example1.vbs
+		WSC\VGT.Axes.VBScript.Example1.wsc = WSC\VGT.Axes.VBScript.Example1.wsc
+		WSC\VGT.CalcScalar.JScript.Example1.js = WSC\VGT.CalcScalar.JScript.Example1.js
+		WSC\VGT.CalcScalar.JScript.Example1.wsc = WSC\VGT.CalcScalar.JScript.Example1.wsc
+		WSC\VGT.CalcScalar.Perl.Example1.pl = WSC\VGT.CalcScalar.Perl.Example1.pl
+		WSC\VGT.CalcScalar.Perl.Example1.wsc = WSC\VGT.CalcScalar.Perl.Example1.wsc
+		WSC\VGT.CalcScalar.VBScript.Example1.vbs = WSC\VGT.CalcScalar.VBScript.Example1.vbs
+		WSC\VGT.CalcScalar.VBScript.Example1.wsc = WSC\VGT.CalcScalar.VBScript.Example1.wsc
+		WSC\VGT.Point.JScript.Example1.js = WSC\VGT.Point.JScript.Example1.js
+		WSC\VGT.Point.JScript.Example1.wsc = WSC\VGT.Point.JScript.Example1.wsc
+		WSC\VGT.Point.Perl.Example1.pl = WSC\VGT.Point.Perl.Example1.pl
+		WSC\VGT.Point.Perl.Example1.wsc = WSC\VGT.Point.Perl.Example1.wsc
+		WSC\VGT.Point.VBScript.Example1.vbs = WSC\VGT.Point.VBScript.Example1.vbs
+		WSC\VGT.Point.VBScript.Example1.wsc = WSC\VGT.Point.VBScript.Example1.wsc
+		WSC\VGT.Vector.JScript.Example1.js = WSC\VGT.Vector.JScript.Example1.js
+		WSC\VGT.Vector.JScript.Example1.wsc = WSC\VGT.Vector.JScript.Example1.wsc
+		WSC\VGT.Vector.Perl.Example1.pl = WSC\VGT.Vector.Perl.Example1.pl
+		WSC\VGT.Vector.Perl.Example1.wsc = WSC\VGT.Vector.Perl.Example1.wsc
+		WSC\VGT.Vector.VBScript.Example1.vbs = WSC\VGT.Vector.VBScript.Example1.vbs
+		WSC\VGT.Vector.VBScript.Example1.wsc = WSC\VGT.Vector.VBScript.Example1.wsc
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.VGT.Axes.Plugin.Examples.CSharp.Example_VS2015", "CSharp\Axes\Agi.VGT.Axes.Plugin.Examples.CSharp.Example_VS2015.csproj", "{622E51B3-2255-4C6E-B0E5-983F846018B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.VGT.CalcScalar.Plugin.Examples.CSharp.Example_VS2015", "CSharp\CalcScalar\Agi.VGT.CalcScalar.Plugin.Examples.CSharp.Example_VS2015.csproj", "{0FA11E24-E5E6-4D1B-ABFA-9BD4E66FFA9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.VGT.Point.Plugin.Examples.CSharp.Example_VS2015", "CSharp\Point\Agi.VGT.Point.Plugin.Examples.CSharp.Example_VS2015.csproj", "{F5C75768-8F6C-4B41-981A-11441D146E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.VGT.Vector.Plugin.Examples.CSharp.Example_VS2015", "CSharp\Vector\Agi.VGT.Vector.Plugin.Examples.CSharp.Example_VS2015.csproj", "{5E9234FA-0DCA-4026-9E1E-2C7D6FAEA1AA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.VGT.Point.Plugin.Examples.VB_NET.Example_VS2015", "VB.NET\Point\Agi.VGT.Point.Plugin.Examples.VB_NET.Example_VS2015.vbproj", "{D10EE32D-D558-44B6-9446-220EA43EE04E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.VGT.CalcScalar.Plugin.Examples.VB_NET.Example_VS2015", "VB.NET\CalcScalar\Agi.VGT.CalcScalar.Plugin.Examples.VB_NET.Example_VS2015.vbproj", "{3C70568F-6437-4307-9996-D0B9975F2463}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.VGT.Axes.Plugin.Examples.VB_NET.Example_VS2015", "VB.NET\Axes\Agi.VGT.Axes.Plugin.Examples.VB_NET.Example_VS2015.vbproj", "{F9F60E31-EEB8-44DC-A0EC-E84B0148D1C8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.VGT.Vector.Plugin.Examples.VB_NET_VS2015", "VB.NET\Vector\Agi.VGT.Vector.Plugin.Examples.VB_NET_VS2015.vbproj", "{900CD95D-8C6B-41B1-82FF-D5BF445B4DCD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.VGT.Axes.Plugin.Examples.CPP.Example", "CPP\Axes\AGI.VGT.Axes.Plugin.Examples.CPP.Example_VS2015.vcxproj", "{20F249D6-1111-493E-BA15-F0A5A7CFE4CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example", "CPP\CalcScalar\AGI.VGT.CalcScalar.Plugin.Examples.CPP.Example_VS2015.vcxproj", "{FE3193B1-520B-494C-ABEC-E75319324C05}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.VGT.Point.Plugin.Examples.CPP.Example", "CPP\Point\AGI.VGT.Point.Plugin.Examples.CPP.Example_VS2015.vcxproj", "{08C83E6D-68F7-4409-A377-452517BCF618}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.VGT.Vector.Plugin.Examples.CPP.Example", "CPP\Vector\AGI.VGT.Vector.Plugin.Examples.CPP.Example_VS2015.vcxproj", "{AD507425-E603-4FF6-AD5B-5CE380A61CFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{622E51B3-2255-4C6E-B0E5-983F846018B6}.Debug|x64.ActiveCfg = Debug|x64
+		{622E51B3-2255-4C6E-B0E5-983F846018B6}.Debug|x64.Build.0 = Debug|x64
+		{622E51B3-2255-4C6E-B0E5-983F846018B6}.Release|x64.ActiveCfg = Release|x64
+		{622E51B3-2255-4C6E-B0E5-983F846018B6}.Release|x64.Build.0 = Release|x64
+		{0FA11E24-E5E6-4D1B-ABFA-9BD4E66FFA9F}.Debug|x64.ActiveCfg = Debug|x64
+		{0FA11E24-E5E6-4D1B-ABFA-9BD4E66FFA9F}.Debug|x64.Build.0 = Debug|x64
+		{0FA11E24-E5E6-4D1B-ABFA-9BD4E66FFA9F}.Release|x64.ActiveCfg = Release|x64
+		{0FA11E24-E5E6-4D1B-ABFA-9BD4E66FFA9F}.Release|x64.Build.0 = Release|x64
+		{F5C75768-8F6C-4B41-981A-11441D146E91}.Debug|x64.ActiveCfg = Debug|x64
+		{F5C75768-8F6C-4B41-981A-11441D146E91}.Debug|x64.Build.0 = Debug|x64
+		{F5C75768-8F6C-4B41-981A-11441D146E91}.Release|x64.ActiveCfg = Release|x64
+		{F5C75768-8F6C-4B41-981A-11441D146E91}.Release|x64.Build.0 = Release|x64
+		{5E9234FA-0DCA-4026-9E1E-2C7D6FAEA1AA}.Debug|x64.ActiveCfg = Debug|x64
+		{5E9234FA-0DCA-4026-9E1E-2C7D6FAEA1AA}.Debug|x64.Build.0 = Debug|x64
+		{5E9234FA-0DCA-4026-9E1E-2C7D6FAEA1AA}.Release|x64.ActiveCfg = Release|x64
+		{5E9234FA-0DCA-4026-9E1E-2C7D6FAEA1AA}.Release|x64.Build.0 = Release|x64
+		{D10EE32D-D558-44B6-9446-220EA43EE04E}.Debug|x64.ActiveCfg = Debug|x64
+		{D10EE32D-D558-44B6-9446-220EA43EE04E}.Debug|x64.Build.0 = Debug|x64
+		{D10EE32D-D558-44B6-9446-220EA43EE04E}.Release|x64.ActiveCfg = Release|x64
+		{D10EE32D-D558-44B6-9446-220EA43EE04E}.Release|x64.Build.0 = Release|x64
+		{3C70568F-6437-4307-9996-D0B9975F2463}.Debug|x64.ActiveCfg = Debug|x64
+		{3C70568F-6437-4307-9996-D0B9975F2463}.Debug|x64.Build.0 = Debug|x64
+		{3C70568F-6437-4307-9996-D0B9975F2463}.Release|x64.ActiveCfg = Release|x64
+		{3C70568F-6437-4307-9996-D0B9975F2463}.Release|x64.Build.0 = Release|x64
+		{F9F60E31-EEB8-44DC-A0EC-E84B0148D1C8}.Debug|x64.ActiveCfg = Debug|x64
+		{F9F60E31-EEB8-44DC-A0EC-E84B0148D1C8}.Debug|x64.Build.0 = Debug|x64
+		{F9F60E31-EEB8-44DC-A0EC-E84B0148D1C8}.Release|x64.ActiveCfg = Release|x64
+		{F9F60E31-EEB8-44DC-A0EC-E84B0148D1C8}.Release|x64.Build.0 = Release|x64
+		{900CD95D-8C6B-41B1-82FF-D5BF445B4DCD}.Debug|x64.ActiveCfg = Debug|x64
+		{900CD95D-8C6B-41B1-82FF-D5BF445B4DCD}.Debug|x64.Build.0 = Debug|x64
+		{900CD95D-8C6B-41B1-82FF-D5BF445B4DCD}.Release|x64.ActiveCfg = Release|x64
+		{900CD95D-8C6B-41B1-82FF-D5BF445B4DCD}.Release|x64.Build.0 = Release|x64
+		{20F249D6-1111-493E-BA15-F0A5A7CFE4CD}.Debug|x64.ActiveCfg = Debug|x64
+		{20F249D6-1111-493E-BA15-F0A5A7CFE4CD}.Debug|x64.Build.0 = Debug|x64
+		{20F249D6-1111-493E-BA15-F0A5A7CFE4CD}.Release|x64.ActiveCfg = Release|x64
+		{20F249D6-1111-493E-BA15-F0A5A7CFE4CD}.Release|x64.Build.0 = Release|x64
+		{FE3193B1-520B-494C-ABEC-E75319324C05}.Debug|x64.ActiveCfg = Debug|x64
+		{FE3193B1-520B-494C-ABEC-E75319324C05}.Debug|x64.Build.0 = Debug|x64
+		{FE3193B1-520B-494C-ABEC-E75319324C05}.Release|x64.ActiveCfg = Release|x64
+		{FE3193B1-520B-494C-ABEC-E75319324C05}.Release|x64.Build.0 = Release|x64
+		{08C83E6D-68F7-4409-A377-452517BCF618}.Debug|x64.ActiveCfg = Debug|x64
+		{08C83E6D-68F7-4409-A377-452517BCF618}.Debug|x64.Build.0 = Debug|x64
+		{08C83E6D-68F7-4409-A377-452517BCF618}.Release|x64.ActiveCfg = Release|x64
+		{08C83E6D-68F7-4409-A377-452517BCF618}.Release|x64.Build.0 = Release|x64
+		{AD507425-E603-4FF6-AD5B-5CE380A61CFB}.Debug|x64.ActiveCfg = Debug|x64
+		{AD507425-E603-4FF6-AD5B-5CE380A61CFB}.Debug|x64.Build.0 = Debug|x64
+		{AD507425-E603-4FF6-AD5B-5CE380A61CFB}.Release|x64.ActiveCfg = Release|x64
+		{AD507425-E603-4FF6-AD5B-5CE380A61CFB}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

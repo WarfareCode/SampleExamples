@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SharedResources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/SharedResources/ThirdParty/jsyntaxpane-0.9.4/jsyntaxpane-0.9.4.jar"/>
+	<classpathentry kind="lib" path="/SharedResources/ThirdParty/jfreechart-1.0.14/lib/jfreechart-1.0.14.jar"/>
+	<classpathentry kind="lib" path="/SharedResources/ThirdParty/jfreechart-1.0.14/lib/jcommon-1.0.17.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CustomApp_JavaFX_STK"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CustomApp_Swing_STK"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

@@ -1,0 +1,78 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8A8A7DD-5072-488A-B6D7-E0E383F3B3BF}"
+	ProjectSection(SolutionItems) = preProject
+		WSC\example1Hpop.m = WSC\example1Hpop.m
+		Hpop Plugins.xml = Hpop Plugins.xml
+		WSC\JScript.Example1.Hpop.js = WSC\JScript.Example1.Hpop.js
+		WSC\JScript.Example1.Hpop.wsc = WSC\JScript.Example1.Hpop.wsc
+		WSC\Matlab.Example1.Hpop.vbs = WSC\Matlab.Example1.Hpop.vbs
+		WSC\Matlab.Example1.Hpop.wsc = WSC\Matlab.Example1.Hpop.wsc
+		WSC\MyPlugin.Hpop.JScript.js = WSC\MyPlugin.Hpop.JScript.js
+		WSC\MyPlugin.Hpop.Perl.pl = WSC\MyPlugin.Hpop.Perl.pl
+		WSC\MyPlugin.Hpop.VBScript.vbs = WSC\MyPlugin.Hpop.VBScript.vbs
+		WSC\MyPlugin.Hpop.wsc = WSC\MyPlugin.Hpop.wsc
+		WSC\Perl.Example1.Hpop.pl = WSC\Perl.Example1.Hpop.pl
+		WSC\Perl.Example1.Hpop.wsc = WSC\Perl.Example1.Hpop.wsc
+		WSC\Perl.SRPExample1.Hpop.pl = WSC\Perl.SRPExample1.Hpop.pl
+		WSC\Perl.SRPExample1.Hpop.wsc = WSC\Perl.SRPExample1.Hpop.wsc
+		WSC\ReadMe.txt = WSC\ReadMe.txt
+		WSC\VBScript.Example1.Hpop.vbs = WSC\VBScript.Example1.Hpop.vbs
+		WSC\VBScript.Example1.Hpop.wsc = WSC\VBScript.Example1.Hpop.wsc
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.As.Hpop.Plugin.CSharp.Examples_VS2017", "CSharp\Gen\Agi.As.Hpop.Plugin.CSharp.Examples_VS2017.csproj", "{DF20B59E-6751-4697-B32A-400981B887B6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.As.Hpop.Plugins.CPP.Examples", "CPP\Gen\Agi.As.Hpop.Plugins.CPP.Examples_VS2017.vcxproj", "{E0E0A8AD-35D0-45B2-9C57-A224A8FC18CC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.As.Hpop.FrcMdl.Plugin.VB_NET.Examples_VS2017", "VB.NET\Gen\Agi.As.Hpop.FrcMdl.Plugin.VB_NET.Examples_VS2017.vbproj", "{ACC47301-800C-4EAB-894E-99B596A3E1EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.As.Hpop.FrcMdl.Srp.Plugin.CSharp.Examples_VS2017", "CSharp\Srp\Agi.As.Hpop.FrcMdl.Srp.Plugin.CSharp.Examples_VS2017.csproj", "{FCF63D72-EC28-496F-9727-BBDF94C17A47}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Agi.As.Hpop.FrcMdl.Srp.Plugin.VB_NET.Examples_VS2017", "VB.NET\Srp\Agi.As.Hpop.FrcMdl.Srp.Plugin.VB_NET.Examples_VS2017.vbproj", "{1D720CAC-4515-4605-8D27-133C0A212D6B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyPlugin", "CPP\MyPlugin\MyPlugin_VS2017.vcxproj", "{A8F7C207-0D07-4FF9-8BC7-FF430CB2400B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AGI.HPOP.MyPlugin_VS2017", "CSharp\MyPlugin\AGI.HPOP.MyPlugin_VS2017.csproj", "{3D05EE3B-3808-4969-AD3E-A76346EFB757}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF20B59E-6751-4697-B32A-400981B887B6}.Debug|x64.ActiveCfg = Debug|x64
+		{DF20B59E-6751-4697-B32A-400981B887B6}.Debug|x64.Build.0 = Debug|x64
+		{DF20B59E-6751-4697-B32A-400981B887B6}.Release|x64.ActiveCfg = Release|x64
+		{DF20B59E-6751-4697-B32A-400981B887B6}.Release|x64.Build.0 = Release|x64
+		{E0E0A8AD-35D0-45B2-9C57-A224A8FC18CC}.Debug|x64.ActiveCfg = Debug|x64
+		{E0E0A8AD-35D0-45B2-9C57-A224A8FC18CC}.Debug|x64.Build.0 = Debug|x64
+		{E0E0A8AD-35D0-45B2-9C57-A224A8FC18CC}.Release|x64.ActiveCfg = Release|x64
+		{E0E0A8AD-35D0-45B2-9C57-A224A8FC18CC}.Release|x64.Build.0 = Release|x64
+		{ACC47301-800C-4EAB-894E-99B596A3E1EF}.Debug|x64.ActiveCfg = Debug|x64
+		{ACC47301-800C-4EAB-894E-99B596A3E1EF}.Debug|x64.Build.0 = Debug|x64
+		{ACC47301-800C-4EAB-894E-99B596A3E1EF}.Release|x64.ActiveCfg = Release|x64
+		{ACC47301-800C-4EAB-894E-99B596A3E1EF}.Release|x64.Build.0 = Release|x64
+		{FCF63D72-EC28-496F-9727-BBDF94C17A47}.Debug|x64.ActiveCfg = Debug|x64
+		{FCF63D72-EC28-496F-9727-BBDF94C17A47}.Debug|x64.Build.0 = Debug|x64
+		{FCF63D72-EC28-496F-9727-BBDF94C17A47}.Release|x64.ActiveCfg = Release|x64
+		{FCF63D72-EC28-496F-9727-BBDF94C17A47}.Release|x64.Build.0 = Release|x64
+		{1D720CAC-4515-4605-8D27-133C0A212D6B}.Debug|x64.ActiveCfg = Debug|x64
+		{1D720CAC-4515-4605-8D27-133C0A212D6B}.Debug|x64.Build.0 = Debug|x64
+		{1D720CAC-4515-4605-8D27-133C0A212D6B}.Release|x64.ActiveCfg = Release|x64
+		{1D720CAC-4515-4605-8D27-133C0A212D6B}.Release|x64.Build.0 = Release|x64
+		{A8F7C207-0D07-4FF9-8BC7-FF430CB2400B}.Debug|x64.ActiveCfg = Debug|x64
+		{A8F7C207-0D07-4FF9-8BC7-FF430CB2400B}.Debug|x64.Build.0 = Debug|x64
+		{A8F7C207-0D07-4FF9-8BC7-FF430CB2400B}.Release|x64.ActiveCfg = Release|x64
+		{A8F7C207-0D07-4FF9-8BC7-FF430CB2400B}.Release|x64.Build.0 = Release|x64
+		{3D05EE3B-3808-4969-AD3E-A76346EFB757}.Debug|x64.ActiveCfg = Debug|x64
+		{3D05EE3B-3808-4969-AD3E-A76346EFB757}.Debug|x64.Build.0 = Debug|x64
+		{3D05EE3B-3808-4969-AD3E-A76346EFB757}.Release|x64.ActiveCfg = Release|x64
+		{3D05EE3B-3808-4969-AD3E-A76346EFB757}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

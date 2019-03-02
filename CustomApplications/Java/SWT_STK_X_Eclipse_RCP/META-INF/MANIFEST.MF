@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CustomApp_SWT_STK_X_Eclipse_RCP
+Bundle-SymbolicName: CustomApp_SWT_STK_X_Eclipse_RCP; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: main.MainActivator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ lib/agi.core.jar,
+ lib/agi.core.swt.jar,
+ lib/agi.jar,
+ lib/agi.stk.javadocs.jar,
+ lib/agi.stkengine.jar,
+ lib/agi.stkgraphics.jar,
+ lib/agi.stkobjects.astrogator.jar,
+ lib/agi.stkobjects.jar,
+ lib/agi.stkutil.jar,
+ lib/agi.stkvgt.jar,
+ lib/agi.stkx.initialization.jar,
+ lib/agi.stkx.jar,
+ lib/agi.stkx.swt.jar,
+ lib/agi.swt.jar
+Bundle-Vendor: Analytical Graphics, Inc.
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: agi.stkengine,
+ agi.stkgraphics,
+ agi.stkobjects,
+ agi.stkobjects.astrogator,
+ agi.stkutil,
+ agi.stkvgt,
+ agi.stkx,
+ agi.stkx.initialization,
+ agi.stkx.swt,
+ agi.swt,
+ main

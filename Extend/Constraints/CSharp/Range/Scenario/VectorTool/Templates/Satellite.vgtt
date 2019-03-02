@@ -1,0 +1,582 @@
+stk.v.7.0
+BEGIN	AXES
+	Type	AXES_GENALIGNED
+	Name	2-Vector_User_Defined
+	Description	Coordinate System defined by Two vectors
+		Alignment
+			1.00000000000000e+000
+			0.00000000000000e+000
+			0.00000000000000e+000
+			AlignmentUiSequence		321
+			AlignmentUiCoordType		4
+		AlignmentReference
+	BEGIN	VECTOR
+		Type	VECTOR_LINKTO
+		Name	Displacement
+	END	VECTOR
+		AlignmentLimit		0.0000000000000e+000
+		Constraint
+			0.00000000000000e+000
+			1.00000000000000e+000
+			0.00000000000000e+000
+			ConstraintUiSequence		321
+			ConstraintUiCoordType		4
+		ConstraintReference
+	BEGIN	VECTOR
+		Type	VECTOR_LINKTO
+		Name	User_Defined
+		AbsolutePath	CentralBody/Earth
+	END	VECTOR
+		ConstraintLimit		0.0000000000000e+000
+		BodySpin   Yes
+		UniDirConstraint   No
+		LabelX	
+		LabelY	
+		LabelZ	
+END	AXES
+BEGIN	AXES
+	Type	AXES_LINKTO
+	Name	Body
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Earth_LVLH
+	Description	LVLH (Local-Vertical Local-Horizontal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Earth
+			END	SYSTEM
+		TrajAxesType	13
+		LabelX	Position
+		LabelY	InTrack
+		LabelZ	Normal
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Earth_VNC
+	Description	VNC (Velocity Normal Co-Normal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Earth
+			END	SYSTEM
+		TrajAxesType	11
+		LabelX	Velocity
+		LabelY	Normal
+		LabelZ	Co-Normal
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Earth_VVLH
+	Description	VVLH (Vehicle Velocity Local Horizontal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Earth
+			END	SYSTEM
+		TrajAxesType	14
+		LabelX	InTrack
+		LabelY	Anti-Normal
+		LabelZ	Nadir
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Mars_VNC
+	Description	VNC (Velocity Normal Co-Normal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Mars
+			END	SYSTEM
+		TrajAxesType	11
+		LabelX	Velocity
+		LabelY	Normal
+		LabelZ	Co-Normal
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Moon_VNC
+	Description	VNC (Velocity Normal Co-Normal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Moon
+			END	SYSTEM
+		TrajAxesType	11
+		LabelX	Velocity
+		LabelY	Normal
+		LabelZ	Co-Normal
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Sun_VNC
+	Description	VNC (Velocity Normal Co-Normal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Sun
+			END	SYSTEM
+		TrajAxesType	11
+		LabelX	Velocity
+		LabelY	Normal
+		LabelZ	Co-Normal
+END	AXES
+BEGIN	AXES
+	Type	AXES_TRAJECTORY
+	Name	Venus_VNC
+	Description	VNC (Velocity Normal Co-Normal)
+		TrajPoint
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		ReferenceSystem
+			BEGIN	SYSTEM
+				Type	SYSTEM_LINKTO
+				Name	Centered_Inertial
+				AbsolutePath	CentralBody/Venus
+			END	SYSTEM
+		TrajAxesType	11
+		LabelX	Velocity
+		LabelY	Normal
+		LabelZ	Co-Normal
+END	AXES
+BEGIN	POINT
+	Type	POINT_LINKTO
+	Name	Center
+END	POINT
+BEGIN	VECTOR
+	Type	VECTOR_CROSS
+	Name	Cross_Product
+	Description	Cross Product of Vectors
+		From
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Displacement
+			END	VECTOR
+		To
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	User_Defined
+				AbsolutePath	CentralBody/Earth
+			END	VECTOR
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Displacement
+	Description	User Defined Two-point Displacement Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	SSBarycenter
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Earth
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_CROSS
+	Name	Earth_Orbit_Angular_Momentum
+	Description	The angular momentum of the orbit of the Earth as defined by the referenced position and velocity vectors
+		From
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Earth_Position
+			END	VECTOR
+		To
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Earth_Velocity
+				AbsolutePath	CentralBody/Earth
+			END	VECTOR
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Earth_Position
+	Description	User Defined Two-point Displacement Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	SSBarycenter
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Earth
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Nadir_in_Fixed
+	Description	Vehicle Nadir Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Earth
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Nadir_in_Inertial
+	Description	Vehicle Nadir Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Earth
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Nadir_in_Moon_Centered_Inertial
+	Description	Vehicle Nadir Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Moon
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_CROSS
+	Name	Orb_Ang_Momentum_in_Fixed
+	Description	Vehicle Orbit Ang Momentum Vector
+		From
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Earth_Centered_Fixed
+			END	VECTOR
+		To
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Velocity_in_Earth_Centered_Fixed
+			END	VECTOR
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_CROSS
+	Name	Orb_Ang_Momentum_in_Inertial
+	Description	Vehicle Orbit Ang Momentum Vector
+		From
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Earth_Centered_Mean_J2000
+			END	VECTOR
+		To
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Velocity_in_Earth_Centered_Mean_J2000
+			END	VECTOR
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_CROSS
+	Name	Orbit_Ang_Momentum_in_Moon_Centered_Inertial
+	Description	Vehicle Orbit Ang Momentum Vector
+		From
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Moon_Centered_Inertial
+			END	VECTOR
+		To
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Velocity_in_Moon_Centered_Inertial
+			END	VECTOR
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Position_Fixed
+	Description	Vehicle Position Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Earth
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Position_Inertial
+	Description	Vehicle Position Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Earth
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Position_in_Mars_Centered_Inertial
+	Description	Vehicle Position Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Mars
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Position_in_Moon_Centered_Inertial
+	Description	Vehicle Position Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Moon
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Position_in_Sun_Centered_Inertial
+	Description	Vehicle Position Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Sun
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DISP
+	Name	Position_in_Venus_Centered_Inertial
+	Description	Vehicle Position Vector
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+				AbsolutePath	CentralBody/Venus
+			END	POINT
+		Destination
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Apparent	No
+		TimeConvergence	1.0000000000000000e-003
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_SCALED
+	Name	Unit_Vector
+	Description	Unit Vector along Given Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Displacement
+			END	VECTOR
+		ScaleFactor	1.00000000000000e+000
+		Normalize	Yes
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DERIVATIVE
+	Name	Velocity_Fixed
+	Description	Vehicle Velocity Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Earth_Centered_Fixed
+			END	VECTOR
+		ReferenceAxes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Fixed
+				AbsolutePath	CentralBody/Earth
+			END	AXES
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DERIVATIVE
+	Name	Velocity_Inertial
+	Description	Vehicle Velocity Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Earth_Centered_Mean_J2000
+			END	VECTOR
+		ReferenceAxes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Inertial
+				AbsolutePath	CentralBody/Earth
+			END	AXES
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DERIVATIVE
+	Name	Velocity_in_Mars_Centered_Inertial
+	Description	Vehicle Velocity Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Mars_Centered_Inertial
+			END	VECTOR
+		ReferenceAxes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Inertial
+				AbsolutePath	CentralBody/Mars
+			END	AXES
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DERIVATIVE
+	Name	Velocity_in_Moon_Centered_Inertial
+	Description	Vehicle Velocity Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Moon_Centered_Inertial
+			END	VECTOR
+		ReferenceAxes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Inertial
+				AbsolutePath	CentralBody/Moon
+			END	AXES
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DERIVATIVE
+	Name	Velocity_in_Sun_Centered_Inertial
+	Description	Vehicle Velocity Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Sun_Centered_Inertial
+			END	VECTOR
+		ReferenceAxes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Inertial
+				AbsolutePath	CentralBody/Sun
+			END	AXES
+END	VECTOR
+BEGIN	VECTOR
+	Type	VECTOR_DERIVATIVE
+	Name	Velocity_in_Venus_Centered_Inertial
+	Description	Vehicle Velocity Vector
+		Vector
+			BEGIN	VECTOR
+				Type	VECTOR_LINKTO
+				Name	Position_in_Venus_Centered_Inertial
+			END	VECTOR
+		ReferenceAxes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Inertial
+				AbsolutePath	CentralBody/Venus
+			END	AXES
+END	VECTOR
+BEGIN	SYSTEM
+	Type	SYSTEM_ASSEMBLED
+	Name	Vehicle_Body
+	Description	User Assembled Coordinate System
+		Origin
+			BEGIN	POINT
+				Type	POINT_LINKTO
+				Name	Center
+			END	POINT
+		Axes
+			BEGIN	AXES
+				Type	AXES_LINKTO
+				Name	Body
+			END	AXES
+END	SYSTEM

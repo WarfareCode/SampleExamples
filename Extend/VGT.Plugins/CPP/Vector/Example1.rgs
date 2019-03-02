@@ -1,0 +1,27 @@
+HKCR
+{
+	Agi.VGT.Vector.Plugin.Examples.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{BD2CB800-085E-4AFE-B705-CBB6B00C202E}'
+	}
+	Agi.VGT.Vector.Plugin.Examples.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{BD2CB800-085E-4AFE-B705-CBB6B00C202E}'
+		CurVer = s 'Agi.VGT.Vector.Plugin.Examples.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BD2CB800-085E-4AFE-B705-CBB6B00C202E} = s 'Example1 Class'
+		{
+			ProgID = s 'Agi.VGT.Vector.Plugin.Examples.CPP.Example1.1'
+			VersionIndependentProgID = s 'Agi.VGT.Vector.Plugin.Examples.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{0BEA0EB7-65BA-47B9-8B85-7E70F0553D56}'
+		}
+	}
+}

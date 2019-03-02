@@ -1,0 +1,50 @@
+/**********************************************************************/
+/*           Copyright 2012, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(782D2610-4757-45D8-9462-71F98FE555B4),
+	helpstring("CPP VGT Calc Scalar Plugin Example1 Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IExample1 : IDispatch
+{
+	[propget, id(1), helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+}
+
+[
+	uuid(CB27E00F-3EBA-432C-9802-DAF5FE6794E8),
+	helpstring("AgiVGTPointPluginCPPExample 11"), // "Type Library"
+	custom(F1920169-22E1-45e9-8849-CC29BBBFDD74, "Agi.VGT.Point.Plugin.Examples.CPP.Example"),
+	version(1.0),
+	hidden
+]
+library AgiVGTPointPluginCPPExampleLib
+{
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(AA7DB5F4-A155-46E9-8DF5-EA61A4FD85D2),
+		helpstring("Example1 Class")
+	]
+	coclass Example1
+	{
+		[default] interface IExample1;
+		interface IAgUtPluginConfig;
+		interface IAgCrdnPointPlugin;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2012, Analytical Graphics, Inc.                */
+/**********************************************************************/

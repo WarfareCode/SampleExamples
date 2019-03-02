@@ -1,0 +1,132 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN CoverageDefinition
+
+Name        radar_coverage
+
+BEGIN GridDefinition
+
+    VersionIndicator     20080103
+    Begin                CustomRegions
+        AreaTarget    AreaTarget/saudi_arabia
+        CheckForHoles		No
+    End                  CustomRegions
+    LatResolution        5.000000000000000e-001
+    LonResolution        5.000000000000000e-001
+    UsePolarRegions        No
+    GridClass            Radar
+    SeedInstance         Facility/ar_riyad/Sensor/tracking/Radar/thaad_radar
+    UseCopyOfSeed        Yes
+    PointLocationMethod  EqualArea
+    CustomPtAltMethod    ValueFromFile
+    CentralBody          Earth
+    GroundAltMethod      Altitude
+    GroundAlt            0.000000
+    AltitudeMethod       Altitude
+    Begin AltitudeList
+        0.000000
+    End AltitudeList
+
+END GridDefinition
+
+BEGIN AccessDefinition
+
+    DataRetention        AllData
+    Convergence          0.050000
+    AbsValueConvergence  1.000000e-014
+    RelValueConvergence  1.000000e-008
+    MaxTimeStep          360.000000
+    MinTimeStep          1.000000e-002
+    UseLightTimeDelay    No
+    TimeSense            PerAsset
+    DetectEventsUsingSamplesOnly No
+    AutoRecompute        No
+    UseAllAssetAccess        No
+    AssetSatisType           AtLeast
+    AssetSatisThreshold      1
+    AccessSaveMode       SaveWith
+    RegionAccessAccel    Auto
+
+END AccessDefinition
+
+BEGIN AssetList
+
+    Missile/scud   Active 
+    Required No
+
+END AssetList
+
+BEGIN Interval
+
+    AccStart             1 Jul 1998 00:00:00.000000000
+    AccStop              1 Jul 1998 00:05:46.000000000
+    UseScenarioInterval       No
+    AccIntervalPtr
+	BEGIN	EVENTINTERVAL
+			BEGIN Interval
+				Start	1 Jul 1998 00:00:00.000000000
+				Stop	1 Jul 1998 00:05:46.000000000
+			END Interval
+			IntervalState	Explicit
+	END	EVENTINTERVAL
+
+
+END Interval
+
+Begin SavedAccesses
+    FileName: radar_coverage.cva
+End SavedAccesses
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+BEGIN Attributes
+
+    GridMarkerStyle          1
+    GridColor                #00ffff
+    ProgressColor            #ffffff
+    SatisfactionColor        #4169e1
+    GridTranslucency         0.500000
+    SatisfactionTranslucency 0.700000
+
+END Attributes
+
+BEGIN Graphics
+
+    Show                 Yes
+    ShowGrid             Yes
+    ShowRegions          Yes
+    ShowRegionsText      Yes
+    ShowPoints           No
+    FillPoints           No
+    ShowProgress         No
+    ShowSatisfaction     No
+
+END Graphics
+    END Graphics
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+BEGIN SubObjects
+
+Class FigureOfMerit
+
+	coverage_time
+
+END Class
+
+END SubObjects
+
+END CoverageDefinition
+

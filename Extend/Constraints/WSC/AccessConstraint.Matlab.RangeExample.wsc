@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!-- ===================================================== -->
+<!--  Copyright 2007, Analytical Graphics, Inc.            -->
+<!-- ===================================================== -->
+
+<!--
+	NOTE: There are special things which must be done to 
+	efficiently use MATLAB in an Access Constraint plugin,
+	because the Constraint may go through the Init()/Free()
+	lifecycle many times. Currently, our experience is that
+	MATLAB will be closed once the plugin is freed, UNLESS
+	the user Connects to MATLAB from STK. To do so, go to
+	Edit->Preferences, select MATLAB and hit the Open MATLAB button. By
+	doing this, STK will open MATLAB and keep a reference
+	to it, preventing it from being closed by the plugin being
+	freed.
+-->
+
+<component>
+	<?component error="true" debug="true"?>
+	<registration
+		classid="{1C5AFA87-4220-4f54-A961-C84A16C04DA8}"
+		progid="AGI.Access.Constraint.Plugin.Examples.Matlab.RangeExample"
+		description="AGI.Access.Constraint.Plugin.Examples.Matlab.RangeExample"
+		version="1.00"
+	>
+	</registration>
+	<public>
+	
+		<!-- ========== -->
+		<!-- Properties -->
+		<!-- ========== -->
+		
+		<property name="DisplayName" get="GetDisplayName"/>
+
+		<!-- ======= -->
+		<!-- Methods -->
+		<!-- ======= -->
+		
+		<method name="Register">
+			<parameter name="AgAccessConstraintPluginResultRegister"/>
+		</method>
+		<method name="Init">
+			<parameter name="AgStkPluginSite"/>
+		</method>
+		<method name="PreCompute">
+			<parameter name="AgAccessConstraintPluginResultPreCompute"/>
+		</method>
+		<method name="Evaluate">
+			<parameter name="AgAccessConstraintPluginResultEval"/>
+			<parameter name="AgAccessConstraintPluginObjectData"/>
+			<parameter name="AgAccessConstraintPluginObjectData"/>
+		</method>
+		<method name="PostCompute">
+			<parameter name="AgAccessConstraintPluginResultPostCompute"/>
+		</method>
+		<method name="Free"/>
+	</public>
+
+	<!-- NOTE:  The method for using Matlab here is NOT to have Matlab
+				itself create a COM component. Instead, we're using
+				a JScript based COM component to implement the plugin.
+				
+				BUT... the JScript code will get a handle to Matlab
+				using COM, and will use Matlab's COM-available functions
+				to set inputs into Matlab, execute an m-file, 
+				and get output results from Matlab.  These are then passed
+				on through the JScript plugin
+				
+				BUT... we cannot get the matlab function evaluation call
+				(Feval) to work correctly by returning data when using JScript.
+				So, to actually compute the script, we use a VBScript function,
+				called from the JScript code. [And, yes, this *is* complicated!]
+	-->
+	
+	<script language="VBScript">
+		<![CDATA[
+		Function ExecuteMatlabFunction(ByRef m_MatlabApp, m_mFilename, numOutArgs, ByVal argArray)
+			
+			Dim vbArray
+			Dim argName
+						
+			Dim quote
+			quote = Chr(34)
+					
+			Dim execStr
+			execStr = "Call m_MatlabApp.Feval(m_mFilename, " & numOutArgs & ", vbArray"
+			
+			For Each argName In argArray
+			
+				execStr =  execStr & ", " & quote & argName & "=" & quote
+			
+			Next
+			
+			execStr =  execStr & ")"
+			
+			Execute(execStr)
+	
+			ExecuteMatlabFunction = vbArray
+	
+		End Function
+		]]>
+	</script>
+
+	<script language="JScript" src="AccessConstraint.Matlab.RangeExample.js"/>
+	
+</component>
+
+<!-- ===================================================== -->
+<!--  Copyright 2007, Analytical Graphics, Inc.            -->
+<!-- ===================================================== -->

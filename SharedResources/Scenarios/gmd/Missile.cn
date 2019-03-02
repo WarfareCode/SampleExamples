@@ -1,0 +1,40 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Constellation
+
+Name  Missile
+BEGIN Definition
+
+   Type        Constellation
+   Operator    Or
+   Order       1
+   IsRelay     No
+    Object  Missile/TH1_MSL1
+    Object  Missile/TH1_MSL2
+    Object  Missile/TH1_MSL3
+    Object  Missile/TH1_PBV3
+    Object  Missile/TH1_RV1
+    Object  Missile/TH1_RV2
+    Object  Missile/TH1_RV3
+    Object  Missile/TH1_SRD1
+    Object  Missile/TH1_STG1
+    Object  Missile/TH1_STG2
+    Object  Missile/TH1_STG3
+    Object  Missile/TH1_l2i
+   SaveMode    0
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+
+END Extensions
+
+END Constellation

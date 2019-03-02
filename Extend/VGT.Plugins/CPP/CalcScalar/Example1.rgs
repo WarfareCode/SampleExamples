@@ -1,0 +1,27 @@
+HKCR
+{
+	Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{F00553DD-AD7E-45C4-9E4C-1FE625BD4B7F}'
+	}
+	Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{F00553DD-AD7E-45C4-9E4C-1FE625BD4B7F}'
+		CurVer = s 'Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F00553DD-AD7E-45C4-9E4C-1FE625BD4B7F} = s 'Example1 Class'
+		{
+			ProgID = s 'Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example1.1'
+			VersionIndependentProgID = s 'Agi.VGT.CalcScalar.Plugin.Examples.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{F2FC70B3-3DCD-4D52-92D9-09A564D33650}'
+		}
+	}
+}

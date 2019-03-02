@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SharedResources_common">
+	<property environment="env" />
+
+	<condition property="stk.install.dir" value="${env.STK_INSTALL_DIR}">
+		<isset property="env.STK_INSTALL_DIR" />
+	</condition>
+
+	<fail message="STK install directory not configured. Either set an Ant property stk.install.dir, or set an environment variable STK_INSTALL_DIR to locate the STK install directory.">
+		<condition>
+			<not>
+				<isset property="stk.install.dir" />
+			</not>
+		</condition>
+	</fail>
+
+	<condition property="stk.config.dir" value="${env.STK_CONFIG_DIR}">
+		<isset property="env.STK_CONFIG_DIR" />
+	</condition>
+
+	<fail message="STK config directory not configured. Either set an Ant property stk.config.dir, or set an environment variable STK_CONFIG_DIR to locate the STK config directory.">
+		<condition>
+			<and>
+				<os family="unix" />
+				<not>
+					<isset property="stk.config.dir" />
+				</not>
+			</and>
+		</condition>
+	</fail>
+
+	<property name="stk.bin.dir" location="${stk.install.dir}/bin" />
+	<property name="classes.dir" location="classes" />
+
+	<!-- paths will be overridden by individual project build files -->
+	<path id="build.sourcepath" />
+	<path id="build.dependentprojects" />
+	<path id="build.classpath" />
+	<path id="build.resourcepath" />
+
+	<target name="-check-for-dependent-projects">
+		<pathconvert property="build.dependentprojects.list" setonempty="false" refid="build.dependentprojects" />
+	</target>
+
+	<target name="-clean-dependent-projects" depends="-check-for-dependent-projects" if="build.dependentprojects.list">
+		<subant target="clean" failonerror="true" inheritall="false" inheritrefs="false">
+			<path refid="build.dependentprojects" />
+		</subant>
+	</target>
+
+	<target name="clean" depends="-clean-dependent-projects" description="Clean all generated output.">
+		<delete dir="${classes.dir}" />
+	</target>
+
+	<target name="-compile-dependent-projects" depends="-check-for-dependent-projects" if="build.dependentprojects.list">
+		<subant target="compile" failonerror="true" inheritall="false" inheritrefs="false">
+			<path refid="build.dependentprojects" />
+		</subant>
+	</target>
+
+	<target name="compile" depends="-compile-dependent-projects" description="Compile source code.">
+		<mkdir dir="${classes.dir}" />
+
+		<javac destdir="${classes.dir}" classpathref="build.classpath" includeantruntime="no" deprecation="yes" debug="yes" debuglevel="lines,vars,source">
+			<src refid="build.sourcepath" />
+		</javac>
+
+		<pathconvert property="src.path.list" refid="build.sourcepath" pathsep="," />
+
+		<copy todir="${classes.dir}">
+			<path refid="build.resourcepath" />
+		</copy>
+	</target>
+
+	<target name="-checkClassname">
+		<fail message="main.classname not set!">
+			<condition>
+				<not>
+					<isset property="main.classname" />
+				</not>
+			</condition>
+		</fail>
+	</target>
+
+	<condition property="should.run.windows">
+		<os family="windows" />
+	</condition>
+
+	<condition property="should.run.unix">
+		<os family="unix" />
+	</condition>
+
+	<target name="-runWindows" if="should.run.windows">
+		<java fork="true" classname="${main.classname}">
+			<classpath>
+				<path refid="build.classpath" />
+				<pathelement location="${classes.dir}" />
+			</classpath>
+			<sysproperty key="java.library.path" path="${stk.bin.dir};${java.library.path}" />
+		</java>
+	</target>
+
+	<target name="-runUnix" if="should.run.unix">
+		<condition property="ld.library.path" value="${stk.bin.dir};${env.LD_LIBRARY_PATH}" else="${stk.bin.dir}">
+			<isset property="env.LD_LIBRARY_PATH" />
+		</condition>
+
+		<java fork="true" classname="${main.classname}">
+			<classpath>
+				<path refid="build.classpath" />
+				<pathelement location="${classes.dir}" />
+			</classpath>
+			<env key="STK_INSTALL_DIR" value="${stk.install.dir}" />
+			<env key="STK_CONFIG_DIR" value="${stk.config.dir}" />
+			<env key="LD_LIBRARY_PATH" value="${ld.library.path}" />
+			<sysproperty key="java.library.path" path="${stk.bin.dir};${java.library.path}" />
+		</java>
+	</target>
+
+	<target name="run" depends="compile,-checkClassname,-runWindows,-runUnix" description="Build and run the demo application." />
+</project>

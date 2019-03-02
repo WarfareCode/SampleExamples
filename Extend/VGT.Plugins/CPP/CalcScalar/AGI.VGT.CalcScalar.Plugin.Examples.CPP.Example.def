@@ -1,0 +1,16 @@
+;**********************************************************************
+;*           Copyright 2012, Analytical Graphics, Inc.                *
+;**********************************************************************
+; AGI.VGT.CalcScalar.Plugin.Examples.CPP.Example.def : Declares the module parameters.
+
+LIBRARY      "AGI.VGT.CalcScalar.Plugin.Examples.CPP.Example.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	
+;**********************************************************************
+;*           Copyright 2012, Analytical Graphics, Inc.                *
+;**********************************************************************

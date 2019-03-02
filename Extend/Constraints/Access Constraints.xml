@@ -1,0 +1,65 @@
+<?xml version = "1.0"?>
+
+<!--
+      AGI Registry File for COM Servers. 
+-->
+
+<AGIRegistry version = "1.0">
+
+	<CategoryRegistry>
+		
+		<Category Name = "Access Constraint Plugins">
+				
+			<!-- This tag to the left indicates the start of a comment block
+
+				Register your plugins with those below. Use the following format:
+
+				<Plugin ProgID = "YOUR_PROGID_GOES_HERE"/>
+
+				The tag below indicates the end of the comment block 
+			-->
+			
+			<!-- NOTE: The xml reader is case sensitive, so while the keyword ProgID is valid, 
+			           ProgId is invalid because of the 'd' not being capitalized. 
+			           Any improper keyword casing violation will cause the plugin to 
+			           not be registered.
+			-->
+
+            <!-- This section is a comment block.
+			
+			The following Plugin tags register each Plugin component as an Access Constraint Plugin. 
+			
+			To enable one of the sample plugins in STK, simply build the component (if necessary), 
+			register it in the Windows Registry, and move the registration line below 
+			outside of this comment block.
+		
+			<Plugin ProgID = "AGI.Access.Constraint.Plugin.Examples.CPP.RangeExample"/>
+			<Plugin ProgID = "AGI.Access.Constraint.Plugin.Examples.Matlab.RangeExample"/>
+			<Plugin ProgID = "AGI.Access.Constraint.Plugin.Examples.JScript.RangeExample"/>
+			<Plugin ProgID = "AGI.Access.Constraint.Plugin.Examples.CSharp.RangeExample"/>
+			<Plugin ProgID = "AGI.Access.Constraint.Plugin.Examples.VB_NET.RangeExample"/>
+			<Plugin ProgID = "AGI.Access.Constraint.Plugin.Examples.CSharp.NIIRS"/>
+
+			If Windows 32 bit OS (only x86 JRE) then use ...
+			NOTE: You must edit the classpath to the provide compile path of the plugin samples, it may not be the default installed location.
+			<JavaPlugin DisplayName="Java.Config" ClassName="agi.stk.plugin.accessconstraints.config.JavaExample" ClassPath="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Constraints\Java\Config\classes;C:\Program Files\AGI\STK 11\CodeSamples\Extend\Constraints\Java\Common\classes"/>
+			<JavaPlugin DisplayName="Java.NIIRS" ClassName="agi.stk.plugin.accessconstraints.niirs.JavaExample" ClassPath="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Constraints\Java\NIIRS\classes"/>
+			<JavaPlugin DisplayName="Java.Range" ClassName="agi.stk.plugin.accessconstraints.range.JavaExample" ClassPath="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Constraints\Java\Range\classes"/>
+
+			If Windows 64 bit OS (regardless of x86 JRE OR x64 JRE), then use ...
+			NOTE: You must edit the classpath to the provide compile path of the plugin samples, it may not be the default installed location.
+			<JavaPlugin DisplayName="Java.Config" ClassName="agi.stk.plugin.accessconstraints.config.JavaExample" ClassPath="C:\Program Files (x86)\AGI\STK 11\CodeSamples\Extend\Constraints\Java\Config\classes;C:\Program Files (x86)\AGI\STK 11\CodeSamples\Extend\Constraints\Java\Common\classes"/>
+			<JavaPlugin DisplayName="Java.NIIRS" ClassName="agi.stk.plugin.accessconstraints.niirs.JavaExample" ClassPath="C:\Program Files (x86)\AGI\STK 11\CodeSamples\Extend\Constraints\Java\NIIRS\classes"/>
+			<JavaPlugin DisplayName="Java.Range" ClassName="agi.stk.plugin.accessconstraints.range.JavaExample" ClassPath="C:\Program Files (x86)\AGI\STK 11\CodeSamples\Extend\Constraints\Java\Range\classes"/>
+
+			If Linux OS, then use ...
+			<JavaPlugin DisplayName="Java.Config" ClassName="agi.stk.plugin.accessconstraints.config.JavaExample" ClassPath="/usr/local/stk11.0.0/CodeSamples/Extend/Constraints/Java/Config/classes;/usr/local/stk11.0.0/CodeSamples/Extend/Constraints/Java/Common/classes"/>
+			<JavaPlugin DisplayName="Java.NIIRS" ClassName="agi.stk.plugin.accessconstraints.niirs.JavaExample" ClassPath="/usr/local/stk11.0.0/CodeSamples/Extend/Constraints/Java/NIIRS/classes"/>
+			<JavaPlugin DisplayName="Java.Range" ClassName="agi.stk.plugin.accessconstraints.range.JavaExample" ClassPath="/usr/local/stk11.0.0/CodeSamples/Extend/Constraints/Java/Range/classes"/>
+             -->
+
+		</Category>
+		
+	</CategoryRegistry>
+
+</AGIRegistry>

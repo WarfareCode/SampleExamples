@@ -1,0 +1,131 @@
+VO_V100
+    Translucency          0.600000
+    IsShowingRadialLines  No
+    RadialLineIncr        4
+    IsShowingBoresight  No
+    IsShowingFill       No
+    FillTranslucency      0.500000
+    FillResolution      4.000000
+    PulseStyle            Sin
+    PulseAmplitude        0.5
+    PulseWavelength       50000
+    PulseFreq             0.333
+    PulseAntiAliased      Yes
+    PulseReversed         No
+    PulseFrameDependent   Yes
+    IsShowingPulse        No
+    TranslucentLines        Yes
+    PersistSpaceProjLines   No
+    PersistPartialCBProjLines  Yes
+    UseConstExtensionLength No
+    ExtensionLength         2970000.000000
+    UseSpaceExtLenTimeList  No
+    UseTgtExtLenTimeList    No
+    TargetExtensionLength   0.000000
+    VolumeSwapDist        -2.5000
+    UseRangeCnstrntMinMax   Yes
+    IsShowingCompleteDome   No
+    Inherit2dProjection   No
+    ShowDomesWith2dProjection   No
+    InheritModelPosOffset Yes
+    UseModelPosOffset     No
+    ModelPosOffset        0.000000 0.000000 0.000000
+    FixVectorAxesScaleToAttSph No
+    Begin GeneralVectorAxes
+        ArrowPointSize          3.00
+        PersistentLineWidth     2.00
+        Scale                   50000.000000
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector No
+            IsCentralBodyFrame No
+            Name "Body"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame No
+            Name "Body"
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #4169e1
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector Yes
+            IsCentralBodyFrame No
+            Name "Up"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame No
+            Name "Body"
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #00ffff
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector Yes
+            IsCentralBodyFrame No
+            Name "Boresight"
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame No
+            Name "Body"
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        UseTrueScale            No
+        Label                   Name
+        DrawAtCentralBody       No
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              #ff0000
+        IntervalType            AlwaysOn
+        AngleUnit               deg
+    End
+    Begin VectorAngle
+        FractionalScale                1.000000
+        SupportingDihedralArcLineWidth 1.00
+        ArcLineWidth                   2.00
+        PixelThreshold                 1.000000
+    End
+    Begin Plane
+    End
+    UseAttachPoint        No
+    SensorRadius          0
+    ShowStarsInFOV            No
+    UseDefStarCollection      Yes
+
+    BEGIN VolumesGfx
+
+	Show       Yes
+
+    END VolumesGfx

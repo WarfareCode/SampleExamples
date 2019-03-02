@@ -1,0 +1,71 @@
+<?xml version = "1.0"?>
+<AGIRegistry version="1.0">
+	<CategoryRegistry>
+		<Category Name="UiPlugins">
+			
+			<!-- This tag to the left indicates the start of a comment block
+						
+				Register your plugins with those below. Use the following format:
+						
+				<Plugin ProgID = "YOUR_PROGID_GOES_HERE" File = "LOCATION_OF_PLUGIN_DLL" DisplayName = ""/>
+							 
+				The tag below indicates the end of the comment block 
+			-->
+						
+			<!-- NOTE: The xml reader is case sensitive, so while the keyword ProgID is valid, 
+				   ProgId is invalid because of the 'd' not being capitalized. 
+				   Any improper keyword casing violation will cause the plugin to 
+				   not be registered.
+			-->
+						
+			<!-- This section is a comment block.
+						
+				The following Plugin tags register each Plugin component as a Ui Plugin. 
+						
+				To enable one of the sample plugins in STK, simply build the component (if necessary), 
+				register it in the Windows Registry, move the registration line below 
+				outside of this comment block, and move this file to <STK Install Area>\Plugins.
+						
+				<UiPlugin ProgID="Agi.Ui.Plugins.VB_Net.Basic" File="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Ui.Plugins\VB.Net\Basic\bin\Debug\Agi.Ui.Plugins.VB_Net.Basic.dll" DisplayName="Basic VBNet Plugin"/>
+	 			<UiPlugin ProgID="Agi.Ui.Plugins.VB_Net.ColorChanger" File="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Ui.Plugins\VB.Net\ColorChanger\bin\Debug\Agi.Ui.Plugins.VB_Net.ColorChanger.dll" DisplayName="Color Changer Plugin"/>
+	 			<UiPlugin ProgID="Agi.Ui.Plugins.CSharp.Basic" File="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Ui.Plugins\CSharp\Basic\bin\Debug\Agi.Ui.Plugins.CSharp.Basic.dll" DisplayName="Basic CSharp Plugin"/>
+	 			<UiPlugin ProgID="Agi.Ui.Plugins.CSharp.GfxAnalysis" File="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Ui.Plugins\CSharp\GfxAnalysis\bin\Debug\Agi.Ui.Plugins.CSharp.GfxAnalysis.dll" DisplayName="Gfx Analysis Plugin">
+	 				<LicenseSet Strict="false" Group="STK">STKProfessional,STKExpert</LicenseSet>
+	 			</UiPlugin>
+				<UiPlugin ProgID="AgUiPluginTutorial11.AgUiPluginCppAddIn" File="AgUiPluginTutorial.dll" DisplayName="C++ Extension DLL"/>
+				<UiPlugin ProgID="AGI.RectangularSensorPlugin" File="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Ui.Plugins\CSharp\RectangularSensorPlugin\bin\Debug\RectangularSensorPlugin.dll" DisplayName="Rectangular Sensor Plugin"/>
+				<UiPlugin ProgID="Agi.Ui.Plugins.CSharp.VgtGridPlugin" File="C:\Program Files\AGI\STK 11\CodeSamples\Extend\Ui.Plugins\CSharp\VgtGridPlugin\bin\Debug\Agi.Ui.Plugins.CSharp.VgtGridPlugin.dll" DisplayName="Vgt Grid Plugin" />
+			-->
+	 		
+		</Category>
+		
+		<Category Name = "GfxPlugins">
+				
+			<!-- This tag to the left indicates the start of a comment block
+
+				Register your plugins with those below. Use the following format:
+
+				<Plugin ProgID="YOUR_PROGID_GOES_HERE" DisplayName="UNIQUE_NAME_USED_IN_OBJECT_MODEL_OR_GUI"/>
+
+				The tag below indicates the end of the comment block 
+			-->
+			
+			<!-- NOTE: The xml reader is case sensitive, so while the keyword ProgID is valid, 
+			           ProgId is invalid because of the 'd' not being capitalized. 
+			           Any improper keyword casing violation will cause the plugin to 
+			           not be registered.
+			-->
+
+			<!-- This section is a comment block.
+			
+				The following Plugin tags register each Plugin component as an Graphics Plugin.
+
+				To enable one of the sample plugins in STK, simply build the component (if necessary), 
+				register it in the Windows Registry, and move the registration line below 
+				outside of this comment block.
+
+				<Plugin ProgID="SensorStreamingPlugin.SensorStreamingPlugin" DisplayName="SensorStreamingPlugin"/>
+			-->
+		</Category>
+	</CategoryRegistry>
+</AGIRegistry>

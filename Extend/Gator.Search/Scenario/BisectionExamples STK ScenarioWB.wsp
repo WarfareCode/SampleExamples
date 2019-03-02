@@ -1,0 +1,55 @@
+[Analytical Graphics, Inc]
+WorkbookVersion=9.0
+Title=BisectionExamples
+Description=
+ApplicationVersion=STK 9.3.0 (Pre-release) Feb 21 2011
+Scenario=YES
+ActiveMDIState=FALSE
+[WorkState_v1_2]
+ptn_Child1=Frames
+[WorkState_v1_2.Frames]
+ptn_Child1=MainFrame
+ptn_Child2=ChildFrames
+[WorkState_v1_2.Frames.MainFrame]
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAPPPPPPPPPPPPPPPPAAAAAAAAAAAAAAAAAAEAAAAAPNCAAAAA
+Title=BisectionExamples - STK 9 Feb 21 2011 - HTML Viewer - Astrogator Search Plugin Example
+[WorkState_v1_2.Frames.ChildFrames]
+ptn_Child1=Document-0
+ptn_Child2=Document-1
+ptn_Child3=Document-2
+[WorkState_v1_2.Frames.ChildFrames.Document-0]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-0.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.Search\Scenario\AgUiDllHtmlViewer9.AgUiPiHtmlViewer.1
+DocumentString=AgUiDllHtmlViewer.AgUiPiHtmlViewer.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPOGAAAAAAECBAAAAAFMDAAAAAJBDAAAAA
+IsActiveChildFrame=True
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-0.ViewFrame-0.AGI Custom Node Data]
+CurrentURL=<LOCAL>\Search_Plugin.htm
+[WorkState_v1_2.Frames.ChildFrames.Document-1]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-1.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.Search\Scenario\AgUi3DGfxView9.AgUiPi3DGfxView.1
+DocumentString=AgUi3DGfxView.AgUiPi3DGfxView.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKAAAAAAADAAAAAAAOCCAAAAABNBAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-1.ViewFrame-0.AGI Custom Node Data]
+MapID=1
+SceneType=1
+[WorkState_v1_2.Frames.ChildFrames.Document-2]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-2.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.Search\Scenario\AgUiAttrBrowser9.AgUiPiAttrBrowser.1
+DocumentString=AgUiAttrBrowser.AgUiPiAttrBrowser.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAAAAAAAAAAAAAAAAHLAAAAAAFFDAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ProfUISBarID=63001
+ptn_Child1=AGI Custom Node Data

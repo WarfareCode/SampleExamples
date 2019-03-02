@@ -1,0 +1,57 @@
+/**********************************************************************/
+/*           Copyright 2009, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(FDC9B6CA-655B-452A-9000-D5B2492AB045),
+	helpstring("C++ EOM Function Plugin Example1 Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IExample1 : IDispatch
+{
+	[propget, id(1), helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+
+	[propget, id(2), helpstring("property DeltaVAxes")] 
+	HRESULT DeltaVAxes([out, retval] BSTR* pVal);
+	
+	[propput, id(2), helpstring("property DeltaVAxes")] 
+	HRESULT DeltaVAxes([in] BSTR newVal);
+}
+
+[
+	uuid(7F37D8E5-DF8C-444C-AFC2-65C8F4B4D072),
+	helpstring("AgiAsEOMFuncPluginCPPExamples 11"), // "Type Library"
+	custom(5DDFA6A2-E00A-46db-B78B-EFD0B5E148D8, "AGI.As.Plugin.Examples.EOMFunc.CPP"),
+	version(1.0),
+	hidden
+]
+library AgiAsEOMFuncPluginCPPExamplesLib
+{
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgAsHpopPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(9ADF6B51-0F7F-4734-9BAC-9D40A4F13485),
+		helpstring("Example1 Class")
+	]
+	coclass Example1
+	{
+		[default] interface IExample1;
+		interface IAgUtPluginConfig;
+		interface IAgAsEOMFuncPlugin;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2009, Analytical Graphics, Inc.                */
+/**********************************************************************/

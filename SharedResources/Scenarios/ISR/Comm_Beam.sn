@@ -1,0 +1,229 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Sensor
+
+    Name            Comm_Beam
+
+BEGIN Pattern
+
+    BEGIN SimpleCone
+
+        ConeAngle              1.000000000000e-001
+        AngularPatternResolution     4.000000000000e+000
+
+    END SimpleCone
+
+    DetailedTerrainHorizon     Yes
+
+
+END Pattern
+
+BEGIN Pointing
+
+    BEGIN Targeted
+
+    TargetMode              Tracking
+    Sequence                323
+    TrackingMode            Both
+    AberrationType           Annual
+    TimeDelayConvergence     5.000000e-005
+    MaxTimeStep              3.600000e+002
+    MinTimeStep              1.000000e-002
+    TimeConvergence          5.000000e-003
+    AbsValueConvergence      1.000000e-014
+    RelValueConvergence      1.000000e-008
+    DetectEventsUsingSamplesOnly No
+
+    BEGIN AssignedTargets
+
+    Facility/KCOIC
+    Facility/Okinawa
+
+    END AssignedTargets
+
+    BEGIN TargetSchedule
+
+    Facility/KCOIC  00186.91925930000000  00186.91947920000000
+    Facility/Okinawa  00186.92222220000000  00186.92244210000000
+
+    END TargetSchedule
+
+    BEGIN TargetInviews
+
+    Facility/Okinawa  2000-07-04T08:20:57.142433969  2000-07-04T08:33:05.328170344
+    Facility/KCOIC  2000-07-04T08:23:14.272307485  2000-07-04T08:36:05.255802484
+    Facility/Okinawa  2000-07-04T09:57:32.180608089  2000-07-04T10:10:20.872937250
+    Facility/KCOIC  2000-07-04T10:00:24.955998393  2000-07-04T10:13:06.721947096
+    Facility/KCOIC  2000-07-04T20:21:38.828535537  2000-07-04T20:30:51.823442417
+    Facility/Okinawa  2000-07-04T20:24:26.623117661  2000-07-04T20:33:59.920804179
+    Facility/KCOIC  2000-07-04T21:57:06.046504536  2000-07-04T22:10:45.287039060
+    Facility/Okinawa  2000-07-04T21:59:49.175983213  2000-07-04T22:13:18.787358710
+    Facility/KCOIC  2000-07-04T23:35:40.916623238  2000-07-04T23:44:53.411049329
+    Facility/Okinawa  2000-07-04T23:40:31.505791950  2000-07-04T23:44:58.488956891
+    Facility/Okinawa  2000-07-05T07:22:14.910778160  2000-07-05T07:26:19.643547088
+    Facility/KCOIC  2000-07-05T07:22:31.756141464  2000-07-05T07:31:11.818815684
+    Facility/Okinawa  2000-07-05T08:53:40.167773292  2000-07-05T09:07:13.083933617
+    Facility/KCOIC  2000-07-05T08:56:17.185165767  2000-07-05T09:09:58.948948834
+    Facility/Okinawa  2000-07-05T10:32:49.929827389  2000-07-05T10:42:42.524100948
+    Facility/KCOIC  2000-07-05T10:35:44.250204317  2000-07-05T10:45:43.384025621
+    Facility/KCOIC  2000-07-05T20:54:05.022271159  2000-07-05T21:06:25.229123893
+    Facility/Okinawa  2000-07-05T20:56:44.091508002  2000-07-05T21:09:22.658227218
+    Facility/KCOIC  2000-07-05T22:30:56.497935967  2000-07-05T22:43:55.142528606
+    Facility/Okinawa  2000-07-05T22:33:55.496523061  2000-07-05T22:46:04.337093478
+
+    END TargetInviews
+
+    SaveTargetAccesses Yes
+
+    UseTargetSchedule  Yes
+
+    Begin Stable
+        Use          No
+        Mode         NorthStable
+    End Stable
+    AdjustPointingToTargetsDuringAccessToTargets   No
+    UseTrackControl            No
+
+    END Targeted
+
+END Pointing
+
+BEGIN Optics
+
+    FocalLength             0.000000000000e+000
+    DetectorPitch           0.000000000000e+000
+    IQConstant              0.000000000000e+000
+    GsdCoefficient          0.000000000000e+000
+
+END Optics
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+		BEGIN Attributes
+
+			Inherit             Yes
+			Show                Yes
+			LineStyle           0
+			LineWidth           1.000000
+			PatternColor        #ffffff
+
+		END Attributes
+
+		BEGIN Display
+
+			NumberOfPatterns        1
+			PersistenceDuration     0.000000000000e+000
+			PersistenceIgnoreDefChg No
+			MinDisplayAltitude      0.000000000000e+000
+			MaxDisplayAltitude      1.000000000000e+007
+			AltitudeIntersectSense           Either
+			ShowBothAltCrossings           No
+			IntersectType           CentralBody
+			ShowGround          Yes
+			UseProjectionRadii          No
+			ExcludeHorizonArcs           No
+			ForwardPersist          No
+			FillPersist             No
+			SpaceLength             5.000000000000e+007
+			TgtExtLength            0.000000000000e+000
+			FOVHalfAngle            No
+			HalfAngle               0.000000000000e+000
+			ProjDisplay             Sphere
+			DisplayType             ConstantRadius
+			DisplayFOVWithConstraints           No
+			ShowBoresight           No
+			BoresightMarker         4
+			BoresightColor          #ffffff
+			ShowFill                No
+			FillTranslucency        0.500000
+			FillStyle               7
+			ShowOn2DMap             Yes
+
+		END Display
+
+		BEGIN    Swath
+
+			MaxStep            6.000000000000e+001
+			MinStep            1.000000000000e-001
+			CloseSwath    Yes
+			Tolerance          4.000000000000e+000
+			MatchTolerance     9.000000000000e+001
+			ShowSwath    No
+			ComputationalMethod    Numerical
+			Color        #ff69b4
+			LineStyle    0
+			LineWidth    1.000000
+    SwathIntervalPtr
+	BEGIN	EVENTINTERVAL
+			BEGIN Interval
+				Start	4 Jul 2000 00:00:00.000000000
+				Stop	6 Jul 2000 00:00:01.000000000
+			END Interval
+			IntervalState	Explicit
+	END	EVENTINTERVAL
+
+
+		END    Swath
+
+            Begin DisplayTimes
+                DisplayType	AlwaysOn
+            End DisplayTimes
+    END Graphics
+    
+    BEGIN Swath
+    END Swath
+    
+    BEGIN ExternData
+    END ExternData
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN AccessConstraints
+		AtFieldOfView   IncludeIntervals 
+		FieldOfView   IncludeIntervals 
+		LineOfSight   IncludeIntervals 
+    END AccessConstraints
+    
+    BEGIN ObjectCoverage
+    END ObjectCoverage
+    
+    BEGIN Desc
+    END Desc
+    
+    BEGIN Refraction
+		RefractionModel	Effective Radius Method
+
+		UseRefractionInAccess		No
+
+		BEGIN ModelData
+			RefractionCeiling	5.00000000000000e+003
+			MaxTargetAltitude	1.00000000000000e+004
+			EffectiveRadius		1.33333333333333e+000
+
+			UseExtrapolation	 Yes
+
+
+		END ModelData
+    END Refraction
+    
+    BEGIN Crdn
+    END Crdn
+    
+    BEGIN DIS
+    END DIS
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+BEGIN SubObjects
+
+END SubObjects
+
+END Sensor
+

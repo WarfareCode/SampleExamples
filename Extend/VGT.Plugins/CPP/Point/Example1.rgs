@@ -1,0 +1,27 @@
+HKCR
+{
+	Agi.VGT.Point.Plugin.Examples.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{AA7DB5F4-A155-46E9-8DF5-EA61A4FD85D2}'
+	}
+	Agi.VGT.Point.Plugin.Examples.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{AA7DB5F4-A155-46E9-8DF5-EA61A4FD85D2}'
+		CurVer = s 'Agi.VGT.Point.Plugin.Examples.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AA7DB5F4-A155-46E9-8DF5-EA61A4FD85D2} = s 'Example1 Class'
+		{
+			ProgID = s 'Agi.VGT.Point.Plugin.Examples.CPP.Example1.1'
+			VersionIndependentProgID = s 'Agi.VGT.Point.Plugin.Examples1.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{CB27E00F-3EBA-432C-9802-DAF5FE6794E8}'
+		}
+	}
+}

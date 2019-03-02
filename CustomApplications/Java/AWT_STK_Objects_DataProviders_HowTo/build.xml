@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_AWT_STK_Objects_DataProviders_HowTo">
+	<import file="../Swing_STK/common.xml" />
+
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+
+	<path id="build.dependentprojects">
+		<pathelement location="../../../SharedResources/Java/SharedResources/build.xml" />
+		<pathelement location="../Swing_STK/build.xml" />
+		<pathelement location="../AWT_STK_Graphics_Globe_Common/build.xml" />
+	</path>
+
+	<path id="build.classpath">
+		<path refid="customapp.swing.stk.classpath" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/classes" />
+		<pathelement location="../Swing_STK/classes" />
+		<pathelement location="../AWT_STK_Graphics_Globe_Common/classes" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/ThirdParty/jsyntaxpane-0.9.4/jsyntaxpane-0.9.4.jar" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/ThirdParty/jfreechart-1.0.14/lib/jfreechart-1.0.14.jar" />
+		<pathelement location="../../../SharedResources/Java/SharedResources/ThirdParty/jfreechart-1.0.14/lib/jcommon-1.0.17.jar" />
+	</path>
+
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<property name="main.classname" value="Main" />
+</project>

@@ -1,0 +1,129 @@
+/**********************************************************************/
+/*           Copyright 2006-2008, Analytical Graphics, Inc.           */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(DF7B0C7A-0A27-4D0A-8788-9198C7E169EB),
+	helpstring("C++ Search Algorithm Plugin Bisection Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IBisectionPlugin : IDispatch
+{
+	[propget, id(1), helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+
+	[propget, id(2), helpstring("property MaxIterations")] 
+	HRESULT MaxIterations([out, retval] INT* pVal);
+
+	[propput, id(2), helpstring("property MaxIterations")]
+	HRESULT MaxIterations([in] INT newVal);
+}
+
+[
+	object,
+	uuid(C108B91B-D479-49FD-ACA0-A50E81A66722),
+	helpstring("C++ Bisection Search Control Real Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IBisectionControlReal : IDispatch
+{
+	[propget, id(1), helpstring("property Step")] 
+	HRESULT Step([out, retval] DOUBLE* pVal);
+
+	[propput, id(1), helpstring("propery Step")]
+	HRESULT Step([in] DOUBLE newVal);
+
+	[propget, id(2), helpstring("Active flag")]
+	HRESULT IsActive([out, retval] VARIANT_BOOL* pVal);
+
+	[propput, id(2), helpstring("Active flag")]
+	HRESULT IsActive([in] VARIANT_BOOL newVal);
+}
+
+[
+	object,
+	uuid(9264E431-FFAB-4798-BEDB-BFEE3FE42D47),
+	helpstring("C++ Bisection Search Result Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IBisectionResult : IDispatch
+{
+	[propget, id(1), helpstring("property desired value")] 
+	HRESULT DesiredValue([out, retval] DOUBLE* pVal);
+
+	[propput, id(1), helpstring("property desired value")] 
+	HRESULT DesiredValue([in] DOUBLE newVal);
+
+	[propget, id(2), helpstring("property tolerance")]
+	HRESULT Tolerance([out, retval] DOUBLE* pVal);
+
+	[propput, id(2), helpstring("property tolerance")]
+	HRESULT Tolerance([in] DOUBLE newVal);
+
+	[propget, id(3), helpstring("Active flag")]
+	HRESULT IsActive([out, retval] VARIANT_BOOL* pVal);
+
+	[propput, id(3), helpstring("Active flag")]
+	HRESULT IsActive([in] VARIANT_BOOL newVal);}
+
+[
+	uuid(2ACAE769-EB87-43C0-AB31-9897887D1520),
+	helpstring("AgiSearchPluginCppExamples 11"), // "Type Library"
+	custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9, "AGI.Search.Plugin.Examples.CPP"),
+	version(1.0),
+	hidden
+]
+library AgiSearchPluginCppExamplesLib
+{
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+	importlib("AgSearch.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(15DB7E3F-2D6C-4B0A-AD7D-0AC208187E9E),
+		helpstring("BisectionPlugin Class")
+	]
+	coclass BisectionPlugin
+	{
+		[default] interface IBisectionPlugin;
+		interface IAgUtPluginConfig;
+		interface IAgPluginSearch;
+	};
+
+	[
+		uuid(450B3725-6802-4F07-B2EB-78A095C7CA4A),
+		helpstring("BisectionControlReal Class")
+	]
+	coclass BisectionControlReal
+	{
+		[default] interface IBisectionControlReal;
+		interface IAgUtPluginConfig;
+		interface IAgSearchControlReal;
+	};
+
+	[
+		uuid(74D1D6EB-68FD-4215-9A8D-E0928F430C54),
+		helpstring("BisectionResult Class")
+	]
+	coclass BisectionResult
+	{
+		[default] interface IBisectionResult;
+		interface IAgUtPluginConfig;
+		interface IAgSearchResult;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2006-2008, Analytical Graphics, Inc.           */
+/**********************************************************************/

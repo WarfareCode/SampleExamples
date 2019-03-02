@@ -1,0 +1,27 @@
+HKCR
+{
+	AGI.Astrogator.Plugin.Examples.EngineModeling.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{3B9A4881-A954-44FF-BC45-534C60AE1200}'
+	}
+	AGI.Astrogator.Plugin.Examples.EngineModeling.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{3B9A4881-A954-44FF-BC45-534C60AE1200}'
+		CurVer = s 'AGI.Astrogator.Plugin.Examples.EngineModeling.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3B9A4881-A954-44FF-BC45-534C60AE1200} = s 'Example1 Class'
+		{
+			ProgID = s 'AGI.Astrogator.Plugin.Examples.EngineModeling.CPP.Example1.1'
+			VersionIndependentProgID = s 'AGI.Astrogator.Plugin.Examples.EngineModeling.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{AF2E8439-DC4B-4C3F-9C1E-22F0B92A9842}'
+		}
+	}
+}

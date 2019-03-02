@@ -1,0 +1,167 @@
+VO_v43
+    IsInvisible               No
+    Modelfile                 AWACS-E3.mdl
+    UseModelList              No
+    IsShowingModel            No
+    ModelScale                31.622777
+    IsSwapped                 No
+    Level0SwapDistance        7000000.000000
+    Level1SwapDistance        14000000.000000
+    Level2SwapDistance        28000000.000000
+    Level3SwapDistance        56000000.000000
+    ShowMarker                No
+    Begin Marker
+        Show               No
+        Type               LineGraphic
+        Shape              Point
+        IsTransparent      No
+        Scale              54.598150
+        Rotate             No
+        Angle              0.000000
+        HorizOrigin        Center
+        VertOrigin         Center
+        RotateRelToNorth   No
+    End
+    Begin GlintMarker
+        Show               No
+        Type               LineGraphic
+        Shape              Point
+        IsTransparent      No
+        Scale              54.598150
+        Rotate             No
+        Angle              0.000000
+        HorizOrigin        Center
+        VertOrigin         Center
+        RotateRelToNorth   No
+    End
+    Begin OrbitFrames
+        InertialCoordFrame     No
+        FixedCoordFrame        No
+    End OrbitFrames
+    Begin AttSphRefCrdn
+        IsVector No
+        IsCentralBodyFrame Yes
+        Name "Inertial"
+        CentralBody Earth
+    End
+    Begin CovarianceData
+        Show  No
+        Scale 1.000000
+    End
+    UseModelFilePosOffset     No
+    UseModelPosOffset         No
+    ModelPosOffset            0.000000000000 0.000000000000 0.000000000000
+    UseModelRotation          No
+    ModelRotation             3.141593000000 0.000000000000 0.000000000000
+    DontSaveArticFile         No
+    ObscurationToObject       No
+    Inherit2DPassGfx          No
+    GtLeadingType             AllData
+    GtTrailingType            AllData
+    OrbitLeadingType          NoPass
+    OrbitTrailingType         NoPass
+    FixVectorAxesScaleToModel Yes
+    FixVectorAxesScaleToAttSph No
+    Begin GeneralVectorAxes
+        ArrowPointSize          3.00
+        PersistentLineWidth     2.00
+        Scale                   5000.000000
+    End
+    Begin VectorAxes
+        Begin CrdnDef
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Begin RefCrdn
+            IsVector No
+            IsCentralBodyFrame Yes
+            Name "Inertial"
+            CentralBody Earth
+        End
+        Duration                600.000
+        IsShowing               No
+        IsPersistent            No
+        IsTransparent           No
+        DrawFirstArrowOnly      Yes
+        Label                   Name
+        DrawAtCentralBody       Yes
+        ArrowType               3D
+        ConnectType             Sweep
+        ColorIndex              -65535
+        IntervalType            AlwaysOn
+    End
+    Begin VectorAngle
+        FractionalScale                1.000000
+        SupportingDihedralArcLineWidth 1.00
+        ArcLineWidth                   2.00
+        PixelThreshold                 1.000000
+    End
+    SaveArticStateAsDef       No
+    ShowElevFov               No
+    ShowElevFovCones          Yes
+    ElevFovTranslucency       0.700
+    ShowSAAContour            No
+    SAATranslucency           0.700
+    IsShowingVolumeCube       No
+    CubeColorIndex            -16776960
+    CubeTangential            200000.000000
+    CubeCrossTrack            150000.000000
+    CubeNormal                100000.000000
+    IsShowingGeoBox           No
+    GeoBoxColorIndex          -255
+    GeoBoxNS                  0.01745300000
+    GeoBoxEW                  0.01745300000
+    GeoBoxTickSpacing         0.00349065850
+    TrkTickFrequencyTime      364.522183
+    ShowOrbTrkTicks           No
+    OrbTrkTickWidth           50000.000000
+    OrbTrkPointSize           3.000000
+    OrbTrkLinWidth            1.000000
+    OrbTrkStyle               CrossTrack
+    ShowGrdTrkTicks           No
+    GrdTrkTickWidth           50000.000000
+    GrdTrkPointSize           3.000000
+    GrdTrkLinWidth            1.000000
+    GrdTrkStyle               CrossTrack
+    IsShowingVaporTrail       No
+    VaporMaxPuffs             100
+    VaporColorIndex           -16777215
+    VaporTransPriority        1
+    VaporWindSpeed            0.000000 0.000000 0.000000
+    VaporIsInSpace            No
+    VaporUseAttachPoint       No
+    VaporOutputRate           0.500000
+    VaporRadius               1000.000000
+    VaporExpansionRate        0.010000
+    VaporStartTime            79200.000000
+    VaporEndTime              172800.000000
+    VaporTexturemap           smoke.pgm
+    IsShowingAttitudeSphere   No
+    FixAttitudeSphereScaleToModel No
+    Begin LatLonSphere
+        Scale                 1.000000
+        MinDegDim             0.100000
+        MaxDegDim             90.000000
+        DegDim                90.000000
+        FogDistanceFactor     50
+        LabelType             None
+        TransparentLines      Yes
+        FontIndex             0
+        LineColorIndex        -16436871
+        ZeroDegLineColorIndex -65280
+        LabelColorIndex       -65280
+        PixelThreshold        180
+        LabelPointSize        2.000000
+        LineWidth             1.0
+        ZeroDegLineWidth      1.0
+    End
+    UseSolarToolBoundRadius   No
+    SolarPowerEquation        Basic
+    SolarToolBoundRadius      1.000000
+    UseLabelOffset            No
+    LabelXYZ                  0.000000 10.000000 10.000000
+    DrawOrbitsRelativeToEyePt No
+    AttTrajCovDataScaleToModel Yes
+    AttTrajCovDataScale       50000.000000

@@ -1,0 +1,16 @@
+;**********************************************************************
+;*           Copyright 2009, Analytical Graphics, Inc.                *
+;**********************************************************************
+; Agi.As.EOMFunc.Plugin.CPP.Examples.def : Declares the module parameters.
+
+LIBRARY      "Agi.As.EOMFunc.Plugin.CPP.Examples.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	
+;**********************************************************************
+;*           Copyright 2009, Analytical Graphics, Inc.                *
+;**********************************************************************

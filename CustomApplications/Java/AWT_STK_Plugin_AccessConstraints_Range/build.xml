@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_AWT_STK_Plugin_AccessConstraints_Range">
+	<import file="../Swing_STK/common.xml" />
+	<import file="../../../Extend/Constraints/Java/Common/common.xml" />
+
+	<path id="build.sourcepath">
+		<pathelement location="src" />
+	</path>
+
+	<path id="build.dependentprojects">
+		<pathelement location="../Swing_STK/build.xml" />
+		<pathelement location="../../../Extend/Constraints/Java/Range/build.xml" />
+	</path>
+
+	<path id="build.classpath">
+		<path refid="customapp.swing.stk.classpath" />
+		<path refid="extend.stk.plugin.accessconstraint.classpath" />
+		<pathelement location="../Swing_STK/classes" />
+		<pathelement location="../../../Extend/Constraints/Java/Range/classes" />
+	</path>
+	
+	<path id="build.resourcepath">
+		<fileset dir="src">
+			<exclude name="**/*.java" />
+		</fileset>
+	</path>
+
+	<property name="main.classname" value="Main" />
+</project>

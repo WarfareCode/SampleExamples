@@ -1,0 +1,27 @@
+HKCR
+{
+	AGI.Hpop.Plugin.Examples.Stk.ForceModeling.CPP.Example1.1 = s 'Example1 Class'
+	{
+		CLSID = s '{993F5C51-EAF5-492D-BD13-CB1EC0659D42}'
+	}
+	AGI.Hpop.Plugin.Examples.Stk.ForceModeling.CPP.Example1 = s 'Example1 Class'
+	{
+		CLSID = s '{993F5C51-EAF5-492D-BD13-CB1EC0659D42}'
+		CurVer = s 'AGI.Hpop.Plugin.Examples.Stk.ForceModeling.CPP.Example1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {993F5C51-EAF5-492D-BD13-CB1EC0659D42} = s 'Example1 Class'
+		{
+			ProgID = s 'AGI.Hpop.Plugin.Examples.Stk.ForceModeling.CPP.Example1.1'
+			VersionIndependentProgID = s 'AGI.Hpop.Plugin.Examples.Stk.ForceModeling.CPP.Example1'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{441473E0-09FC-46FC-A227-7000883991CD}'
+		}
+	}
+}

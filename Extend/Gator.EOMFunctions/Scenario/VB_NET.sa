@@ -1,0 +1,2436 @@
+stk.v.9.0
+WrittenBy    STK_v9.1.0
+
+BEGIN Satellite
+
+Name		VB_NET
+
+BEGIN VehiclePath
+	CentralBody				Earth
+
+    BEGIN Interval
+
+         StartTime            5 May 2009 16:00:00.000000000
+         StopTime             6 May 2009 04:00:00.000000000
+
+    END Interval
+
+	StoreEphemeris				Yes
+	SmoothInterp				No
+
+    BEGIN Astrogator
+
+<!-- STKv4.0 Format="XML" -->
+<STKOBJECT>
+<OBJECT Class = "DriverMCS" Name = "Mission_Control_Sequence">
+    <OBJECT Class = "bool" Name = "AutomaticallyAddDependentVariablesToDifferentialCorrectors"> False </OBJECT>
+    <OBJECT Class = "bool" Name = "AutomaticallyAddIndependentVariablesToDifferentialCorrectors"> False </OBJECT>
+    <OBJECT Class = "AttrCon" Name = "AutoSequenceListSelected" />
+    <OBJECT Class = "ListLink" Name = "AutoSequenceList">
+        <OBJECT Class = "MCSSegment" Name = "Stop">
+            <OBJECT Class = "bool" Name = "BeenRun"> False </OBJECT>
+            <OBJECT Class = "container" Name = "BPlanes" />
+            <OBJECT Class = "AttrCon" Name = "ChildrenSelected" />
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;Stops Running the Sequence.&quot; </OBJECT>
+            <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "FinalState">
+                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                    <OBJECT Class = "container" Name = "Cartesian">
+                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "CoordSysRep">
+                        <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                    <OBJECT Class = "container" Name = "UserVariables" />
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "bool" Name = "GenerateEphemeris"> True </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "InitialState">
+                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                    <OBJECT Class = "container" Name = "Cartesian">
+                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "CoordSysRep">
+                        <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                    <OBJECT Class = "container" Name = "UserVariables" />
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "string" Name = "InputDirection"> &quot;Forward&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> True </OBJECT>
+            <OBJECT Class = "int" Name = "RepeatCount"> 1 </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+            <OBJECT Class = "ListLink" Name = "Results" />
+            <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+            <OBJECT Class = "link" Name = "ScriptingTool">
+                <OBJECT Class = "TargeterProfile" Name = "Scripting_Tool">
+                    <OBJECT Class = "ListLink" Name = "Attributes" />
+                    <OBJECT Class = "ListLink" Name = "CalcObjects" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;-Scripting Tool-&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Language"> &quot;JScript&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Mode"> &quot;Not Active&quot; </OBJECT>
+                    <OBJECT Class = "ListLink" Name = "Parameters" />
+                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "ScriptStatements"> &quot;&quot; </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "Type"> &quot;ScriptingTool&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;-Scripting Tool-&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "SegmentListSelected" />
+            <OBJECT Class = "ListLink" Name = "SegmentList">
+                <OBJECT Class = "MCSSegment" Name = "STOP">
+                    <OBJECT Class = "bool" Name = "BeenRun"> False </OBJECT>
+                    <OBJECT Class = "container" Name = "BPlanes" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;Stops the sequence from running&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "bool" Name = "Enabled"> True </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "FinalState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables" />
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "InitialState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables" />
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "bool" Name = "ReadOnly"> True </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                    <OBJECT Class = "ListLink" Name = "Results" />
+                    <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                    <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "Type"> &quot;Stop&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;Stops the sequence from running&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+                <OBJECT Class = "MCSSegment" Name = "-">
+                    <OBJECT Class = "bool" Name = "BeenRun"> False </OBJECT>
+                    <OBJECT Class = "container" Name = "BPlanes" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;End Of Sequence&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "FinalState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables" />
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "InitialState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables" />
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "bool" Name = "ReadOnly"> True </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                    <OBJECT Class = "ListLink" Name = "Results" />
+                    <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                    <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "Type"> &quot;End&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;End Of Sequence&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "StateToPass"> &quot;Final&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Type"> &quot;Sequence&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;Stops Running the Sequence.&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+    </OBJECT>
+    <OBJECT Class = "AttrCon" Name = "AuxSequenceListSelected" />
+    <OBJECT Class = "bool" Name = "ClearBPlanesBeforeRun"> True </OBJECT>
+    <OBJECT Class = "bool" Name = "ClearWindow"> True </OBJECT>
+    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+    <OBJECT Class = "string" Name = "Description"> &quot;-Driver Description Not Set Yet-&quot; </OBJECT>
+    <OBJECT Class = "bool" Name = "DynamicDraw2d"> False </OBJECT>
+    <OBJECT Class = "bool" Name = "DynamicDraw3d"> True </OBJECT>
+    <OBJECT Class = "AttrCon" Name = "FuelTankListSelected" />
+    <OBJECT Class = "ListLink" Name = "FuelTankList">
+        <OBJECT Class = "FuelTank" Name = "Liquid_Fuel_Tank">
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;Fuel tank for modeling liquid fuel&quot; </OBJECT>
+            <OBJECT Class = "double" Name = "MaxFuelMass"> 1500 kg </OBJECT>
+            <OBJECT Class = "string" Name = "PressureMode"> &quot;Blow-Down&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "Type"> &quot;FuelTankLiquid&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;Fuel tank for modeling liquid fuel&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+            <OBJECT Class = "double" Name = "Volume"> 1.5 m^3 </OBJECT>
+        </OBJECT>
+    </OBJECT>
+    <OBJECT Class = "bool" Name = "GenerateEphemeris"> True </OBJECT>
+    <OBJECT Class = "string" Name = "GenPathMode"> &quot;RunMissionControlSequence&quot; </OBJECT>
+    <OBJECT Class = "string" Name = "InstName"> &quot;VB_NET&quot; </OBJECT>
+    <OBJECT Class = "link" Name = "MainSEQUENCE">
+        <OBJECT Class = "MCSSegment" Name = "Mission_Control_Sequence">
+            <OBJECT Class = "bool" Name = "BeenRun"> True </OBJECT>
+            <OBJECT Class = "container" Name = "BPlanes" />
+            <OBJECT Class = "AttrCon" Name = "ChildrenSelected" />
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;Sequence of segments&quot; </OBJECT>
+            <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "FinalState">
+                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                    <OBJECT Class = "container" Name = "Cartesian">
+                        <OBJECT Class = "double" Name = "X"> 3034038.816279063 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Y"> -17808444.82958692 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Z"> -9644712.428678475 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Vx"> 3259.508573724303 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vy"> 321.4957703503222 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vz"> 190.9771742118392 m*sec^-1 </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "CoordSysRep">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "date" Name = "Epoch"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelMass"> 1.06581410364015e-013 kg </OBJECT>
+                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                    <OBJECT Class = "container" Name = "UserVariables">
+                        <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 1470997.5 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 2039.235539471456 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> -3.855465608930239e-015 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 8.809180813923786e-015 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "bool" Name = "GenerateEphemeris"> True </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "InitialState">
+                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                    <OBJECT Class = "container" Name = "Cartesian">
+                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "CoordSysRep">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                    <OBJECT Class = "container" Name = "UserVariables">
+                        <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "string" Name = "InputDirection"> &quot;Forward&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "int" Name = "RepeatCount"> 1 </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+            <OBJECT Class = "ListLink" Name = "Results" />
+            <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+            <OBJECT Class = "link" Name = "ScriptingTool">
+                <OBJECT Class = "TargeterProfile" Name = "Scripting_Tool">
+                    <OBJECT Class = "ListLink" Name = "Attributes" />
+                    <OBJECT Class = "ListLink" Name = "CalcObjects" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;-Scripting Tool-&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Language"> &quot;JScript&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Mode"> &quot;Not Active&quot; </OBJECT>
+                    <OBJECT Class = "ListLink" Name = "Parameters" />
+                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "ScriptStatements"> &quot;&quot; </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "Type"> &quot;ScriptingTool&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;-Scripting Tool-&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+            <OBJECT Class = "AttrCon" Name = "SegmentListSelected" />
+            <OBJECT Class = "ListLink" Name = "SegmentList">
+                <OBJECT Class = "MCSSegment" Name = "Initial_State">
+                    <OBJECT Class = "string" Name = "AnomType"> &quot;True Anomaly&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "BeenRun"> True </OBJECT>
+                    <OBJECT Class = "container" Name = "BPlanes" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "link" Name = "CoordinateSystem">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "CoordinateType"> &quot;Cartesian&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;Initializes state data&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "EquinoctialFormulation"> &quot;Posigrade&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "EquinoctialSizeType"> &quot;Semi-major Axis&quot; </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "FinalState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables">
+                                <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "FlightPathAngleType"> &quot;Horizontal Flight Path Angle&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "GType"> &quot;G&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "HType"> &quot;H&quot; </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "InitialState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables">
+                                <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "LType"> &quot;L&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "MixedFlightPathAngleType"> &quot;Horizontal Flight Path Angle&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "NodeType"> &quot;Right Asc. of Asc. Node&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                    <OBJECT Class = "ListLink" Name = "Results" />
+                    <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                    <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                    <OBJECT Class = "string" Name = "ShapeType"> &quot;Eccentricity&quot; </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "SizeType"> &quot;Semi-major Axis&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Type"> &quot;InitialState&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;Initializes state data&quot; </OBJECT>
+                    <OBJECT Class = "container" Name = "UserVariables">
+                        <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                            <OBJECT Class = "string" Name = "UnitDimension"> &quot;&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Speed Change&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 m*sec^-1 </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Speed Change&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 m*sec^-1 </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Speed Change&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "VariableValue"> 0 m*sec^-1 </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+                <OBJECT Class = "MCSSegment" Name = "Maneuver">
+                    <OBJECT Class = "bool" Name = "BeenRun"> True </OBJECT>
+                    <OBJECT Class = "container" Name = "BPlanes" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;Maneuvers satellite with impulsive or finite burn&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "FinalState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 3034038.816279063 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> -17808444.82958692 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> -9644712.428678475 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 3259.508573724303 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 321.4957703503222 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 190.9771742118392 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 1.06581410364015e-013 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables">
+                                <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 1470997.5 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 2039.235539471456 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> -3.855465608930239e-015 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 8.809180813923786e-015 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "link" Name = "FiniteMnvr">
+                        <OBJECT Class = "MCSSegment" Name = "FiniteMnvr">
+                            <OBJECT Class = "double" Name = "AttFileTimeOffset"> 0 sec </OBJECT>
+                            <OBJECT Class = "int" Name = "AttInterpOrder"> 1 </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeControl"> &quot;Thrust Vector&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeFile"> &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "AttitudeLeadDuration"> 600 sec </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeRep"> &quot;EulerAngles&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "AttitudeTrailDuration"> 600 sec </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeUpdate"> &quot;Update during burn&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeUse"> &quot;Apply&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "AttPlugin">
+                                <OBJECT Class = "AttCtrlPlugin" Name = "Plugin_Attitude_Controller">
+                                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                                    <OBJECT Class = "string" Name = "Description"> &quot;Attitude controller that uses a COM interface to compute attitude&quot; </OBJECT>
+                                    <OBJECT Class = "AttrCon" Name = "PluginConfig" />
+                                    <OBJECT Class = "string" Name = "PluginIdentifier"> &quot;&lt;servername&gt;.&lt;objectname&gt;.&lt;version&gt;&quot; </OBJECT>
+                                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                                    <OBJECT Class = "container" Name = "ShooterControls" />
+                                    <OBJECT Class = "string" Name = "Type"> &quot;AttCtrlPlugin&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "UserComment"> &quot;Attitude controller that uses a COM interface to compute attitude&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "bool" Name = "AutoCenterBurn"> False </OBJECT>
+                            <OBJECT Class = "double" Name = "AverageStep"> 168.8711439688717 sec </OBJECT>
+                            <OBJECT Class = "bool" Name = "BeenRun"> True </OBJECT>
+                            <OBJECT Class = "string" Name = "BodyConstraintVectorRepresentation"> &quot;Cartesian&quot; </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "BodyConstraintVector">
+                                <OBJECT Class = "container" Name = "Cartesian">
+                                    <OBJECT Class = "double" Name = "X"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "Y"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "Z"> 1 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "container" Name = "Spherical" />
+                            </OBJECT>
+                            <OBJECT Class = "container" Name = "BPlanes" />
+                            <OBJECT Class = "double" Name = "BurnCenterBias"> 0 sec </OBJECT>
+                            <OBJECT Class = "container" Name = "Cartesian" />
+                            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                            <OBJECT Class = "string" Name = "ConstraintSign"> &quot;+&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "ConstraintVector">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth VernalEquinox&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "CoordType"> &quot;Spherical&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Description"> &quot;This is a finite maneuver inside a maneuver segment&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "EngineDirection"> &quot;+X&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "EngineModel">
+                                <OBJECT Class = "string" Name = ""> &quot;Constant_Thrust_and_Isp&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "EulerSequence"> &quot;313&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalDeltaV"> 2039.235539471456 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalInertialDeltaVx"> -1486.902776054827 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalInertialDeltaVy"> -158.20248089258 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalInertialDeltaVz"> -87.50037980563715 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalMassFlowRate"> 0 kg*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQs"> 0.4451633685862723 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQx"> -0.2646735848959424 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQy"> 0.7352944848124861 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQz"> -0.4371721506816209 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "FinalState">
+                                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                                    <OBJECT Class = "container" Name = "Cartesian">
+                                        <OBJECT Class = "double" Name = "X"> 3034038.816279063 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Y"> -17808444.82958692 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Z"> -9644712.428678475 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vx"> 3259.508573724303 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vy"> 321.4957703503222 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vz"> 190.9771742118392 m*sec^-1 </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "link" Name = "CoordSysRep">
+                                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelMass"> 1.06581410364015e-013 kg </OBJECT>
+                                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                                    <OBJECT Class = "container" Name = "UserVariables">
+                                        <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 1470997.5 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 2039.235539471456 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> -3.855465608930239e-015 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 8.809180813923786e-015 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                    </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalThrustX"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalThrustY"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalThrustZ"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialMassFlowRate"> -0.1699527021629881 kg*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQs"> 0.3615388083388807 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQx"> 0.6076921013678738 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQy"> 0.3615388083388808 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQz"> 0.6076921013678738 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "InitialState">
+                                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                                    <OBJECT Class = "container" Name = "Cartesian">
+                                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "link" Name = "CoordSysRep">
+                                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                                    <OBJECT Class = "container" Name = "UserVariables">
+                                        <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                    </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialThrustX"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialThrustY"> 439.4085563309828 N </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialThrustZ"> 238.5793801298043 N </OBJECT>
+                            <OBJECT Class = "double" Name = "LargestStep"> 384.946 sec </OBJECT>
+                            <OBJECT Class = "link" Name = "LastRunPropagator">
+                                <OBJECT Class = "string" Name = ""> &quot;VB_NET_Example&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "LastRun">
+                                <OBJECT Class = "double" Name = "LastRunAttFileTimeOffset"> 0 sec </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunAttitudeControl"> &quot;Thrust Vector&quot; </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunAttitudeFile"> &quot;&quot; </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunAttitudeRep"> &quot;EulerAngles&quot; </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunAttitudeUpdate"> &quot;Update during burn&quot; </OBJECT>
+                                <OBJECT Class = "bool" Name = "LastRunAutoCenterBurn"> False </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "LastRunBodyConstraintVector">
+                                    <OBJECT Class = "container" Name = "Cartesian">
+                                        <OBJECT Class = "double" Name = "LastRunX"> 0 &quot;&quot; </OBJECT>
+                                        <OBJECT Class = "double" Name = "LastRunY"> 0 &quot;&quot; </OBJECT>
+                                        <OBJECT Class = "double" Name = "LastRunZ"> 1 &quot;&quot; </OBJECT>
+                                    </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "double" Name = "LastRunBurnCenterBias"> 0 sec </OBJECT>
+                                <OBJECT Class = "container" Name = "LastRunCartesian">
+                                    <OBJECT Class = "double" Name = "LastRunX"> 1 m*sec^-1 </OBJECT>
+                                    <OBJECT Class = "double" Name = "LastRunY"> 0 m*sec^-1 </OBJECT>
+                                    <OBJECT Class = "double" Name = "LastRunZ"> 0 m*sec^-1 </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunConstraintSign"> &quot;+&quot; </OBJECT>
+                                <OBJECT Class = "link" Name = "LastRunConstraintVector">
+                                    <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth VernalEquinox&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunCoordType"> &quot;Spherical&quot; </OBJECT>
+                                <OBJECT Class = "container" Name = "LastRunEngineInfo">
+                                    <OBJECT Class = "string" Name = "EngineName"> &quot;Constant_Thrust_and_Isp&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "EngineDescription"> &quot;Engine that has a constant Thrust and Isp&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "EngineComment"> &quot;Engine that has a constant Thrust and Isp&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "InitialThrust"> 500 N </OBJECT>
+                                    <OBJECT Class = "double" Name = "FinalThrust"> 500 N </OBJECT>
+                                    <OBJECT Class = "double" Name = "InitialIsp"> 300 s </OBJECT>
+                                    <OBJECT Class = "double" Name = "FinalIsp"> 300 s </OBJECT>
+                                    <OBJECT Class = "double" Name = "InitialMdot"> -0.1699527021629881 kg*sec^-1 </OBJECT>
+                                    <OBJECT Class = "double" Name = "FinalMdot"> -0.1699527021629881 kg*sec^-1 </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "link" Name = "LastRunEngineModel">
+                                    <OBJECT Class = "string" Name = ""> &quot;Constant_Thrust_and_Isp&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunEulerSequence"> &quot;313&quot; </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunPropulsionType"> &quot;Engine Model&quot; </OBJECT>
+                                <OBJECT Class = "container" Name = "LastRunQuaternion">
+                                    <OBJECT Class = "double" Name = "LastRunQx"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "LastRunQy"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "LastRunQz"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "LastRunQs"> 1 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "link" Name = "LastRunThrustAxes">
+                                    <OBJECT Class = "string" Name = ""> &quot;Satellite VNC(Earth)&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "string" Name = "LastRunThrustEfficiencyMode"> &quot;Affects Accel Only&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "LastRunThrustEfficiency"> 1 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "link" Name = "LastRunThrusterSet">
+                                    <OBJECT Class = "string" Name = ""> &quot;Single_Thruster&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "MaxPropTime"> 86400 sec </OBJECT>
+                            <OBJECT Class = "double" Name = "MinPropTime"> 0 sec </OBJECT>
+                            <OBJECT Class = "int" Name = "NumSteps"> 257 </OBJECT>
+                            <OBJECT Class = "bool" Name = "OverrideMaxPropTime"> True </OBJECT>
+                            <OBJECT Class = "string" Name = "PressureMode"> &quot;Pressure-Regulated&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "Propagator">
+                                <OBJECT Class = "string" Name = ""> &quot;VB_NET_Example&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "PropulsionType"> &quot;Engine Model&quot; </OBJECT>
+                            <OBJECT Class = "container" Name = "Quaternion">
+                                <OBJECT Class = "double" Name = "qx"> 0 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "qy"> 0 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "qz"> 0 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "qs"> 1 &quot;&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                            <OBJECT Class = "ListLink" Name = "Results" />
+                            <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                            <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "SegmentStartState">
+                                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                                    <OBJECT Class = "container" Name = "Cartesian">
+                                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "link" Name = "CoordSysRep">
+                                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                                    <OBJECT Class = "container" Name = "UserVariables">
+                                        <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                        <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                            <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                            <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                        </OBJECT>
+                                    </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "container" Name = "ShooterControls" />
+                            <OBJECT Class = "double" Name = "SmallestStep"> 35.341 sec </OBJECT>
+                            <OBJECT Class = "container" Name = "Spherical">
+                                <OBJECT Class = "double" Name = "Azimuth"> 0 rad </OBJECT>
+                                <OBJECT Class = "double" Name = "Elevation"> 0 rad </OBJECT>
+                                <OBJECT Class = "double" Name = "Magnitude"> 1 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "StoppingConditionsSelected" />
+                            <OBJECT Class = "ListLink" Name = "StoppingConditions">
+                                <OBJECT Class = "AsStateTrigger" Name = "Duration">
+                                    <OBJECT Class = "bool" Name = "Active"> True </OBJECT>
+                                    <OBJECT Class = "AttrCon" Name = "BeforeConditionsSelected" />
+                                    <OBJECT Class = "ListLink" Name = "BeforeConditions" />
+                                    <OBJECT Class = "AttrCon" Name = "CalcObjectAttributes">
+                                        <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                                        <OBJECT Class = "string" Name = "Description"> &quot;Duration from an epoch&quot; </OBJECT>
+                                        <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                                        <OBJECT Class = "container" Name = "ShooterControls" />
+                                        <OBJECT Class = "string" Name = "Type"> &quot;AsStateCalcDuration&quot; </OBJECT>
+                                        <OBJECT Class = "string" Name = "UserComment"> &quot;Duration from an epoch&quot; </OBJECT>
+                                        <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                                    <OBJECT Class = "string" Name = "Comment"> &quot;User-supplied comment&quot; </OBJECT>
+                                    <OBJECT Class = "AttrCon" Name = "ConstraintsSelected" />
+                                    <OBJECT Class = "ListLink" Name = "Constraints" />
+                                    <OBJECT Class = "string" Name = "Description"> &quot;Stop after a specified duration&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Dimension"> &quot;TimeUnit&quot; </OBJECT>
+                                    <OBJECT Class = "bool" Name = "Inherited"> True </OBJECT>
+                                    <OBJECT Class = "int" Name = "MaxTripTimes"> 10000 </OBJECT>
+                                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                                    <OBJECT Class = "link" Name = "Sequence">
+                                        <OBJECT Class = "string" Name = ""> &quot;STOP&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "container" Name = "ShooterControls" />
+                                    <OBJECT Class = "double" Name = "Tolerance"> 1e-008 sec </OBJECT>
+                                    <OBJECT Class = "double" Name = "TripValue"> 43200 sec </OBJECT>
+                                    <OBJECT Class = "string" Name = "Type"> &quot;Duration&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "UserComment"> &quot;Stop after a specified duration&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "link" Name = "ThrustAxes">
+                                <OBJECT Class = "string" Name = ""> &quot;Satellite VNC(Earth)&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "ThrustEfficiencyMode"> &quot;Affects Accel Only&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "ThrustEfficiency"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "ThrusterSet">
+                                <OBJECT Class = "string" Name = ""> &quot;Single_Thruster&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "ListLink" Name = "TriggerLog">
+                                <OBJECT Class = "TriggerLog" Name = "Trigger_Log">
+                                    <OBJECT Class = "bool" Name = "CausedTermination"> False </OBJECT>
+                                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                                    <OBJECT Class = "string" Name = "Description"> &quot;Trigger Log Information&quot; </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:49:35.995&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                                    <OBJECT Class = "container" Name = "ShooterControls" />
+                                    <OBJECT Class = "string" Name = "TriggerDescription"> &quot;Fuel_Ran_Out; Run Sequence Restart_because_fuel_ran_out; 
+        Commands: EnginesOff&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Type"> &quot;TriggerLogEntry&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "UserComment"> &quot;Trigger Log Information&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "TriggerLog" Name = "Trigger_Log">
+                                    <OBJECT Class = "bool" Name = "CausedTermination"> True </OBJECT>
+                                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                                    <OBJECT Class = "string" Name = "Description"> &quot;Trigger Log Information&quot; </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                                    <OBJECT Class = "container" Name = "ShooterControls" />
+                                    <OBJECT Class = "string" Name = "TriggerDescription"> &quot;Duration; Run Sequence STOP&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Type"> &quot;TriggerLogEntry&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "UserComment"> &quot;Trigger Log Information&quot; </OBJECT>
+                                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "Type"> &quot;Maneuver:Finite&quot; </OBJECT>
+                            <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                            <OBJECT Class = "bool" Name = "UsedRegTime"> False </OBJECT>
+                            <OBJECT Class = "bool" Name = "UseMaxPropTimeWarn"> True </OBJECT>
+                            <OBJECT Class = "bool" Name = "UseMaxPropTime"> True </OBJECT>
+                            <OBJECT Class = "string" Name = "UserComment"> &quot;This is a finite maneuver inside a maneuver segment&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "link" Name = "ImpulsiveMnvr">
+                        <OBJECT Class = "MCSSegment" Name = "ImpulsiveMnvr">
+                            <OBJECT Class = "double" Name = "AttFileTimeOffset"> 0 sec </OBJECT>
+                            <OBJECT Class = "int" Name = "AttInterpOrder"> 1 </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeControl"> &quot;Along Velocity Vector&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeFile"> &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "AttitudeLeadDuration"> 600 sec </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeRep"> &quot;EulerAngles&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "AttitudeTrailDuration"> 600 sec </OBJECT>
+                            <OBJECT Class = "string" Name = "AttitudeUse"> &quot;Apply&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "AverageStep"> 0 sec </OBJECT>
+                            <OBJECT Class = "bool" Name = "BeenRun"> False </OBJECT>
+                            <OBJECT Class = "string" Name = "BodyConstraintVectorRepresentation"> &quot;Cartesian&quot; </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "BodyConstraintVector">
+                                <OBJECT Class = "container" Name = "Cartesian">
+                                    <OBJECT Class = "double" Name = "X"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "Y"> 0 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "Z"> 1 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "container" Name = "Spherical" />
+                            </OBJECT>
+                            <OBJECT Class = "container" Name = "BPlanes" />
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                            <OBJECT Class = "double" Name = "ComputedBurnDuration"> 0 sec </OBJECT>
+                            <OBJECT Class = "double" Name = "ComputedFuelUsed"> 0 kg </OBJECT>
+                            <OBJECT Class = "string" Name = "ConstraintSign"> &quot;+&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "ConstraintVector">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth VernalEquinox&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "CoordType"> &quot;Cartesian&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Description"> &quot;This is an impulsive maneuver inside a maneuver segment&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "EngineDirection"> &quot;+X&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "EngineModel">
+                                <OBJECT Class = "string" Name = ""> &quot;Constant_Thrust_and_Isp&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "EulerSequence"> &quot;313&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalDeltaV"> 0 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalInertialDeltaVx"> 0 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalInertialDeltaVy"> 0 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalInertialDeltaVz"> 0 m*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalMassFlowRate"> 0 kg*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQs"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQx"> 0 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQy"> 0 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalQz"> 0 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "FinalState">
+                                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                                    <OBJECT Class = "container" Name = "Cartesian">
+                                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "link" Name = "CoordSysRep">
+                                        <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                                    <OBJECT Class = "container" Name = "UserVariables" />
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalThrustX"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalThrustY"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "FinalThrustZ"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialMassFlowRate"> 0 kg*sec^-1 </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQs"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQx"> 0 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQy"> 0 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialQz"> 0 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "InitialState">
+                                <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                                    <OBJECT Class = "container" Name = "Cartesian">
+                                        <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                        <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "link" Name = "CoordSysRep">
+                                        <OBJECT Class = "string" Name = ""> &quot;None&quot; </OBJECT>
+                                    </OBJECT>
+                                    <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "date" Name = "Epoch"> &quot;1 Jul 2009 15:00:34.000&quot; TAIG </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                                    <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                                    <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                                    <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                                    <OBJECT Class = "container" Name = "UserVariables" />
+                                </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialThrustX"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialThrustY"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "InitialThrustZ"> 0 N </OBJECT>
+                            <OBJECT Class = "double" Name = "LargestStep"> 0 sec </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "LastRun" />
+                            <OBJECT Class = "double" Name = "MaxPropTime"> 8640000 sec </OBJECT>
+                            <OBJECT Class = "double" Name = "MinPropTime"> 0 sec </OBJECT>
+                            <OBJECT Class = "int" Name = "NumSteps"> 0 </OBJECT>
+                            <OBJECT Class = "bool" Name = "OverrideMaxPropTime"> True </OBJECT>
+                            <OBJECT Class = "string" Name = "PropulsionType"> &quot;Engine Model&quot; </OBJECT>
+                            <OBJECT Class = "container" Name = "Quaternion">
+                                <OBJECT Class = "double" Name = "qx"> 0 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "qy"> 0 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "qz"> 0 &quot;&quot; </OBJECT>
+                                <OBJECT Class = "double" Name = "qs"> 1 &quot;&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                            <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                            <OBJECT Class = "ListLink" Name = "Results" />
+                            <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                            <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                            <OBJECT Class = "container" Name = "ShooterControls" />
+                            <OBJECT Class = "double" Name = "SmallestStep"> 0 sec </OBJECT>
+                            <OBJECT Class = "container" Name = "Spherical" />
+                            <OBJECT Class = "link" Name = "ThrustAxes">
+                                <OBJECT Class = "string" Name = ""> &quot;Satellite VNC(Earth)&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "link" Name = "ThrusterSet">
+                                <OBJECT Class = "string" Name = ""> &quot;Single_Thruster&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "ListLink" Name = "TriggerLog" />
+                            <OBJECT Class = "string" Name = "Type"> &quot;Maneuver:Impulsive&quot; </OBJECT>
+                            <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                            <OBJECT Class = "bool" Name = "UpdateMass"> False </OBJECT>
+                            <OBJECT Class = "bool" Name = "UsedRegTime"> False </OBJECT>
+                            <OBJECT Class = "bool" Name = "UseMaxPropTimeWarn"> True </OBJECT>
+                            <OBJECT Class = "bool" Name = "UseMaxPropTime"> True </OBJECT>
+                            <OBJECT Class = "string" Name = "UserComment"> &quot;This is an impulsive maneuver inside a maneuver segment&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "InitialState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 6678137 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> 0 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 0 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 6789.530300272665 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 3686.414174400911 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables">
+                                <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 0 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "LastRanMnvrType"> &quot;Finite&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "MnvrType"> &quot;Finite&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                    <OBJECT Class = "ListLink" Name = "Results">
+                        <OBJECT Class = "AsStateCalc" Name = "Inertial_DeltaVx">
+                            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordAxes">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "Description"> &quot;X component of accumulated DeltaV integrated in inertial coordinates&quot; </OBJECT>
+                            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                            <OBJECT Class = "container" Name = "ShooterControls" />
+                            <OBJECT Class = "string" Name = "Type"> &quot;CAgAsStateCalcInertDeltaVx&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "UserComment"> &quot;X component of accumulated DeltaV integrated in inertial coordinates&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AsStateCalc" Name = "Inertial_DeltaVy">
+                            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordAxes">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "Description"> &quot;Y component of accumulated DeltaV integrated in inertial coordinates&quot; </OBJECT>
+                            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                            <OBJECT Class = "container" Name = "ShooterControls" />
+                            <OBJECT Class = "string" Name = "Type"> &quot;CAgAsStateCalcInertDeltaVy&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "UserComment"> &quot;Y component of accumulated DeltaV integrated in inertial coordinates&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                        </OBJECT>
+                        <OBJECT Class = "AsStateCalc" Name = "Inertial_DeltaVz">
+                            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordAxes">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "string" Name = "Description"> &quot;Z component of accumulated DeltaV integrated in inertial coordinates&quot; </OBJECT>
+                            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                            <OBJECT Class = "container" Name = "ShooterControls" />
+                            <OBJECT Class = "string" Name = "Type"> &quot;CAgAsStateCalcInertDeltaVz&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "UserComment"> &quot;Z component of accumulated DeltaV integrated in inertial coordinates&quot; </OBJECT>
+                            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                    <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "Type"> &quot;Maneuver&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;Maneuvers satellite with impulsive or finite burn&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+                <OBJECT Class = "MCSSegment" Name = "-">
+                    <OBJECT Class = "bool" Name = "BeenRun"> True </OBJECT>
+                    <OBJECT Class = "container" Name = "BPlanes" />
+                    <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+                    <OBJECT Class = "string" Name = "Description"> &quot;End Of Sequence&quot; </OBJECT>
+                    <OBJECT Class = "link" Name = "DisplayCoordSystem">
+                        <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "FinalState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 3034038.816279063 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> -17808444.82958692 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> -9644712.428678475 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 3259.508573724303 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 321.4957703503222 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 190.9771742118392 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 1.06581410364015e-013 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables">
+                                <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 1470997.5 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 2039.235539471456 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> -3.855465608930239e-015 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 8.809180813923786e-015 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "InitialState">
+                        <OBJECT Class = "Orbit_State" Name = "Orbit_State">
+                            <OBJECT Class = "container" Name = "Cartesian">
+                                <OBJECT Class = "double" Name = "X"> 3034038.816279063 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Y"> -17808444.82958692 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Z"> -9644712.428678475 m </OBJECT>
+                                <OBJECT Class = "double" Name = "Vx"> 3259.508573724303 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vy"> 321.4957703503222 m*sec^-1 </OBJECT>
+                                <OBJECT Class = "double" Name = "Vz"> 190.9771742118392 m*sec^-1 </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cd"> 2.2 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "link" Name = "CoordSysRep">
+                                <OBJECT Class = "string" Name = ""> &quot;CentralBody/Earth Inertial&quot; </OBJECT>
+                            </OBJECT>
+                            <OBJECT Class = "double" Name = "Cr"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "DragArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "DryMass"> 500 kg </OBJECT>
+                            <OBJECT Class = "date" Name = "Epoch"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelDensity"> 1000 kg*m^-3 </OBJECT>
+                            <OBJECT Class = "double" Name = "FuelMass"> 1.06581410364015e-013 kg </OBJECT>
+                            <OBJECT Class = "double" Name = "K1"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "K2"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "RadPressureCoeff"> 1 &quot;&quot; </OBJECT>
+                            <OBJECT Class = "double" Name = "SRPArea"> 20 m^2 </OBJECT>
+                            <OBJECT Class = "double" Name = "TankPressure"> 5000 Pa </OBJECT>
+                            <OBJECT Class = "double" Name = "TankTemperature"> 293.15 K </OBJECT>
+                            <OBJECT Class = "container" Name = "UserVariables">
+                                <OBJECT Class = "AttrCon" Name = "EffectiveImpulse">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;EffectiveImpulse&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 1470997.5 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVx">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVx&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 2039.235539471456 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVy">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVy&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> -3.855465608930239e-015 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                                <OBJECT Class = "AttrCon" Name = "IntegratedDeltaVz">
+                                    <OBJECT Class = "string" Name = "VariableName"> &quot;IntegratedDeltaVz&quot; </OBJECT>
+                                    <OBJECT Class = "double" Name = "VariableValue"> 8.809180813923786e-015 &quot;&quot; </OBJECT>
+                                </OBJECT>
+                            </OBJECT>
+                        </OBJECT>
+                    </OBJECT>
+                    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+                    <OBJECT Class = "AttrCon" Name = "ResultsSelected" />
+                    <OBJECT Class = "ListLink" Name = "Results" />
+                    <OBJECT Class = "string" Name = "RunDirection"> &quot;Forward&quot; </OBJECT>
+                    <OBJECT Class = "int" Name = "SegmentColor"> 65280 </OBJECT>
+                    <OBJECT Class = "container" Name = "ShooterControls" />
+                    <OBJECT Class = "string" Name = "Type"> &quot;End&quot; </OBJECT>
+                    <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+                    <OBJECT Class = "string" Name = "UserComment"> &quot;End Of Sequence&quot; </OBJECT>
+                    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+                </OBJECT>
+            </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "StateToPass"> &quot;Final&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Type"> &quot;Sequence&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "UpdateAnimationTimeAfterRunning"> False </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;Sequence of segments&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+    </OBJECT>
+    <OBJECT Class = "ListLink" Name = "ManeuverSummaries">
+        <OBJECT Class = "ManeuverSummary" Name = "Maneuver_Summary">
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "double" Name = "DeltaV"> 2039.235539471456 m*sec^-1 </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;Maneuver Summary Information&quot; </OBJECT>
+            <OBJECT Class = "double" Name = "Duration"> 43200.00000000001 sec </OBJECT>
+            <OBJECT Class = "string" Name = "Engine"> &quot;Constant_Thrust_and_Isp&quot; </OBJECT>
+            <OBJECT Class = "double" Name = "FuelUsed"> 499.9999999999999 kg </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "string" Name = "Segment"> &quot;Maneuver&quot; </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "date" Name = "Start"> &quot;5 May 2009 16:00:34.000&quot; TAIG </OBJECT>
+            <OBJECT Class = "date" Name = "Stop"> &quot;6 May 2009 04:00:34.000&quot; TAIG </OBJECT>
+            <OBJECT Class = "string" Name = "Type"> &quot;ManeuverSummary&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;Maneuver Summary Information&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+    </OBJECT>
+    <OBJECT Class = "double" Name = "MinEphemStep"> 1 sec </OBJECT>
+    <OBJECT Class = "bool" Name = "PromoteControls"> True </OBJECT>
+    <OBJECT Class = "bool" Name = "PropOnApply"> False </OBJECT>
+    <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+    <OBJECT Class = "bool" Name = "SatLevelLog"> False </OBJECT>
+    <OBJECT Class = "bool" Name = "SaveNumbersInBinary"> False </OBJECT>
+    <OBJECT Class = "container" Name = "ShooterControls" />
+    <OBJECT Class = "string" Name = "SmartRunMode"> &quot;Run Entire Mission Control Sequence&quot; </OBJECT>
+    <OBJECT Class = "string" Name = "Type"> &quot;Astrogator Vehicle&quot; </OBJECT>
+    <OBJECT Class = "double" Name = "UpdateAllObjectsRate"> 0.15 &quot;&quot; </OBJECT>
+    <OBJECT Class = "bool" Name = "UpdateAllObjects"> False </OBJECT>
+    <OBJECT Class = "bool" Name = "UseNominalSettings"> False </OBJECT>
+    <OBJECT Class = "string" Name = "UserComment"> &quot;-Driver Description Not Set Yet-&quot; </OBJECT>
+    <OBJECT Class = "ListLink" Name = "UserVariables">
+        <OBJECT Class = "UserVariable" Name = "EffectiveImpulse">
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "Type"> &quot;UserVariable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Unitless&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+        <OBJECT Class = "UserVariable" Name = "IntegratedDeltaVx">
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "Type"> &quot;UserVariable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Speed Change&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+        <OBJECT Class = "UserVariable" Name = "IntegratedDeltaVy">
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "Type"> &quot;UserVariable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Speed Change&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+        <OBJECT Class = "UserVariable" Name = "IntegratedDeltaVz">
+            <OBJECT Class = "bool" Name = "Clonable"> True </OBJECT>
+            <OBJECT Class = "string" Name = "Description"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "bool" Name = "ReadOnly"> False </OBJECT>
+            <OBJECT Class = "container" Name = "ShooterControls" />
+            <OBJECT Class = "string" Name = "Type"> &quot;UserVariable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UnitDimension"> &quot;Speed Change&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "UserComment"> &quot;User-defined variable&quot; </OBJECT>
+            <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+        </OBJECT>
+    </OBJECT>
+    <OBJECT Class = "bool" Name = "UseSegmentColors"> True </OBJECT>
+    <OBJECT Class = "string" Name = "Version"> &quot;1.0.0 a&quot; </OBJECT>
+    <OBJECT Class = "double" Name = "xTolerance"> 1e-005 sec </OBJECT>
+</OBJECT>
+</STKOBJECT>
+
+    END Astrogator
+
+BEGIN PassDefn
+
+    Break               Ascending
+    CoordSystem         Inertial
+    BreakType           Latitude
+    BreakAngle          0.000000000000e+000
+    PartialPassMethod   ByTime
+    DisplayFlag         Both
+    FirstPass           1
+    FirstPath           1
+    RepeatCycle         1
+    MaintainPassNum     No
+    RangeFirstPass      1
+    RangeLastPass       2147483647
+    DisplayScheme       AllEphemeris
+    ScenarioEpoch       5 May 2009 16:00:00.000000
+END PassDefn
+
+END VehiclePath
+
+BEGIN MassProperties
+
+	Mass           1.000000000000e+003
+	InertiaXX      4.500000000000e+003
+	InertiaYX      0.000000000000e+000
+	InertiaYY      4.500000000000e+003
+	InertiaZX      0.000000000000e+000
+	InertiaZY      0.000000000000e+000
+	InertiaZZ      4.500000000000e+003
+
+END MassProperties
+
+BEGIN Attitude
+
+     	ScenarioEpoch		 5 May 2009 16:00:00.000000
+
+      BEGIN Profile
+          Name			 ECFVVLH
+          UserNamed			 No
+          StartTime			 0.000000000000e+000
+          BEGIN ECFVVLH
+             	Azimuth		 0.000000000000e+000
+          END ECFVVLH
+      END Profile
+
+      BEGIN OverrideTrajectory
+          Enabled			 Yes
+          StartTime			 -6.000000000000e+002
+          StopTime			 4.380000000000e+004
+          BEGIN QuatData
+		BlockingFactor 		 25
+            LeadExtensionMethod 	 Hold
+            TrailExtensionMethod 	 Hold
+
+BEGIN AttitudeData
+
+NumberOfAttitudePoints		258
+
+    BlockingFactor          25
+
+    InterpolationOrder      1
+
+    AttitudeDeviations      Rapid
+
+ScenarioEpoch			5 May 2009 16:00:00.000000
+
+# Epoch in JDate format:	2454957.16666666666667
+# Epoch in YYDDD format:	  09125.66666666666667
+
+
+# Time of first point: 5 May 2009 16:00:00.000000000 UTCG = 2454957.16666666666667 JDate = 09125.66666666666667 YYDDD
+
+CoordinateAxes		Inertial
+
+AttitudeTimeQuaternions
+0.00000000000000e+000 6.07692101367874e-001 3.61538808338881e-001 6.07692101367874e-001 3.61538808338881e-001
+3.59630000000034e+001 5.94915857349595e-001 3.68983618300816e-001 6.20204714747604e-001 3.53938305223491e-001
+7.13040000000037e+001 5.82139214365587e-001 3.76128294798178e-001 6.32211353987391e-001 3.46338338679767e-001
+1.34224000000002e+002 5.58871667177214e-001 3.88421893551089e-001 6.52866601005982e-001 3.32499764703140e-001
+1.97626000000004e+002 5.34788142514880e-001 4.00248023554512e-001 6.72730248123548e-001 3.18177899178779e-001
+2.61234000000004e+002 5.10027685799887e-001 4.11535977884665e-001 6.91682571184183e-001 3.03455300405448e-001
+3.25023000000001e+002 4.84641420838718e-001 4.22266732980764e-001 7.09690589751992e-001 2.88362213617961e-001
+3.88950000000004e+002 4.58691432824506e-001 4.32420202962989e-001 7.26719499611596e-001 2.72935352065503e-001
+4.52920000000006e+002 4.32265408073057e-001 4.41971443357441e-001 7.42726281651035e-001 2.57226613679069e-001
+5.16935000000005e+002 4.05414787530339e-001 4.50913601000592e-001 7.57698041643580e-001 2.41266351101627e-001
+5.81121000000006e+002 3.78139768416640e-001 4.59256926544012e-001 7.71650098290406e-001 2.25054475120060e-001
+6.45572000000007e+002 3.50453890953276e-001 4.67004948705863e-001 7.84585859902619e-001 2.08598841417711e-001
+7.10259000000005e+002 3.22425140410483e-001 4.74146676148802e-001 7.96483594577074e-001 1.91939682968131e-001
+7.75153000000006e+002 2.94124313290168e-001 4.80674795072845e-001 8.07326445599364e-001 1.75118930870316e-001
+8.40322000000007e+002 2.65581933147549e-001 4.86594504520006e-001 8.17116361532841e-001 1.58154597378238e-001
+9.05867000000006e+002 2.36815506371182e-001 4.91914594350821e-001 8.25857969344581e-001 1.41056946928799e-001
+9.71861000000004e+002 2.07856584109922e-001 4.96642987637967e-001 8.33548982278912e-001 1.23844569578075e-001
+1.03838100000000e+003 1.78737033872320e-001 5.00792221987930e-001 8.40184653552081e-001 1.06536242915204e-001
+1.10553000000000e+003 1.49479664170186e-001 5.04385110377425e-001 8.45756815381844e-001 8.91453849858957e-002
+1.17341400000000e+003 1.20108710609119e-001 5.07464031430696e-001 8.50244218322213e-001 7.16862863424355e-002
+1.24214700000000e+003 9.06480773166970e-002 5.10123929134848e-001 8.53593453938867e-001 5.41730412246398e-002
+1.31185800000000e+003 6.11189027595536e-002 5.12639825357595e-001 8.55642451851178e-001 3.66180798637548e-002
+1.38055300000000e+003 3.24265176762463e-002 5.16135517584486e-001 8.55669371797155e-001 1.95595144993216e-002
+1.44378800000000e+003 6.42571532474928e-003 5.37903922699588e-001 8.42971688643795e-001 4.10027706255985e-003
+1.51566300000000e+003 -1.31749354158927e-002 8.63881091147420e-001 -5.03014823634159e-001 2.26267240011916e-002
+1.58350200000000e+003 -2.91431787585505e-002 8.60224527043160e-001 -5.06671741725303e-001 4.94791303709615e-002
+1.65292800000000e+003 -4.51301356782638e-002 8.57494182977329e-001 -5.06789938946925e-001 7.63606888122175e-002
+1.72501200000000e+003 -6.13256302842898e-002 8.54256578232639e-001 -5.05721177513269e-001 1.03590328849226e-001
+1.79953900000000e+003 -7.76159539906484e-002 8.50262125467617e-001 -5.03860312298462e-001 1.30976590931008e-001
+1.87654700000001e+003 -9.39439625133817e-002 8.45424815042142e-001 -5.01331744100702e-001 1.58423156057415e-001
+1.95627300000001e+003 -1.10290922303338e-001 8.39698143020734e-001 -4.98181458731000e-001 1.85898292734663e-001
+2.03902700000001e+003 -1.26645323667762e-001 8.33049642279372e-001 -4.94426133110543e-001 2.13382413494305e-001
+2.12514100000001e+003 -1.42990602375357e-001 8.25455361557901e-001 -4.90071061782644e-001 2.40847437418130e-001
+2.21501100000001e+003 -1.59311700573784e-001 8.16893855517625e-001 -4.85115026692038e-001 2.68267817218954e-001
+2.30917800000001e+003 -1.75606129450525e-001 8.07337047244042e-001 -4.79548634707097e-001 2.95639115134038e-001
+2.40837200000002e+003 -1.91884675253323e-001 7.96744571450425e-001 -4.73352741795403e-001 3.22979165120571e-001
+2.51361000000002e+003 -2.08177371528431e-001 7.85053684713140e-001 -4.66493438801836e-001 3.50338073375809e-001
+2.62433900000001e+003 -2.24258927906375e-001 7.72396940341265e-001 -4.59050651693734e-001 3.77337248340652e-001
+2.74016100000001e+003 -2.39951811830414e-001 7.58922515744018e-001 -4.51113505253860e-001 4.03678521194339e-001
+2.85983800000002e+003 -2.55001237560553e-001 7.44902020054440e-001 -4.42843870022967e-001 4.28934326143855e-001
+2.94199500000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.05365600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.16489800000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.27951500000001e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.38370600000001e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.50540000000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.63116600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.76090200000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.89484600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.03295200000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.17497800000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.32035900000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.47877000000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.65099400000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.83819700000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+5.04193000000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+5.26417600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+5.50672700000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+5.76158100000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+6.02922800000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+6.31013600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+6.55049200000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+6.77344200000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+7.08762200000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+7.41511600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+7.75044600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+8.09086000000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+8.43238600000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+8.76876900000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+9.00665200000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+9.24357400000003e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+9.55273500000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+9.89856100000002e+003 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.02749310000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.06584690000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.10377050000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.14109710000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.17765440000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.21327980000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.24782480000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.28116090000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.31318330000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.34381460000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.37300510000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.40073180000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.42699550000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.45181700000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.47522970000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.49727380000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.51798060000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.53911260000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.55942840000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.57818540000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.59348000000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.60674710000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.61459330000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.62243460000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.63435200000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.64706460000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.66025910000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.67362060000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.68651570000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.69874080000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.71037350000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.72148050000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.73211590000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.74232370000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.75214020000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.76159690000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.77072270000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.77954640000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.78809810000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.79641030000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.80451810000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.81245870000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.82025990000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.82775530000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.83503040000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.84259560000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.85017850000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.85783220000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.86559440000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.87351460000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.88162190000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.88992580000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.89845470000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.90722990000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.91626560000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.92556860000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.93513960000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.94497760000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.95508450000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.96546720000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.97613890000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.98711650000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+1.99522010000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.00340190000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.01493710000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.02712350000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.03971270000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.05270950000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.06612550000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.07995350000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.09416560000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.10876060000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.12472590000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.14207310000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.16092820000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.18144860000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.20383510000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.22818760000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.25377400000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.28064290000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.30884040000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.32853100000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.35858870000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.39051900000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.42339330000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.45699420000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.49102590000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.52505510000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.55837740000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.58361620000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.60878700000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.64120420000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.67685190000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.71534650000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.75357230000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.79131800000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.82840920000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.86467630000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.89996070000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.93411990000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.96703290000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+2.99860390000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.02876390000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.05747210000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.08471390000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.11049640000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.13484520000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.15779560000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.17938540000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.20019950000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.22144890000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.24123540000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.25939910000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.27393000000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.28592990000002e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.29792180000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.30904680000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.32178190000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.33497070000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.34833460000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.36127860000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.37354680000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.38521690000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.39635690000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.40702160000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.41725570000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.42709590000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.43657410000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.44571920000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.45456020000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.46312750000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.47145360000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.47957320000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.48752280000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.49534000000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.50282930000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.51005880000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.51762760000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.52520900000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.53285430000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.54060610000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.54851490000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.55661120000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.56490220000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.57341600000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.58217510000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.59119400000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.60047900000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.61003090000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.61984910000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.62993560000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.64029650000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.65094440000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.66189640000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.66997970000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.67814560000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.68956460000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.70171420000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.71325180000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.72618500000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.73952270000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.75327160000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.76740750000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.78187230000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.79763720000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.81476970000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.83338730000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.85363990000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.87572200000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.89989040000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.92528470000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.95195340000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+3.97994260000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.00395980000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.02756850000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.05898180000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.09162310000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.12503450000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.15893960000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.19293740000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.22639540000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.24874320000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.27099020000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.30170340000001e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+4.32000000000000e+004 -2.64673584895942e-001 7.35294484812486e-001 -4.37172150681621e-001 4.45163368586272e-001
+
+
+END AttitudeData
+
+          END QuatData
+      END OverrideTrajectory
+
+END Attitude
+
+BEGIN Swath
+
+    SwathType           ElevAngleEnvelope
+    ElevationAngle      0.000000000000e+000
+    HalfAngle           0.000000000000e+000
+    Distance            0.000000000000e+000
+    RepType             NoSwath
+
+END Swath
+
+BEGIN Eclipse
+
+    Sunlight                Off
+    SunlightColor           #ffff00
+    SunlightLineStyle       0
+    SunlightLineWidth       3
+    SunlightMarkerStyle     15
+
+    Penumbra                Off
+    PenumbraColor           #f0ffff
+    PenumbraLineStyle       0
+    PenumbraLineWidth       3
+    PenumbraMarkerStyle     15
+
+    Umbra                   Off
+    UmbraColor              #0000ff
+    UmbraLineStyle          0
+    UmbraLineWidth          3
+    UmbraMarkerStyle        15
+
+    SunlightPenumbraLine    Off
+    PenumbraUmbraLine       Off
+
+    UseCustomEclipseBodies  No
+
+END Eclipse
+
+BEGIN RealTimeDef
+
+	HistoryDuration     1.800000000000e+003
+	LookAheadDuration   1.800000000000e+003
+
+END RealTimeDef
+
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+        BEGIN GenericGraphics
+            ShowPassLabel        Off
+            ShowPathLabel        Off
+            TransformTrajectory  On
+            MinGfxGndTrkTimeStep 0.000000000000e+000
+            MaxGfxGndTrkTimeStep 1.800000000000e+003
+            MinGfxOrbitTimeStep  0.000000000000e+000
+            MaxGfxOrbitTimeStep  4.320000000000e+004
+            ShowGlintPoint       Off
+            ShowGlintColor       #ffffff
+            ShowGlintStyle       2
+        END GenericGraphics
+
+        BEGIN AttributeData
+
+            AttributeType    CustomIntervals
+            ScenarioEpoch 5 May 2009 16:00:00.000000
+
+            IntvlHideShowAll Off
+
+            BEGIN DefaultAttributes
+                Show                 On
+                Inherit              On
+                ShowLabel            On
+                ShowGndTrack         On
+                ShowGndMarker        On
+                ShowOrbit            On
+                ShowOrbitMarker      On
+                ShowElsetNum         Off
+                ShowSpecialSwath     On
+                MarkerColor          #00ffff
+                GroundTrackColor     #00ffff
+                SwathColor           #00ffff
+                LabelColor           #00ffff
+                LineStyle            0
+                LineWidth            1.000000
+                MarkerStyle          15
+                FontStyle            0
+                SwathLineStyle       0
+                SpecSwathLineStyle   1
+            END DefaultAttributes
+
+            BEGIN CustomIntervalList
+                BEGIN DefaultAttributes
+                    Show                 On
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #00ffff
+                    GroundTrackColor     #00ffff
+                    SwathColor           #00ffff
+                    LabelColor           #00ffff
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END DefaultAttributes
+                BEGIN GraphicsInterval
+                    StartTime            0.000000000000e+000
+                    StopTime             2.941995000000e+003
+                    BEGIN Attributes
+                        Show                 On
+                        Inherit              On
+                        ShowLabel            On
+                        ShowGndTrack         On
+                        ShowGndMarker        On
+                        ShowOrbit            On
+                        ShowOrbitMarker      On
+                        ShowElsetNum         Off
+                        ShowSpecialSwath     On
+                        MarkerColor          #00ff00
+                        GroundTrackColor     #00ff00
+                        SwathColor           #00ff00
+                        LabelColor           #00ff00
+                        LineStyle            0
+                        LineWidth            1.000000
+                        MarkerStyle          4
+                        FontStyle            0
+                        SwathLineStyle       0
+                        SpecSwathLineStyle   1
+                    END Attributes
+                END GraphicsInterval
+                BEGIN GraphicsInterval
+                    StartTime            2.941995000000e+003
+                    StopTime             4.320000000000e+004
+                    BEGIN Attributes
+                        Show                 On
+                        Inherit              On
+                        ShowLabel            On
+                        ShowGndTrack         On
+                        ShowGndMarker        On
+                        ShowOrbit            On
+                        ShowOrbitMarker      On
+                        ShowElsetNum         Off
+                        ShowSpecialSwath     On
+                        MarkerColor          #00ff00
+                        GroundTrackColor     #00ff00
+                        SwathColor           #00ff00
+                        LabelColor           #00ff00
+                        LineStyle            0
+                        LineWidth            1.000000
+                        MarkerStyle          4
+                        FontStyle            0
+                        SwathLineStyle       0
+                        SpecSwathLineStyle   1
+                    END Attributes
+                END GraphicsInterval
+            END CustomIntervalList
+
+            BEGIN AccessIntervalsAttributes
+                BEGIN AttrDuringAccess
+                    Show                 On
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #00ffff
+                    GroundTrackColor     #00ffff
+                    SwathColor           #00ffff
+                    LabelColor           #00ffff
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END AttrDuringAccess
+                BEGIN AttrDuringNoAccess
+                    Show                 Off
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #ff00ff
+                    GroundTrackColor     #ff00ff
+                    SwathColor           #ff00ff
+                    LabelColor           #ff00ff
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END AttrDuringNoAccess
+            END AccessIntervalsAttributes
+
+            BEGIN RealTimeAttributes
+                BEGIN HistoryAttr
+                    Show                 On
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #00ffff
+                    GroundTrackColor     #00ffff
+                    SwathColor           #00ffff
+                    LabelColor           #00ffff
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END HistoryAttr
+                BEGIN SplineAttr
+                    Show                 On
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #ffff00
+                    GroundTrackColor     #ffff00
+                    SwathColor           #ffff00
+                    LabelColor           #ffff00
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END SplineAttr
+                BEGIN LookAheadAttr
+                    Show                 On
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #ffffff
+                    GroundTrackColor     #ffffff
+                    SwathColor           #ffffff
+                    LabelColor           #ffffff
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END LookAheadAttr
+                BEGIN DropOutAttr
+                    Show                 On
+                    Inherit              On
+                    ShowLabel            On
+                    ShowGndTrack         On
+                    ShowGndMarker        On
+                    ShowOrbit            On
+                    ShowOrbitMarker      On
+                    ShowElsetNum         Off
+                    ShowSpecialSwath     On
+                    MarkerColor          #ff0000
+                    GroundTrackColor     #ff0000
+                    SwathColor           #ff0000
+                    LabelColor           #ff0000
+                    LineStyle            0
+                    LineWidth            1.000000
+                    MarkerStyle          4
+                    FontStyle            0
+                    SwathLineStyle       0
+                    SpecSwathLineStyle   1
+                END DropOutAttr
+            END RealTimeAttributes
+        END AttributeData
+
+        BEGIN LeadTrailData
+                GtLeadingType             NoPass
+                GtTrailingType            NoPass
+                OrbitLeadingType          NoPass
+                OrbitTrailingType         NoPass
+        END LeadTrailData
+            BEGIN SaaData
+               ShowSaa            Off
+               ShowSaaFill        Off
+               SaaFillStyle       7
+               TrackSaa           On
+               SaaAltitude        500000.000000
+            END SaaData
+            Begin GroundTracks
+                Begin GroundTrack
+                    CentralBody  Earth
+                End GroundTrack
+            End GroundTracks
+        BEGIN EllipseSetGxData
+            BEGIN DefEllipseSetGx
+                ShowStatic     On
+                ShowDynamic    On
+                UseLastDynPos  Off
+                HoldLastDynPos Off
+                ShowName       Off
+                ShowMarker     On
+                MarkerStyle    0
+                LineStyle      0
+                LineWidth      1.000000
+            END DefEllipseSetGx
+        END EllipseSetGxData
+    END Graphics
+    
+    BEGIN ClsApp
+		RangeConstraint         5000.000
+		ApoPeriPad              30000.000
+		OrbitPathPad            30000.000
+		TimeDistPad             30000.000
+		OutOfDate               2592000.000
+		UseApogeePerigeeFilter  Yes
+		UsePathFilter           Yes
+		UseTimeFilter           Yes
+		UseOutOfDate            Yes
+		CreateSats              No
+		MaxSatsToCreate         500
+		UseModelScale           No
+		ModelScale              4.000
+		UseLaunchWindow         Yes
+		LaunchWindowStart       0.000
+		LaunchWindowStop        0.000
+		ShowLine                Yes
+		AnimHighlight           Yes
+		StaticHighlight         Yes
+		UseCrossRefDb           Yes
+		CollisionDB                     stkAllTLE.tce
+		CollisionCrossRefDB             stkAllTLE.sd
+    END ClsApp
+    
+    BEGIN ExternData
+    END ExternData
+    
+    BEGIN Lifetime
+        Semi_parameter       6.678137000000e+006
+        Eccentricity         0.000000000000e+000
+        Argument_Perigee     0.000000000000e+000
+        RA_Asc_Node          0.000000000000e+000
+        Inclination          4.974188368180e-001
+        UTC_Year             1997
+        UTC_Month            1
+        UTC_Day              1
+        UTC_Hour             0
+        UTC_Minute           0
+        UTC_Second           0.000000000000e+000
+        Limit_Type           OrbitCount
+        Duration_Limit       36525.000000
+        Rev_Count_Limit      99999
+        Revs_Calculation     10
+        Gaussian_Quadratures 1
+        Flux_Sigma_Level     0.000000
+        Gravity_Model_Flag   1
+        Reflection_Coef      1.000000000000e+000
+        Sun_Area             1.543000000000e+001
+        Mass                 -1.000000000000e+000
+        Drag_Coef            2.200000000000e+000
+        Drag_Area            1.365000000000e+001
+        Rotating_Atm_Flag    0
+        Compute_Gamma_Flag   0
+        Initial_Time         0.000000000000e+000
+        Decay_Alt            6.500000000000e+004
+        Solar_Flux_Filename  SolFlx_Schatten.dat
+    END Lifetime
+    
+    BEGIN AccessConstraints
+		LineOfSight   IncludeIntervals 
+    END AccessConstraints
+    
+    BEGIN AttitudeSimulator
+	UseReferenceForAttitude  No
+	UseForAttitude  No
+	UsePctCmplt  Yes
+	PctCmpltDivisor  24
+	PctCmpltTitle  Attitude Simulation
+	UseAnimate  No
+	AnimateSampling 1.0000000000000000e+000
+	StartTime  5 May 2009 16:00:00.000000000
+	StopTime  6 May 2009 16:00:00.000000000
+	Step  0.0000000000000000e+000
+	InitialTime  5 May 2009 16:00:00.000000000
+	BEGIN InitialAttitude
+		0.0000000000000000e+000
+		0.0000000000000000e+000
+		0.0000000000000000e+000
+		1.0000000000000000e+000
+	END InitialAttitude
+	Representation  0
+	Sequence  0
+	BEGIN InitialAngVel
+		0.0000000000000000e+000
+		0.0000000000000000e+000
+		0.0000000000000000e+000
+	END InitialAngVel
+	BEGIN InitialMomentumBias
+		0.0000000000000000e+000
+		0.0000000000000000e+000
+		0.0000000000000000e+000
+	END InitialMomentumBias
+	UseMomentumBias  No
+	BEGIN IntegratedSimulation
+		BEGIN Integrator
+			Type RK78
+			RelTol 1.0000000000000000e-003
+			AbsTol 9.9999999999999995e-007
+			MinStep 9.9999999999999995e-007
+			UseMinStep		No
+			MaxStep 1.0000000000000000e+001
+			UseMaxStep		No
+			NumIter 10
+			UseIter		No
+			UseStat		No
+		END Integrator
+		BEGIN Formulation
+		BEGIN EnvironmentData
+			UseApproxAlt    No
+			MeanFlux    150
+			DailyFlux    150
+			GeoMagIndex       3.0000000000000000
+			RefAlt       0.0000000000000000
+			ScaleAlt    8500.0000000000000000
+			RefDensity       1.2170000000000001
+			DensityModel  Exponential
+		END EnvironmentData
+			BEGIN InitList
+			END InitList
+			BEGIN UpdateList
+			END UpdateList
+			BEGIN PostList
+			END PostList
+			UseInitialUpdateStep  No
+			UseUpdateStep  No
+		END Formulation
+	END IntegratedSimulation
+    END AttitudeSimulator
+    
+    BEGIN ObjectCoverage
+    END ObjectCoverage
+    
+    BEGIN Desc
+        ShortText    0
+
+        LongText    0
+
+    END Desc
+    
+    BEGIN RCS
+	Inherited          True
+	LinearClutterCoef        1.000000e+000
+	BEGIN RCSBAND
+		LinearConstantValue      1.000000e+000
+		Swerling      0
+		BandData      3.000000e+006 3.000000e+011
+	END RCSBAND
+    END RCS
+    
+    BEGIN Ellipse
+        TimesTrackVehStartTime Yes
+    END Ellipse
+    
+    BEGIN Reference
+    END Reference
+    
+    BEGIN AcquisitionData
+    DataType                   IIRV9
+    CoordinateSystem           1
+    MassAtEpoch                1000.000000
+    IIRV_MessageID                  0
+    IIRV_MessageClass               10
+    IIRV_MessageOrigin              A
+    IIRV_MessageDestination         GSVL
+    IIRV_VectorType                 1
+    IIRV_VectorSource               1
+    IIRV_SupportID                  0
+    IIRV_VehicleIdentificationCode  1
+    IIRV_CounterStart               1
+    IIRV_Area                       0.000000
+    IIRV_DragCoefficient            2.000000
+    IIRV_SolarReflectivity          0.000000
+    IIRV_OriginRouteMsg             HJSC
+    IIRV9_MessageOrigin              A
+    IIRV9_MessageDestination         GSVL
+    IIRV9_VectorSource               1
+    IIRV9_IRON                       1
+    IIRV9_PerturbationCoeffType      0
+    IIRV9_DragCoefficient            2.000000
+    IIRV9_SRPCoefficient             1.000000
+    IIRV9_Area                       0.000000
+    IIRV9_OriginRouteMsg             HJSC
+    IIRV1_MessageDestination         GSVL
+    IIRV1_VectorType                 1
+    IIRV1_VectorSource               1
+    IIRV1_SupportID                  0
+    IIRV1_VehicleIdentificationCode  5
+    IIRV1_CounterStart               1
+    IIRV1_Area                       0.000000
+    IIRV1_DragCoefficient            2.000000
+    IIRV1_OriginRouteMsg             HJSC
+    EPV_MessageID                  1
+    EPV_MessageClass               10
+    EPV_MessageOrigin              A
+    EPV_MessageDestination         GSVL
+    EPV_VectorType                 1
+    EPV_VectorSource               1
+    EPV_SupportID                  0
+    EPV_VehicleIdentificationCode  1
+    EPV_CounterStart               1
+    NASA_MissionID                  eol
+    NASA_MessageID                  0
+    NASA_MessageClass               10
+    NASA_RoutIndicator              GSVL
+    NASA_VectorType                 1
+    NASA_VectorSource               1
+    NASA_Area                       0.000000
+    NASA_DragCoefficient            2.000000
+    NASA_SolarReflectivity          0.000000
+    NASA_OriginRouteMsg             0
+    END AcquisitionData
+    
+    BEGIN Identification
+    END Identification
+    
+    BEGIN Crdn
+		BEGIN	ANGLE
+			Type	ANGLE_BETWEEN
+			Name	SunMoon
+			Description	Angle between the sun and moon vectors
+				Origin
+					BEGIN	VECTOR
+						Type	VECTOR_LINKTO
+						Name	Sun
+					END	VECTOR
+				Destination
+					BEGIN	VECTOR
+						Type	VECTOR_LINKTO
+						Name	Moon
+					END	VECTOR
+		END	ANGLE
+    END Crdn
+    
+    BEGIN DIS
+
+		Begin Input
+
+
+		End Input
+
+
+		Begin Output
+
+			Enable                     Off
+			ForceID                    1
+			EntityID                   0:0:0
+			PriEntityType              0:0:0:0:0:0:0
+			AltEntityType              0:0:0:0:0:0:0
+			DistanceThresh             1.000000
+
+		End Output
+
+    END DIS
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+BEGIN SubObjects
+
+END SubObjects
+
+END Satellite
+

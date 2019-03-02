@@ -1,0 +1,30 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Constellation
+
+Name  Fylingdales
+BEGIN Definition
+
+   Type        Constellation
+   Operator    Or
+   Order       1
+   IsRelay     No
+    Object  Facility/Fylingdales/Sensor/f_tracking_rv1
+    Object  Facility/Fylingdales/Sensor/f_tracking2_rv1
+   SaveMode    0
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+
+END Extensions
+
+END Constellation

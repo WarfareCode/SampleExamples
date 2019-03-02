@@ -1,0 +1,16 @@
+;**********************************************************************
+;*           Copyright 2005, Analytical Graphics, Inc.                *
+;**********************************************************************
+; Agi.As.Hpop.Plugins.CPP.Examples.def : Declares the module parameters.
+
+LIBRARY      "Agi.As.Hpop.Plugins.CPP.Examples.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+
+;**********************************************************************
+;*           Copyright 2005, Analytical Graphics, Inc.                *
+;**********************************************************************

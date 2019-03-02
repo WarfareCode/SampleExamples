@@ -1,0 +1,115 @@
+stk.v.9.0
+WrittenBy    STK_v9.3.0
+
+BEGIN LineTarget
+
+Name        Schuylkill
+
+    BEGIN IndexPtData
+
+        CentralBody            Earth
+        AnchorPtIndex          -3
+        NumberOfPolylinePts    26
+
+        BEGIN PolylinePoints
+
+            4.03636538757753e+001    -7.59595230785100e+001    0.00000000000000e+000
+            4.03517520203066e+001    -7.59471329417913e+001    0.00000000000000e+000
+            4.03134219421816e+001    -7.58961075511663e+001    0.00000000000000e+000
+            4.03087832703066e+001    -7.58871964183538e+001    0.00000000000000e+000
+            4.02942569031191e+001    -7.58489273753850e+001    0.00000000000000e+000
+            4.02870547546816e+001    -7.58207901683538e+001    0.00000000000000e+000
+            4.02759463562441e+001    -7.57396744456975e+001    0.00000000000000e+000
+            4.02564761414003e+001    -7.56364029613225e+001    0.00000000000000e+000
+            4.02564761414003e+001    -7.56364029613225e+001    0.00000000000000e+000
+            4.02528750671816e+001    -7.56173599925725e+001    0.00000000000000e+000
+            4.02080142273378e+001    -7.55589493480413e+001    0.00000000000000e+000
+            4.01827456726503e+001    -7.55373429027288e+001    0.00000000000000e+000
+            4.01505801453066e+001    -7.55142105785100e+001    0.00000000000000e+000
+            4.01217715515566e+001    -7.54705094066350e+001    0.00000000000000e+000
+            4.01251895203066e+001    -7.54265030589788e+001    0.00000000000000e+000
+            4.01326358093691e+001    -7.54136246410100e+001    0.00000000000000e+000
+            4.01365420593691e+001    -7.54020889964788e+001    0.00000000000000e+000
+            4.01328799499941e+001    -7.53709610667913e+001    0.00000000000000e+000
+            4.01255557312441e+001    -7.53411148753850e+001    0.00000000000000e+000
+            4.00915591492128e+001    -7.52910050121038e+001    0.00000000000000e+000
+            4.00322329773378e+001    -7.52189835277288e+001    0.00000000000000e+000
+            3.99608828796816e+001    -7.52128800121038e+001    0.00000000000000e+000
+            3.99524600281191e+001    -7.52239273753850e+001    0.00000000000000e+000
+            3.99189517273378e+001    -7.52255753246038e+001    0.00000000000000e+000
+            3.99108340515566e+001    -7.52018936839788e+001    0.00000000000000e+000
+            3.98853823914003e+001    -7.52079361644475e+001    0.00000000000000e+000
+
+        END PolylinePoints
+
+        BoundaryType           GreatArc
+        Granularity            0.008727
+
+    END IndexPtData
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+            BEGIN Attributes
+
+                LineColor               #00ffff
+                LabelColor              #00ffff
+                LineStyle               0
+                LineWidth               1.0
+                FontStyle               0
+
+            END Attributes
+
+            BEGIN Graphics
+
+                Inherit                 On
+                ShowLabel               On
+                ShowBoundingRect        Off
+
+            END Graphics
+            BEGIN PointData
+                ShowPoints           Off
+                NewPointShow         On
+                NewPointMarkerStyle  1
+                NewPointFontStyle    0
+                PointMarkerShow      On
+                PointMarkerStyle     1
+            END PointData
+    END Graphics
+    
+    BEGIN ExternData
+    END ExternData
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN AccessConstraints
+		LineOfSight   IncludeIntervals 
+    END AccessConstraints
+    
+    BEGIN Desc
+        LongText    132
+UIDENT :         1873701.000000000
+StrokeWeig :               0.150000000
+FeatureCla : River
+Name1 : Schuylkill River
+Name2 : 
+
+    END Desc
+    
+    BEGIN DisplayTm
+		DisplayGT	AlwaysOff
+		DisplayType	AlwaysOn
+    END DisplayTm
+    
+    BEGIN Crdn
+    END Crdn
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+END LineTarget
+

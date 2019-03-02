@@ -1,0 +1,793 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Chain
+
+Name  SensorsToMissile
+BEGIN Definition
+
+   Type        Chain
+   Operator    Or
+   Order       1
+   Recompute   Yes
+   IntervalType    0
+   ComputeIntervalStart    0.000000
+   ComputeIntervalStop     86400.000000
+    ComputeIntervalPtr
+	BEGIN	EVENTINTERVAL
+			BEGIN Interval
+				Start	1 Jun 2001 18:00:00.000000000
+				Stop	2 Jun 2001 18:00:00.000000000
+			END Interval
+			IntervalState	Explicit
+	END	EVENTINTERVAL
+
+   UseSaveIntervalFile    No
+   UseMinAngle     No
+   UseMaxAngle     No
+   UseMinLinkTime     No
+   LTDelayCriterion    2.000000
+   TimeConvergence     0.005000
+   AbsValueConvergence 1.000000e-014
+   RelValueConvergence 1.000000e-008
+   MaxTimeStep         360.000000
+   MinTimeStep         1.000000e-002
+   UseLightTimeDelay   Yes
+    DetectEventsUsingSamplesOnly No
+    Object  Constellation/dsp_and_Fylingdales
+    Object  Constellation/Missile
+   SaveMode    1
+BEGIN StrandAccesses
+
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_MSL1
+    Start    5.3845637583325052
+    Stop     6.7398635909429929
+    Start    15.384589849410808
+    Stop     16.739697870815665
+    Start    25.384516134662899
+    Stop     26.738969209836796
+    Start    35.384302861307503
+    Stop     36.738241645655357
+    Start    45.384317048870777
+    Stop     46.736714216688206
+    Start    55.383249353561709
+    Stop     56.734401270643517
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_MSL2
+    Start    65.382333768846294
+    Stop     66.731197594686719
+    Start    75.38133774424918
+    Stop     76.727435969564141
+    Start    85.380135159932536
+    Stop     86.723073525192532
+    Start    95.378894532806555
+    Stop     96.717999145708745
+    Start    105.37758742777029
+    Stop     106.71217825135682
+    Start    115.37624755752812
+    Stop     116.70541996289134
+    Start    125.37492332077343
+    Stop     126.6975684199133
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_MSL3
+    Start    135.37369361544586
+    Stop     136.68856681931376
+    Start    145.37268383531696
+    Stop     146.67858176093179
+    Start    155.37197327986365
+    Stop     156.66746981929325
+    Start    165.37160986590811
+    Stop     166.65492811179138
+    Start    175.37140136232401
+    Stop     176.64037803042601
+    Start    185.37135325398572
+    Stop     186.62314501867743
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_PBV3
+    Start    195.37163706398582
+    Stop     196.60307032588941
+    Start    205.37285761552528
+    Stop     206.58238853052899
+    Start    215.37507720411287
+    Stop     216.56128794911234
+    Start    225.37826937872637
+    Stop     226.5397143697011
+    Start    235.38241647989807
+    Stop     236.51767687586559
+    Start    245.38752724671954
+    Stop     246.49516199448371
+    Start    255.393607294476
+    Stop     256.47214770005939
+    Start    265.40066771157524
+    Stop     266.44860083132517
+    Start    275.40871147580845
+    Stop     276.42449531890077
+    Start    285.41775029730059
+    Stop     286.39974412934419
+    Start    295.42785426028979
+    Stop     296.37430494890259
+    Start    305.43909068000227
+    Stop     306.34811204446305
+    Start    315.4515413468248
+    Stop     316.32107108177831
+    Start    325.46531628192349
+    Stop     326.29306647061509
+    Start    335.48058171155947
+    Stop     336.26394504171913
+    Start    345.49752515320301
+    Stop     346.23352873582917
+    Start    355.51639464610702
+    Stop     356.20150085238197
+    Start    365.53757614906687
+    Stop     366.16745615934343
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_RV1
+    Start    255.39360609997638
+    Stop     256.47214851292352
+    Start    265.40066129188102
+    Stop     266.44860583497979
+    Start    275.40871234864096
+    Stop     276.4244917324686
+    Start    285.41778943064963
+    Stop     286.39976691328798
+    Start    295.42793527029863
+    Stop     296.37436215528737
+    Start    305.43920849488563
+    Stop     306.34820546474657
+    Start    315.45168708926883
+    Stop     316.32120414838505
+    Start    325.46547570642423
+    Stop     326.29323808768294
+    Start    335.48071454510369
+    Stop     336.26415365645408
+    Start    345.49759414449909
+    Stop     346.23374715016513
+    Start    355.51637970269917
+    Stop     356.20174108373863
+    Start    365.53745265918536
+    Stop     366.16774208120893
+    Start    375.56139046988721
+    Stop     376.13116215526804
+    Start    385.58913021194286
+    Stop     386.09105292670347
+    Start    395.62237790162965
+    Stop     396.04569840381737
+    Start    405.6649143252497
+    Stop     405.99130899940968
+    Start    415.73012197130134
+    Stop     415.91449268818775
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_RV2
+    Start    305.4390903783858
+    Stop     306.34811277217523
+    Start    315.45153498610807
+    Stop     316.32107598904298
+    Start    325.4652910877204
+    Stop     326.29307227901882
+    Start    335.48049902269906
+    Stop     336.26395323404455
+    Start    345.49734953634106
+    Stop     346.23350989679102
+    Start    355.51610816860415
+    Stop     356.20146606197983
+    Start    365.53715689299815
+    Stop     366.16742790602831
+    Start    375.56107348542338
+    Stop     376.13080654252923
+    Start    385.58879698280742
+    Stop     386.09065229501073
+    Start    395.62203640565332
+    Stop     396.04524602467899
+    Start    405.66458217118378
+    Stop     405.99078776554791
+    Start    415.72987638654934
+    Stop     415.91382466717283
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_RV3
+    Start    365.5375733806664
+    Stop     366.16745891257364
+    Start    375.56163561766527
+    Stop     376.13081596133236
+    Start    385.58952995304014
+    Stop     386.09061259028385
+    Start    395.62298792531203
+    Stop     396.04510761591331
+    Start    405.66586889137358
+    Stop     405.99043179532879
+    Start    415.73207000335242
+    Stop     415.91267860965013
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_SRD1
+    Start    145.37269504237796
+    Stop     146.67879189411832
+    Start    155.37202102114551
+    Stop     156.66884840323993
+    Start    165.37195694142434
+    Stop     166.65879207821629
+    Start    175.37159686891442
+    Stop     176.64863498456128
+    Start    185.3718085808689
+    Stop     186.63838868774971
+    Start    195.37227900091864
+    Stop     196.62806413204035
+    Start    205.37299128799222
+    Stop     206.61767176735793
+    Start    215.37392924449892
+    Stop     216.6072216914028
+    Start    225.37507747442481
+    Stop     226.59672349556189
+    Start    235.37642109176915
+    Stop     236.58618660695694
+    Start    245.37794577669297
+    Stop     246.57562000901618
+    Start    255.37963766305907
+    Stop     256.56503259531115
+    Start    265.38148331468454
+    Stop     266.55443300073449
+    Start    275.38346965211576
+    Stop     276.54382966183283
+    Start    285.38558399705704
+    Stop     286.53322913660668
+    Start    295.38781384853826
+    Stop     296.52264517110916
+    Start    305.39014698570588
+    Stop     306.51206543506123
+    Start    315.3925713987241
+    Stop     316.50154484657895
+    Start    325.39507527915811
+    Stop     326.49104668857353
+    Start    335.39764687526798
+    Stop     336.48059400988973
+    Start    345.40027460347829
+    Stop     346.47019512806258
+    Start    355.40294688874849
+    Stop     356.45984390430385
+    Start    365.40565221056681
+    Stop     366.44957052066457
+    Start    375.40837908238234
+    Stop     376.43940401591453
+    Start    385.41111603917813
+    Stop     386.42930378653233
+    Start    395.41385147518724
+    Stop     396.41929969673731
+    Start    405.41657378896451
+    Stop     406.40940072584141
+    Start    415.4192713310988
+    Stop     416.39961584973463
+    Start    425.42193231869504
+    Stop     426.3899361132062
+    Start    435.42454491220758
+    Stop     436.38042573666087
+    Start    445.42709708774157
+    Stop     446.37103958505776
+    Start    455.4295766956908
+    Stop     456.36180571565029
+    Start    465.43197159897363
+    Stop     466.35273422350247
+    Start    475.43426938520184
+    Stop     476.34383527202971
+    Start    485.43645761704295
+    Stop     486.33511933080854
+    Start    495.4385237241857
+    Stop     496.32659688426963
+    Start    505.44045501059793
+    Stop     506.31827434292063
+    Start    515.44223886186683
+    Stop     516.31017563394551
+    Start    525.44386245073474
+    Stop     526.30228684586473
+    Start    535.44531310861714
+    Stop     536.29465842113621
+    Start    545.44657814399682
+    Stop     546.28725743119139
+    Start    555.44764495730965
+    Stop     556.28013277054856
+    Start    565.44850118797888
+    Stop     566.27324707352091
+    Start    575.44913578837986
+    Stop     576.266685259734
+    Start    585.44953330379951
+    Stop     586.26039209969406
+    Start    595.44968581243484
+    Stop     596.25438409170602
+    Start    605.44958108246328
+    Stop     606.24871686721121
+    Start    615.44920851560073
+    Stop     616.243353471982
+    Start    625.44855825815137
+    Stop     626.23831771331675
+    Start    635.44766904783046
+    Stop     636.23361197276972
+    Start    645.44638866768878
+    Stop     646.22925961307942
+    Start    655.44485335347372
+    Stop     656.22524956753477
+    Start    665.44300855862195
+    Stop     666.22159542312613
+    Start    675.44084877733792
+    Stop     676.21829037787393
+    Start    685.43836930101315
+    Stop     686.2153634245002
+    Start    695.43556672188288
+    Stop     696.21279199358503
+    Start    705.43243878205897
+    Stop     706.21058542588662
+    Start    715.42898425345982
+    Stop     716.208743660236
+    Start    725.42520307080542
+    Stop     726.20726559541811
+    Start    735.42109637285353
+    Stop     736.20610368531197
+    Start    745.41666630608165
+    Stop     746.2052075881511
+    Start    755.41192334607081
+    Stop     756.20498491721889
+    Start    765.40686097564185
+    Stop     766.20492814354179
+    Start    775.40174236388759
+    Stop     776.20520117307149
+    Start    785.39857071683446
+    Stop     786.20557897715571
+    Start    795.39754250143631
+    Stop     796.20590806672487
+    Start    805.39710258716059
+    Stop     806.20629036480477
+    Start    815.39668139887681
+    Stop     816.20673508100538
+    Start    825.39592791302402
+    Stop     826.207216880396
+    Start    835.39545408628078
+    Stop     836.2077053111085
+    Start    845.39500722438061
+    Stop     846.20818048732565
+    Start    855.39458824586029
+    Stop     856.20863433129671
+    Start    865.39419518320369
+    Stop     866.20906528776879
+    Start    875.39382508653978
+    Stop     876.2094745924536
+    Start    885.39347514649205
+    Stop     886.20986435958093
+    Start    895.39314297677004
+    Stop     896.21023671302851
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_STG1
+    Start    65.382400179632555
+    Stop     66.731554110371846
+    Start    75.381786548921326
+    Stop     76.729103162204524
+    Start    85.381105287534936
+    Stop     86.726788905499518
+    Start    95.380241600310626
+    Stop     96.724503553065006
+    Start    105.37951206029177
+    Stop     106.72228209493915
+    Start    115.37875817305286
+    Stop     116.72017916524783
+    Start    125.37803698599612
+    Stop     126.71814239886804
+    Start    135.37715688640026
+    Stop     136.71604037529323
+    Start    145.37631703691696
+    Stop     146.71409221109934
+    Start    155.37550714352449
+    Stop     156.71219991368707
+    Start    165.37453015385225
+    Stop     166.71032678056508
+    Start    175.37347972891567
+    Stop     176.70858447004258
+    Start    185.37244661950049
+    Stop     186.70686238123986
+    Start    195.37136525129074
+    Stop     196.70521041928694
+    Start    205.37023617269662
+    Stop     206.70363319585559
+    Start    215.36906289049816
+    Stop     216.70209288876504
+    Start    225.36785612134599
+    Stop     226.70072211395018
+    Start    235.36667319855869
+    Stop     236.69948276593431
+    Start    245.36553037897914
+    Stop     246.69845720865951
+    Start    255.36466522658796
+    Stop     256.69779111825693
+    Start    265.36412462706232
+    Stop     266.69623856246471
+    Start    275.36384148966215
+    Stop     276.69737718962227
+    Start    285.36362018671457
+    Stop     286.69738853946012
+    Start    295.36349060153873
+    Stop     296.69745352511887
+    Start    305.36339544993854
+    Stop     306.69754224937526
+    Start    315.3633198578795
+    Stop     316.69763934847981
+    Start    325.36325560232711
+    Stop     326.69773765254985
+    Start    335.36319871506498
+    Stop     336.6978339431048
+    Start    345.3631471246859
+    Stop     346.69792706153521
+    Start    355.36309970432842
+    Stop     356.69801681745389
+    Start    365.36305571865466
+    Stop     366.69810336528172
+    Start    375.36301464983967
+    Stop     376.69818703756653
+    Start    385.36503136949824
+    Stop     386.69826815403405
+    Start    395.36293996614421
+    Stop     396.69834692413349
+    Start    405.36290585461541
+    Stop     406.69842362239228
+    Start    415.36292410913967
+    Stop     416
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_STG2
+    Start    135.37370703250517
+    Stop     136.68876008429095
+    Start    145.37275865435143
+    Stop     146.67978327929956
+    Start    155.37233691785389
+    Stop     156.67071444588854
+    Start    165.37203772922302
+    Stop     166.66156572061251
+    Start    175.37145030720555
+    Stop     176.65233670762973
+    Start    185.37146795329613
+    Stop     186.64305885246722
+    Start    195.37168518825052
+    Stop     196.63375277396915
+    Start    205.37208662470218
+    Stop     206.62439489547674
+    Start    215.37265749012894
+    Stop     216.61501026618282
+    Start    225.37338347199335
+    Stop     226.60560844591251
+    Start    235.37425081013504
+    Stop     236.596198674791
+    Start    245.3752461413232
+    Stop     246.58679006831025
+    Start    255.37635645949368
+    Stop     256.57739142831957
+    Start    265.3775691316435
+    Stop     266.56801153526601
+    Start    275.37887178664795
+    Stop     276.55865888754494
+    Start    285.38025236368975
+    Stop     286.54934197224657
+    Start    295.38169901824324
+    Stop     296.54005748889176
+    Start    305.38320011727478
+    Stop     306.53084365662653
+    Start    315.38474415089695
+    Stop     316.52168897753944
+    Start    325.38631988109387
+    Stop     326.5125750171137
+    Start    335.38791614234003
+    Stop     336.50357084407005
+    Start    345.38952185773582
+    Stop     346.49465560200451
+    Start    355.39112611529333
+    Stop     356.48582045864077
+    Start    365.39271800169814
+    Stop     366.47708685920225
+    Start    375.39428681766304
+    Stop     376.46846341365193
+    Start    385.39582179571045
+    Stop     386.45994973304914
+    Start    395.39731229568173
+    Stop     396.45157905754775
+    Start    405.39874772438884
+    Stop     406.44332547392696
+    Start    415.40011753523942
+    Stop     416.4352336547563
+    Start    425.40141123388338
+    Stop     426.42728388428151
+    Start    435.40261844858981
+    Stop     436.41949384004175
+    Start    445.40372880338725
+    Stop     446.41187186646494
+    Start    455.40473206248703
+    Stop     456.40442626739605
+    Start    465.40561809183248
+    Stop     466.39716529847351
+    Start    475.40637682315833
+    Stop     476.3900971483431
+    Start    485.40699837806847
+    Stop     486.38323000208783
+    Start    495.40747300899289
+    Stop     496.37656633800361
+    Start    505.40779118665802
+    Stop     506.37013036877079
+    Start    515.4079435856388
+    Stop     516.36391346738753
+    Start    525.407921196095
+    Stop     526.35792850520431
+    Start    535.40809575271737
+    Stop     536.35218272807276
+    Start    545.40731705141513
+    Stop     546.34668305250818
+    Start    555.40671883632012
+    Stop     556.34141815826297
+    Start    565.40591280225465
+    Stop     566.33643769286573
+    Start    575.40489168882948
+    Stop     576.33172476115499
+    Start    585.40364874093234
+    Stop     586.32727160940192
+    Start    595.40217778993144
+    Stop     596.32309143897146
+    Start    605.40047308311239
+    Stop     606.31919462921928
+    Start    615.39852953708157
+    Stop     616.31557890623412
+    Start    625.39634269198962
+    Stop     626.31224950069748
+    Start    635.39390871858382
+    Stop     636.30920892888287
+    Start    645.39122448837543
+    Stop     646.30643009953201
+    Start    655.38829337441268
+    Stop     656.30400127800908
+    Start    665.38509596530264
+    Stop     666.30183597066218
+    Start    675.38164895450564
+    Stop     676.29996309902447
+    Start    685.37796365373845
+    Stop     686.29838214829238
+    Start    695.37404958941488
+    Stop     696.29710037908114
+    Start    705.37017046851599
+    Stop     706.29621990588817
+    Start    715.36816357011082
+    Stop     716.29601315993091
+    Start    725.36739610541349
+    Stop     726.29615079311588
+    Start    735.36692551874432
+    Stop     736.29641990763855
+    Start    745.36651300123469
+    Stop     746.29676265908267
+    Start    755.36612779872223
+    Stop     756.29713653993008
+    Start    765.36576888280638
+    Stop     766.29751240256712
+    Start    775.36543401263475
+    Stop     776.29787716039493
+    Start    785.36588464681779
+    Stop     786.29822548037862
+    Start    795.36482848780645
+    Stop     796.29855648459557
+    Start    805.36455286990781
+    Stop     806.29887124049378
+    Start    815.36429242635029
+    Stop     816.29917136598158
+    Start    825.36404518729682
+    Stop     826.29945845670568
+    Start    835.36380961435987
+    Stop     836.29973401389191
+    Start    845.3635844473373
+    Stop     846.2999992483135
+    Start    855.36336862493192
+    Stop     856.30025520131949
+    Start    865.36316118884088
+    Stop     866.30050276785732
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_STG3
+    Start    195.37163575868723
+    Stop     196.6030682214332
+    Start    205.37284627425507
+    Stop     206.58239973634932
+    Start    215.37504374886001
+    Stop     216.56128752040968
+    Start    225.3782119501723
+    Stop     226.53975780562189
+    Start    235.38234047885354
+    Stop     236.51776952572982
+    Start    245.38742530874219
+    Stop     246.49531262678559
+    Start    255.39346933249757
+    Stop     256.47236226854926
+    Start    265.40048293129155
+    Stop     266.44888747310893
+    Start    275.40848539130127
+    Stop     276.42484929769125
+    Start    285.41750619072627
+    Stop     286.40020135761392
+    Start    295.42758716494984
+    Stop     296.374883280365
+    Start    305.43878547718572
+    Stop     306.34882209179619
+    Start    315.45117774513767
+    Stop     316.32192583640364
+    Start    325.46486618670446
+    Stop     326.29407772632965
+    Start    335.47998813117158
+    Stop     336.26512700019123
+    Start    345.49672926159849
+    Stop     346.23487465484828
+    Start    355.5153479412408
+    Stop     356.2030501572134
+    Start    365.53621470434445
+    Stop     366.16927118920842
+    Start    375.55988737223436
+    Stop     376.13296894394176
+    Start    385.58726695148437
+    Stop     386.0932318134283
+    Start    395.61997632530955
+    Stop     396.04842720449273
+    Start    405.66154511846281
+    Stop     405.99501525269375
+    Start    415.72378314932536
+    Stop     415.92117748076998
+  Strand    Satellite/dsp/Sensor/dsp_sweep To Missile/TH1_l2i
+    Start    5.3845637584050356
+    Stop     6.7398635909429929
+    Start    15.384589849410808
+    Stop     16.739697870815665
+    Start    25.384516134662899
+    Stop     26.738969209836796
+    Start    35.384302861307503
+    Stop     36.738241645655357
+    Start    45.384317048870777
+    Stop     46.736714216688206
+    Start    55.383249353561709
+    Stop     56.734401270643517
+    Start    65.382333768635476
+    Stop     66.731197602483377
+    Start    75.381286457662867
+    Stop     76.727435988731443
+    Start    85.380135172606131
+    Stop     86.723073527650257
+    Start    95.37889451975154
+    Stop     96.718023345195391
+    Start    105.37758742408069
+    Stop     106.71217800208251
+    Start    115.37624757134549
+    Stop     116.70541996314842
+    Start    125.37492332379107
+    Stop     126.69757653926951
+    Start    135.37369360013378
+    Stop     136.68855938190245
+    Start    145.37268384277024
+    Stop     146.67856832276448
+    Start    155.37197327023023
+    Stop     156.66746981416134
+    Start    165.37160985740823
+    Stop     166.65493183100148
+    Start    175.37231770081044
+    Stop     176.64036531317106
+    Start    185.37135326211501
+    Stop     186.62313698061917
+    Start    195.37163706161402
+    Stop     196.60307032267843
+    Start    205.37285763365693
+    Stop     206.58238852611976
+    Start    215.37507717739712
+    Stop     216.56128795545362
+    Start    225.37826938874221
+    Stop     226.53970665980887
+    Start    235.38241643800492
+    Stop     236.51767686439609
+    Start    245.38752724321168
+    Stop     246.49516199585406
+    Start    255.3936061166695
+    Stop     256.47214851940026
+    Start    265.40066126913035
+    Stop     266.44860583445211
+    Start    275.40871233630412
+    Stop     276.42449172929628
+    Start    285.41778945916337
+    Stop     286.39976690757186
+    Start    295.42793536454832
+    Stop     296.3743603771145
+    Start    305.43920841060503
+    Stop     306.34820579241563
+    Start    315.45168708583162
+    Stop     316.3212041357927
+    Start    325.46547572156402
+    Stop     326.29323808464602
+    Start    335.48071454607435
+    Stop     336.26415364589224
+    Start    345.49759414975733
+    Stop     346.23374716382943
+    Start    355.51637971863039
+    Stop     356.2017411212334
+    Start    365.53745285996996
+    Stop     366.16774208604284
+    Start    375.56139046979962
+    Stop     376.13116210456207
+    Start    385.58913020826873
+    Stop     386.09105293165749
+    Start    395.62237789778123
+    Stop     396.04569838292082
+    Start    405.66491431722216
+    Stop     405.99130899117739
+    Start    415.73012158006566
+    Stop     415.91449272165033
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_MSL1
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_MSL2
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_MSL3
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_PBV3
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_RV1
+    Start    375.37305847356265
+    Stop     447.45776006007054
+    Start    1695.3002713543697
+    Stop     1789.2815115738651
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_RV2
+    Start    375.37305847356265
+    Stop     447.39183214380967
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_RV3
+    Start    375.37305847356265
+    Stop     447.22920332435666
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_SRD1
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_STG1
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_STG2
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_STG3
+    Start    375.91360651951248
+    Stop     447.45776067218463
+  Strand    Facility/Fylingdales/Sensor/f_tracking_rv1 To Missile/TH1_l2i
+    Start    375.37305847356265
+    Stop     447.45776006007054
+    Start    1695.3002713543697
+    Stop     1789.2815115738651
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_MSL1
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_MSL2
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_MSL3
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_PBV3
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_RV1
+    Start    447.45949846780206
+    Stop     1695.2995143154344
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_RV2
+    Start    447.4577607578434
+    Stop     584.44756451439764
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_RV3
+    Start    447.4577607578434
+    Stop     708.38728095021179
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_SRD1
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_STG1
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_STG2
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_STG3
+    Start    448.25807372832054
+    Stop     490.26940274218839
+    Start    978.08206678935028
+    Stop     1079.0186115760587
+  Strand    Facility/Fylingdales/Sensor/f_tracking2_rv1 To Missile/TH1_l2i
+    Start    447.45949846780206
+    Stop     1695.2995143154344
+END StrandAccesses
+
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+BEGIN Attributes
+
+StaticColor					#0000ff
+AnimationColor					#ffff00
+AnimationLineWidth					1.000000
+StaticLineWidth					3.000000
+
+END Attributes
+
+BEGIN Graphics
+    ShowGfx                On
+    ShowStatic             Off
+    ShowAnimationHighlight Off
+    ShowAnimationLine      On
+    ShowLinkDirection      Off
+END Graphics
+    END Graphics
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+    
+    BEGIN Crdn
+    END Crdn
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+END Chain
+

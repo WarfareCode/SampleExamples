@@ -1,0 +1,97 @@
+[Analytical Graphics, Inc]
+WorkbookVersion=9.0
+Title=Gator_AttCtrl_Plugin_Examples
+Description=
+ApplicationVersion=STK 9.3.0 (Pre-release) Feb 21 2011
+Scenario=YES
+ActiveMDIState=FALSE
+[WorkState_v1_2]
+ptn_Child1=Frames
+[WorkState_v1_2.Frames]
+ptn_Child1=MainFrame
+ptn_Child2=ChildFrames
+[WorkState_v1_2.Frames.MainFrame]
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAPPPPPPPPPPPPPPPPEBAAAAAAFBAAAAAADPEAAAAAJMDAAAAA
+Title=Gator_AttCtrl_Plugin_Examples - STK 9 Feb 21 2011 - HTML Viewer - Astrogator Attitude Plugin Example
+[WorkState_v1_2.Frames.ChildFrames]
+ptn_Child1=Document-0
+ptn_Child2=Document-1
+ptn_Child3=Document-2
+ptn_Child4=Document-3
+ptn_Child5=Document-4
+ptn_Child6=Document-5
+[WorkState_v1_2.Frames.ChildFrames.Document-0]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-0.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.AttitudeControllers\Scenario\AgUiDllHtmlViewer9.AgUiPiHtmlViewer.1
+DocumentString=AgUiDllHtmlViewer.AgUiPiHtmlViewer.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPEDAAAAAAMFAAAAAANJDAAAAAPGCAAAAA
+IsActiveChildFrame=True
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-0.ViewFrame-0.AGI Custom Node Data]
+CurrentURL=<LOCAL>\Attitude_Plugin.htm
+[WorkState_v1_2.Frames.ChildFrames.Document-1]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-1.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.AttitudeControllers\Scenario\AgUi3DGfxView9.AgUiPi3DGfxView.1
+DocumentString=AgUi3DGfxView.AgUiPi3DGfxView.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPBAAAAAAAOPPPPPPPDJBAAAAALBBAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-1.ViewFrame-0.AGI Custom Node Data]
+MapID=1
+SceneType=1
+[WorkState_v1_2.Frames.ChildFrames.Document-2]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-2.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.AttitudeControllers\Scenario\AgUi3DGfxView9.AgUiPi3DGfxView.1
+DocumentString=AgUi3DGfxView.AgUiPi3DGfxView.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPEJBAAAAAAAAAAAAAMBDAAAAALBBAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-2.ViewFrame-0.AGI Custom Node Data]
+MapID=2
+SceneType=1
+[WorkState_v1_2.Frames.ChildFrames.Document-3]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-3.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.AttitudeControllers\Scenario\AgUi3DGfxView9.AgUiPi3DGfxView.1
+DocumentString=AgUi3DGfxView.AgUiPi3DGfxView.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPCAAAAAAALBBAAAAADJBAAAAANDCAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-3.ViewFrame-0.AGI Custom Node Data]
+MapID=3
+SceneType=1
+[WorkState_v1_2.Frames.ChildFrames.Document-4]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-4.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.AttitudeControllers\Scenario\AgUi3DGfxView9.AgUiPi3DGfxView.1
+DocumentString=AgUi3DGfxView.AgUiPi3DGfxView.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPEJBAAAAALBBAAAAAMBDAAAAANDCAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ptn_Child1=AGI Custom Node Data
+[WorkState_v1_2.Frames.ChildFrames.Document-4.ViewFrame-0.AGI Custom Node Data]
+MapID=4
+SceneType=1
+[WorkState_v1_2.Frames.ChildFrames.Document-5]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_2.Frames.ChildFrames.Document-5.ViewFrame-0]
+DocPathName=C:\depot\v9x\Source\DeveloperKit\CodeSamples\Extend\Gator.AttitudeControllers\Scenario\AgUiAttrBrowser9.AgUiPiAttrBrowser.1
+DocumentString=AgUiAttrBrowser.AgUiPiAttrBrowser.1
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAAAAAAAAAAAAAAAAMPAAAAAAPBDAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+ProfUISBarID=63001
+ptn_Child1=AGI Custom Node Data

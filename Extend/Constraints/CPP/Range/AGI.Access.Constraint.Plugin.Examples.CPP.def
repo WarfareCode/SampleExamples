@@ -1,0 +1,16 @@
+;**********************************************************************
+;*           Copyright 2007, Analytical Graphics, Inc.                *
+;**********************************************************************
+; AGI.Access.Constraint.Plugin.Examples.CPP.def : Declares the module parameters.
+
+LIBRARY      "AGI.Access.Constraint.Plugin.Examples.CPP.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+
+;**********************************************************************
+;*           Copyright 2007, Analytical Graphics, Inc.                *
+;**********************************************************************

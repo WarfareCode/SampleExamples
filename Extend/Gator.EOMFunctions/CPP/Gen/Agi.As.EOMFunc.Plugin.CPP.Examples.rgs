@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Agi.As.EOMFunc.Plugin.CPP.Examples'
+		'Agi.As.EOMFunc.Plugin.CPP.Examples.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

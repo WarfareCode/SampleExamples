@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{352FC729-7250-4D04-A63E-A45FE16A5429}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GraphicsHowTo</RootNamespace>
+    <AssemblyName>GraphicsHowTo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VS2013</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\GraphicsHowTo.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <NoWarn>1607</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;VS2013</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\GraphicsHowTo.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <NoWarn>1607</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AGI.STKGraphics.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AGI.STKGraphics.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="AGI.STKObjects.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AGI.STKObjects.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="AGI.STKUtil.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AGI.STKUtil.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="AGI.STKVgt.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AGI.STKVgt.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="AGI.STKX.Controls.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AGI.STKX.Controls.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="AGI.STKX.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AGI.STKX.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="AxAGI.STKX.Interop">
+      <HintPath>C:\Program Files\AGI\STK 11\bin\Primary Interop Assemblies\AxAGI.STKX.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltitudeOverlay.cs" />
+    <Compile Include="Camera\CameraFixedFrameCodeSnippet.cs" />
+    <Compile Include="Camera\CameraFollowingSatelliteCodeSnippet.cs" />
+    <Compile Include="Camera\CameraFollowingSplineCodeSnippet.cs" />
+    <Compile Include="Camera\CameraRecordingSnapshotCodeSnippet.cs" />
+    <Compile Include="Camera\CameraUpdater.cs" />
+    <Compile Include="Camera\CatmullRomSpline.cs" />
+    <Compile Include="CodeSnippet.cs" />
+    <Compile Include="CodeSnippetReader.cs" />
+    <Compile Include="DataPath.cs" />
+    <Compile Include="DisplayConditions\AltitudeDisplayConditionCodeSnippet.cs" />
+    <Compile Include="DisplayConditions\CompositeDisplayConditionCodeSnippet.cs" />
+    <Compile Include="DisplayConditions\DistanceDisplayConditionCodeSnippet.cs" />
+    <Compile Include="DisplayConditions\ScreenOverlayDisplayConditionCodeSnippet.cs" />
+    <Compile Include="DisplayConditions\TimeDisplayConditionCodeSnippet.cs" />
+    <Compile Include="DistanceOverlay.cs" />
+    <Compile Include="GlobeOverlays\GlobeImageOverlayCodeSnippet.cs" />
+    <Compile Include="GlobeOverlays\GlobeOverlayRenderOrderCodeSnippet.cs" />
+    <Compile Include="GlobeOverlays\OpenStreetMapCodeSnippet.cs" />
+    <Compile Include="GlobeOverlays\ProjectedImageCodeSnippet.cs" />
+    <Compile Include="GlobeOverlays\ProjectedImageModelsCodeSnippet.cs" />
+    <Compile Include="GlobeOverlays\TerrainOverlayCodeSnippet.cs" />
+    <Compile Include="HowToForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowToForm.Designer.cs">
+      <DependentUpon>HowToForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imaging\ImageChannelExtractCodeSnippet.cs" />
+    <Compile Include="Imaging\ImageColorCorrectionCodeSnippet.cs" />
+    <Compile Include="Imaging\ImageConvolutionMatrixCodeSnippet.cs" />
+    <Compile Include="Imaging\ImageDynamicCodeSnippet.cs" />
+    <Compile Include="Imaging\ImageFlipCodeSnippet.cs" />
+    <Compile Include="Imaging\ImageLevelsCodeSnippet.cs" />
+    <Compile Include="Imaging\ImageSwizzleCodeSnippet.cs" />
+    <Compile Include="IndicatorOverlay.cs" />
+    <Compile Include="Interval.cs" />
+    <Compile Include="OverlayHelper.cs" />
+    <Compile Include="Picking\PickChangeColorCodeSnippet.cs" />
+    <Compile Include="Picking\PickPerItemCodeSnippet.cs" />
+    <Compile Include="Picking\PickRectangularCodeSnippet.cs" />
+    <Compile Include="Picking\PickZoomCodeSnippet.cs" />
+    <Compile Include="PositionOrientationProvider.cs" />
+    <Compile Include="Primitives\Composite\CompositeLayerCodeSnippet.cs" />
+    <Compile Include="Primitives\MarkerBatch\MarkerBatchAggregationDeaggregationCodeSnippet.cs" />
+    <Compile Include="Primitives\MarkerBatch\MarkerBatchCodeSnippet.cs" />
+    <Compile Include="Primitives\Model\ModelArticulationCodeSnippet.cs" />
+    <Compile Include="Primitives\Model\ModelCodeSnippet.cs" />
+    <Compile Include="Primitives\Model\ModelColladaFXCodeSnippet.cs" />
+    <Compile Include="Primitives\Model\ModelDynamicCodeSnippet.cs" />
+    <Compile Include="Primitives\Model\ModelOrientationCodeSnippet.cs" />
+    <Compile Include="Primitives\Model\ModelVectorOrientationCodeSnippet.cs" />
+    <Compile Include="Primitives\OrderedComposite\OrderedCompositeZOrderCodeSnippet.cs" />
+    <Compile Include="Primitives\Path\PathDropLineCodeSnippet.cs" />
+    <Compile Include="Primitives\Path\PathTrailLineCodeSnippet.cs" />
+    <Compile Include="Primitives\PointBatch\PointBatchCodeSnippet.cs" />
+    <Compile Include="Primitives\PointBatch\PointBatchColorsCodeSnippet.cs" />
+    <Compile Include="Primitives\Polyline\PolylineAreaTargetCodeSnippet.cs" />
+    <Compile Include="Primitives\Polyline\PolylineCircleCodeSnippet.cs" />
+    <Compile Include="Primitives\Polyline\PolylineCodeSnippet.cs" />
+    <Compile Include="Primitives\Polyline\PolylineEllipseCodeSnippet.cs" />
+    <Compile Include="Primitives\Polyline\PolylineGreatArcCodeSnippet.cs" />
+    <Compile Include="Primitives\Polyline\PolylineRhumbLineCodeSnippet.cs" />
+    <Compile Include="Primitives\ReferenceFrameGraphics.cs" />
+    <Compile Include="Primitives\Solid\SolidBoxCodeSnippet.cs" />
+    <Compile Include="Primitives\Solid\SolidCylinderCodeSnippet.cs" />
+    <Compile Include="Primitives\Solid\SolidEllipsoidCodeSnippet.cs" />
+    <Compile Include="Primitives\SurfaceMesh\SurfaceMeshAreaTargetCodeSnippet.cs" />
+    <Compile Include="Primitives\SurfaceMesh\SurfaceMeshDynamicImageCodeSnippet.cs" />
+    <Compile Include="Primitives\SurfaceMesh\SurfaceMeshTexturedExtentCodeSnippet.cs" />
+    <Compile Include="Primitives\SurfaceMesh\SurfaceMeshTransformationsCodeSnippet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Primitives\SurfaceMesh\SurfaceMeshTrapezoidalTextureCodeSnippet.cs" />
+    <Compile Include="Primitives\TextBatch\TextBatchCodeSnippet.cs" />
+    <Compile Include="Primitives\TextBatch\TextBatchColorsCodeSnippet.cs" />
+    <Compile Include="Primitives\TextBatch\TextBatchUnicodeCodeSnippet.cs" />
+    <Compile Include="Primitives\TriangleMesh\TriangleMeshAreaTargetCodeSnippet.cs" />
+    <Compile Include="Primitives\TriangleMesh\TriangleMeshCircleCodeSnippet.cs" />
+    <Compile Include="Primitives\TriangleMesh\TriangleMeshEllipseCodeSnippet.cs" />
+    <Compile Include="Primitives\TriangleMesh\TriangleMeshExtentCodeSnippet.cs" />
+    <Compile Include="Primitives\TriangleMesh\TriangleMeshExtrusionCodeSnippet.cs" />
+    <Compile Include="Primitives\TriangleMesh\TriangleMeshWithHoleCodeSnippet.cs" />
+    <Compile Include="ProcedurallyGeneratedTexture.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="..\..\Data\HowTo\AreaTargets\215.at">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\AreaTargets\215.at</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\AreaTargets\610.at">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\AreaTargets\610.at</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\AreaTargets\925.at">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\AreaTargets\925.at</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\AreaTargets\LogoBoundary.at">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\AreaTargets\LogoBoundary.at</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\AreaTargets\LogoHole.at">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\AreaTargets\LogoHole.at</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\AreaTargets\_pennsylvania_1.at">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\AreaTargets\_pennsylvania_1.at</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\LineTargets\Schuylkill.lt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\LineTargets\Schuylkill.lt</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\battalion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\battalion.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\company.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\company.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\f-22a_raptor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\f-22a_raptor.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\facility.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\facility.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\friendly_battalion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\friendly_battalion.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\friendly_company.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\friendly_company.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\friendly_platoon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\friendly_platoon.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\friendly_soldier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\friendly_soldier.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\friendly_squad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\friendly_squad.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\hostile_battalion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\hostile_battalion.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\hostile_company.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\hostile_company.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\hostile_platoon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\hostile_platoon.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\hostile_soldier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\hostile_soldier.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\hostile_squad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\hostile_squad.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\originalLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\originalLogo.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\platoon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\platoon.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\soldier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\soldier.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\squad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\squad.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Markers\water.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Markers\water.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\f-35_jsf_cvData.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\f-35_jsf_cvData.txt</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\facility-colorless.mdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\facility-colorless.mdl</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\flame.mov">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\flame.mov</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\hellfireflame.anc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\hellfireflame.anc</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\hellfireflame.dae">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\hellfireflame.dae</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture0.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture0.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture1.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture10.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture10.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture11.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture11.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture12.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture12.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture13.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture13.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture14.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture14.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture15.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture15.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture16.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture16.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture17.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture17.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture18.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture18.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture19.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture19.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture2.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture20.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture20.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture21.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture21.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture22.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture22.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture3.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture4.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture5.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture5.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture6.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture7.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture7.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture8.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture8.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\texture9.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\texture9.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite\geoeye_black_foil_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite\geoeye_black_foil_normal.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite\geoeye_gold_foil_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite\geoeye_gold_foil_normal.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite\geoeye_panel_back_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite\geoeye_panel_back_normal.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite\geoeye_silver_foil_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite\geoeye_silver_foil_normal.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite\geoeye_solar_panel_diffuse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite\geoeye_solar_panel_diffuse.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite\geoeye_solar_panel_spec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite\geoeye_solar_panel_spec.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\smoke.avi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\smoke.avi</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\ProjectedImagery\buildings.avi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\ProjectedImagery\buildings.avi</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\ProjectedImagery\buildings.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\ProjectedImagery\buildings.txt</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\ProjectedImagery\fig8.avi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\ProjectedImagery\fig8.avi</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\ProjectedImagery\fig8.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\ProjectedImagery\fig8.txt</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\TerrainAndImagery\surfaceMeshTrapezoidalTexture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\TerrainAndImagery\surfaceMeshTrapezoidalTexture.jpg</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\TerrainAndImagery\925.pdtt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\TerrainAndImagery\925.pdtt</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\TerrainAndImagery\bottom.jp2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\TerrainAndImagery\bottom.jp2</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\TerrainAndImagery\DisplayConditionExample.jp2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\TerrainAndImagery\DisplayConditionExample.jp2</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\TerrainAndImagery\top.jp2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\TerrainAndImagery\top.jp2</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Textures\agi_logo_transparent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Textures\agi_logo_transparent.png</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\hellfire.dae">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\hellfire.dae</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Satellite.dae">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\Satellite.dae</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\f-35_jsf_cv.mdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\f-35_jsf_cv.mdl</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\ISS.tle">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\ISS.tle</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\phoenix_gray\phoenix.dae">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\phoenix_gray\phoenix.dae</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\flame-tex-blue.tga">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\flame-tex-blue.tga</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\flamealpha.tga">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\flamealpha.tga</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\flamealpha3.tga">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\flamealpha3.tga</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\flametex-orange.tga">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\flametex-orange.tga</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\smokealpha.tga">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Models\smokealpha.tga</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Textures\Lava.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Textures\Lava.gif</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Textures\SpinSat_256.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Data\Textures\SpinSat_256.gif</Link>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Videos\ShenzhouVII_BX1.wmv">
+      <Link>Data\Videos\ShenzhouVII_BX1.wmv</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="HowToForm.resx">
+      <DependentUpon>HowToForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="..\..\Data\HowTo\Models\Air\commuter.mdl">
+      <Link>Data\Models\commuter.mdl</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Land\facility.mdl">
+      <Link>Data\Models\facility.mdl</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Land\sa10-mobile-a.mdl">
+      <Link>Data\Models\sa10-mobile-a.mdl</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Models\Space\hs601.mdl">
+      <Link>Data\Models\hs601.mdl</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Textures\St Helens.jp2">
+      <Link>Data\Textures\St Helens.jp2</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Data\HowTo\Textures\St Helens.pdtt">
+      <Link>Data\Textures\St Helens.pdtt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ScreenOverlays\OverlaysMemoryCodeSnippet.cs" />
+    <Compile Include="ScreenOverlays\OverlaysPanelCodeSnippet.cs" />
+    <Compile Include="ScreenOverlays\OverlaysTextCodeSnippet.cs" />
+    <Compile Include="ScreenOverlays\OverlaysTextureCodeSnippet.cs" />
+    <Compile Include="ScreenOverlays\OverlaysVideoCodeSnippet.cs" />
+    <Compile Include="StatusOverlay.cs" />
+    <Compile Include="STKUtil.cs" />
+    <Compile Include="TextOverlayHelper.cs" />
+    <Compile Include="TimeOverlay.cs" />
+    <Compile Include="ViewHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TreeIcons\Balloon.png" />
+    <EmbeddedResource Include="TreeIcons\Camera.png" />
+    <EmbeddedResource Include="TreeIcons\Composite.png" />
+    <EmbeddedResource Include="TreeIcons\DisplayCondition.png" />
+    <EmbeddedResource Include="TreeIcons\Filtering.png" />
+    <EmbeddedResource Include="TreeIcons\GlobeOverlay.png" />
+    <EmbeddedResource Include="TreeIcons\Imaging.png" />
+    <EmbeddedResource Include="TreeIcons\KML.png" />
+    <EmbeddedResource Include="TreeIcons\MarkerBatch.png" />
+    <EmbeddedResource Include="TreeIcons\Models.png" />
+    <EmbeddedResource Include="TreeIcons\OrderedComposite.png" />
+    <EmbeddedResource Include="TreeIcons\Path.png" />
+    <EmbeddedResource Include="TreeIcons\Picking.png" />
+    <EmbeddedResource Include="TreeIcons\PointBatch.png" />
+    <EmbeddedResource Include="TreeIcons\Polyline.png" />
+    <EmbeddedResource Include="TreeIcons\Primitives.png" />
+    <EmbeddedResource Include="TreeIcons\ScreenOverlay.png" />
+    <EmbeddedResource Include="TreeIcons\Solid.png" />
+    <EmbeddedResource Include="TreeIcons\SurfaceMesh.png" />
+    <EmbeddedResource Include="TreeIcons\TextBatch.png" />
+    <EmbeddedResource Include="TreeIcons\Tracking.png" />
+    <EmbeddedResource Include="TreeIcons\TriangleMesh.png" />
+    <EmbeddedResource Include="TreeIcons\Visualizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OverlayToolbar\OverlayToolbar_VS2013.csproj">
+      <Project>{0957C7C7-97F4-4F6A-8970-0E2548D56FAD}</Project>
+      <Name>OverlayToolbar_VS2010 %28CustomApplications\CSharp\OverlayToolbar_VS2010%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>del /F /Q /S "$(TargetDir)CodeSnippets\*.*"
+xcopy "$(ProjectDir)Primitives" "$(TargetDir)CodeSnippets\Primitives" /S /R /I
+xcopy "$(ProjectDir)GlobeOverlays" "$(TargetDir)CodeSnippets\GlobeOverlays" /S /R /I
+xcopy "$(ProjectDir)Imaging" "$(TargetDir)CodeSnippets\Imaging" /S /R /I
+xcopy "$(ProjectDir)DisplayConditions" "$(TargetDir)CodeSnippets\DisplayConditions" /S /R /I
+xcopy "$(ProjectDir)Picking" "$(TargetDir)CodeSnippets\Picking" /S /R /I
+xcopy "$(ProjectDir)ScreenOverlays" "$(TargetDir)CodeSnippets\ScreenOverlays" /S /R /I
+xcopy "$(ProjectDir)Camera" "$(TargetDir)CodeSnippets\Camera" /S /R /I</PostBuildEvent>
+  </PropertyGroup>
+</Project>

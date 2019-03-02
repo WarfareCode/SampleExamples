@@ -1,0 +1,27 @@
+HKCR
+{
+	MYPLUGIN.1 = s 'MYPLUGIN Class'
+	{
+		CLSID = s '{9737EC62-2E22-405E-B964-41F9292C4313}'
+	}
+	MYPLUGIN = s 'MYPLUGIN Class'
+	{
+		CLSID = s '{9737EC62-2E22-405E-B964-41F9292C4313}'
+		CurVer = s 'MYPLUGIN.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9737EC62-2E22-405E-B964-41F9292C4313} = s 'MYPLUGIN Class'
+		{
+			ProgID = s 'MYPLUGIN.1'
+			VersionIndependentProgID = s 'MYPLUGIN'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{9CC8AE2E-7035-4B24-999F-720BB50DE106}'
+		}
+	}
+}

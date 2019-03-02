@@ -1,0 +1,34 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Constellation
+
+Name  Threats
+BEGIN Definition
+
+   Type        Constellation
+   Operator    Or
+   Order       1
+   IsRelay     No
+    Object  Facility/DMZ
+    Object  Facility/Munson_Corridor
+    Object  Facility/Wonsan
+    Object  Facility/threat_1
+    Object  Facility/threat_2
+    Object  Facility/threat_3
+   SaveMode    0
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+
+END Extensions
+
+END Constellation

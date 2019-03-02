@@ -1,0 +1,30 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Constellation
+
+Name  RC-135
+BEGIN Definition
+
+   Type        Constellation
+   Operator    Or
+   Order       1
+   IsRelay     No
+    Object  Aircraft/RC-135/Sensor/RC-135_Left_Side
+    Object  Aircraft/RC-135/Sensor/RC-135_Right_Side
+   SaveMode    0
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+
+END Extensions
+
+END Constellation

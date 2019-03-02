@@ -1,0 +1,16 @@
+;**********************************************************************
+;*           Copyright 2006, Analytical Graphics, Inc.                *
+;**********************************************************************
+; Agi.Search.Plugin.Cpp.Examples.def : Declares the module parameters.
+
+LIBRARY      "Agi.Search.Plugin.Cpp.Examples.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	
+;**********************************************************************
+;*           Copyright 2006, Analytical Graphics, Inc.                *
+;**********************************************************************

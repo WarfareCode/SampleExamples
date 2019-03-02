@@ -1,0 +1,9 @@
+; AgUiPluginTutorial.def : Declares the module parameters.
+
+LIBRARY      "AgUiPluginTutorial.dll"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

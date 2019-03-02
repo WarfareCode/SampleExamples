@@ -1,0 +1,185 @@
+<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<meta name="description" content="STK Astrogator EOM Function Plugin Example">
+<head>
+<script language="VBScript" src="../../../../Data/HtmlUtilities/stk.vbs"></script>
+	<title>Astrogator EOM Function Plugin Example</title>
+	<link href="../../../../Data/HtmlUtilities/HtmlUtilities.css" rel="stylesheet" type="text/css">
+</head>
+<SCRIPT LANGUAGE="VBSCRIPT">
+<!--
+	Dim stk
+	Dim uiApp
+	Dim list
+	Dim HomeDir
+	Dim stkCommand
+	Dim notUsed
+
+	Set uiApp = window.external
+	Set stk = uiApp.personality
+
+	Sub InitPage()
+
+		Dim NewWindow
+		Dim thisWindow
+		Dim HtmlPage
+		Dim i
+
+		Set uiApp = window.external
+		Set stk = uiApp.personality
+		Set thisWindow = uiApp.Windows("HTML Viewer - Astrogator EOM Function Plugin Example")
+		'thisWindow.WindowState = 1
+		thisWindow.Activate
+	    Set list = stk.ExecuteCommand("GetDirectory / STKHome")
+
+	    HomeDir = list(0)
+	    If (Right(HomeDir,1) = "/") Or (Right(HomeDir,1) = "\") Then
+	    	HomeDir = Left(HomeDir,len(HomeDir) - 1)
+	    End If
+
+	    CheckForLicenses()
+	End Sub
+
+    Sub VbShowHelp(HelpPage)
+	    window.showHelp("ms-its:" + HomeDir + HelpPage)
+    End Sub
+
+
+	Sub CheckForLicenses()
+
+		Dim Licenses
+		Dim hasLicenseExpert
+		Dim hasLicensePro
+
+		Licenses = GenerateLicenseList
+		hasLicenseExpert = CheckLicImage(Licenses, "STKExpert", EEImage)
+		hasLicensePro = CheckLicImage(Licenses, "STKProfessional", PEImage)
+		hasLicenseGator = CheckLicImage(Licenses, "ASTG", AImage)
+
+		If ( (Not hasLicenseExpert And Not hasLicensePro) Or Not hasLicenseGator) Then
+				'GetDemoPack.Height = "0"
+				'document.images.GetDemoPack.Width = "0"
+				document.images.GetDemoPack.src="../../../../Data/HtmlInterface/Images/GetLicenses.gif"
+   		End If
+
+	End Sub
+
+	Sub UnloadPage()
+        	Set stk = Nothing
+	        Set uiApp = Nothing
+	End Sub
+-->
+</SCRIPT>
+
+<BODY onLoad="InitPage()" onUnload="UnloadPage()" LEFTMARGIN="0" TOPMARGIN="0" MARGINHEIGHT="0" MARGINWIDTH="0">
+<div align="center">
+<a name="top"></a>
+<table id="" width="761" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="5" height="6" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="6" alt=""></td>
+		<td width="1" height="6" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="6" alt=""></td>
+		<td width="749" height="6" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="749" height="6" alt=""></td>
+		<td width="1" height="6" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="6" alt=""></td>
+		<td width="5" height="6" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="6" alt=""></td>
+	</tr>
+	<tr>
+		<td  width="5" height="1" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="1" alt=""></td>
+		<td width="1" height="1" bgcolor="#E0E0E0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="1" alt=""></td>
+		<td width="749" height="1" bgcolor="#E0E0E0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="749" height="1" alt=""></td>
+		<td width="1" height="1" bgcolor="#E0E0E0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="1" alt=""></td>
+		<td width="5" height="1" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td width="5" bgcolor="#F0F0F0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" alt=""></td>
+		<td width="1" bgcolor="#E0E0E0">
+			<img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" alt=""></td>
+		<td width="749" bgcolor="#FFFFFF" align="center" valign="top">
+			<table width="725" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="10" height="1"></td>
+					<td align="center" valign="top" colspan="3"><br>
+					<div align="left" class="Header">Astrogator EOM Function Plugin Example:</div>
+			<br>
+			<table width="675" border="0" cellpadding="3" cellspacing="0" class="scenario_box">
+				<tr>
+					<td><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="1" height="1" border="0" align="top"></td>
+					<td>
+			<br>
+			Step by step procedures for building and using the Equations of Motion (EOM) Function Plugin samples are located in the STK install directory
+			under CodeSamples\Extend\Gator.EOMFunctions.  There are samples provided for scripting as well as C#, C++, and VB.NET inside the WSC, CSharp, CPP,
+			and VB.NET folders respectively.  Please view the corresponding readme files located in each of these directories which will walk you through setting up building
+			EOM Functions Plugins.
+			
+			<p>In this example, an EOM Func plugin is used to give the derivative of four user variables: effective impulse, and the x-, y-, 
+			and z-components of integrated delta-V.  The user variables are defined on the Mission Control Sequence (MCS) Options panel for 
+			the example satellites.  The maneuver segment in each example MCS uses a custom propagator, each of which includes an EOM Func plugin 
+			in its list of propagation functions.  The frame in which the delta-V is integrated is registered as a property of the plugin
+			that can be changed on the propagator panel.</p>
+			
+			<p>The example EOM plugin registers that it takes the thrust vector and the total mass as input, and that it will give the
+			derivatives of the effective impulse and the integrated delta-V components as output.  In its Calc method, it computes the derivative
+			of effective impulse as the thrust magnitude, and it computes the derivative of the integrated delta-V as the thrust acceleration rotated
+			to the specified integration frame.</p>
+			
+			<p>After each MCS has been run, user value calculation objects can be used to report the user variable values.
+			The report style included in this scenario, "user maneuver vals", can be used to report the effective impulse and integrated
+			delta-V over time.</p>
+			
+			<br><br>
+
+
+
+    <span class="medHeader">Required STK Products</span><br><br>
+
+	<img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"><a href="http://www.agi.com/expert" target="STKExpert">STK Expert Edition</a><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"> <img name="EEImage" id="EEImage" src="../../../../Data/HtmlInterface/Images/check.gif" alt="" width="12" height="12" border="0" align="top">
+	<img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"><span class="smlHeader">or</span><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top">
+	<img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"><a href="http://www.agi.com/professional" target="STKProfessional">STK Professional Edition</a><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"> <img name="PEImage" id="PEImage" src="../../../../Data/HtmlInterface/Images/check.gif" alt="" width="12" height="12" border="0" align="top"><br><br>
+	<img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"><span class="smlHeader">and</span><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top">
+	<img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"><a href="http://www.agi.com/astrogator" target="Astrogator">STK/Astrogator</a><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="4" height="1" border="0" align="top"> <img name="AImage" id="AImage" src="../../../../Data/HtmlInterface/Images/check.gif" alt="" width="12" height="12" border="0" align="top"><br><br>
+
+	<a href="http://www.agi.com/eval" target="GetDemoPack"><img name="GetDemoPack" id="GetDemoPack" src="../../../../Data/HtmlInterface/Images/spacer.gif" border ="0" align="top" valign="center" alt="Get Demo Licenses"></a>
+					<td><img src="../../../../Data/HtmlInterface/Images/spacer.gif" alt="" width="1" height="1" border="0" align="top"></td>
+							</tr>
+						</table>
+	<br>
+	<br>
+	</td>
+</tr>
+</table>
+		</td>
+		<td width="1" bgcolor="#E0E0E0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" alt=""></td>
+		<td width="5" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" alt=""></td>
+	</tr>
+	<tr>
+		<td width="5" height="1" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="1" alt=""></td>
+		<td width="1" height="1" bgcolor="#E0E0E0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="1" alt=""></td>
+		<td width="749" height="1" bgcolor="#E0E0E0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="749" height="1" alt=""></td>
+		<td width="1" height="1" bgcolor="#E0E0E0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="1" alt=""></td>
+		<td width="5" height="1" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td width="5" height="6" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="6" alt=""></td>
+		<td width="1" height="6" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="6" alt=""></td>
+		<td width="749" height="6" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="749" height="6" alt=""></td>
+		<td width="1" height="6" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="1" height="6" alt=""></td>
+		<td width="5" height="6" bgcolor="#F0F0F0"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="5" height="6" alt=""></td>
+	</tr>
+	<tr>
+		<td width="761" colspan="5" bgcolor="#FFFFFF"><img src="../../../../Data/HtmlInterface/Images/spacer.gif" width="761" height="1" alt=""></td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

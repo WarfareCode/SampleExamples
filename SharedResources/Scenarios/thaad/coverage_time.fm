@@ -1,0 +1,159 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN FigureOfMerit
+
+Name        coverage_time
+
+BEGIN FomDefinition
+
+
+    BEGIN CoverageTime
+        TimeType           Absolute
+
+    END CoverageTime
+    ApplySatisfaction    No
+    SatisfactionType     Above
+    SatisfactionThreshold    0.00000000000000e+000
+    NotExecutedValue         0.00000000000000e+000
+    UseFOMValueRangeCheck    0
+    ExcludeValuesInRange     0
+    FOMValueRangeMin         0.000000
+    FOMValueRangeMax         0
+
+END FomDefinition
+
+BEGIN Extensions
+    
+    BEGIN Graphics
+
+BEGIN Attributes
+
+    StaticColor                 #ff69b4
+    StaticColorRampStartColor   #ff0000
+    StaticColorRampEndColor     #9b30ff
+    StaticMarkerStyle           3
+    AnimationColor              #d2691e
+    AnimColorRampStartColor     #ffd700
+    AnimColorRampEndColor       #ba55d3
+    AnimationMarkerStyle        2
+    ObjectCovMarkerStyle        0
+    ObjectCovLineStyle          0
+    ObjectCovLineWidth          1.000000
+
+END Attributes
+
+BEGIN Graphics
+
+    Show                 Yes
+    ShowStatic           No
+    ShowAnim             No
+    ShowStaticContours   Yes
+    ShowAnimContours     No
+    ShareContours        No
+    StaticFillPoints     Yes
+    AnimFillPoints       Yes
+    StaticColorRamp      Yes
+    AnimColorRamp        No
+    StaticContourType    SmoothFill
+    AnimContourType      Block
+    StaticShowUpToMax    No
+    DynShowUpToMax       No
+    Begin StaticContours
+        NumContourLevels          6
+        BEGIN ContourLevel
+            Value            0.000000000000e+000
+            Color            #f0ffff
+            CntMarkerStyle   3
+            LineStyle        0
+            LineWidth        1.000000
+        END ContourLevel
+        BEGIN ContourLevel
+            Value            6.000000000000e+001
+            Color            #00ff00
+            CntMarkerStyle   3
+            LineStyle        0
+            LineWidth        1.000000
+        END ContourLevel
+        BEGIN ContourLevel
+            Value            1.200000000000e+002
+            Color            #00ffff
+            CntMarkerStyle   3
+            LineStyle        0
+            LineWidth        1.000000
+        END ContourLevel
+        BEGIN ContourLevel
+            Value            1.800000000000e+002
+            Color            #ff00ff
+            CntMarkerStyle   3
+            LineStyle        0
+            LineWidth        1.000000
+        END ContourLevel
+        BEGIN ContourLevel
+            Value            2.400000000000e+002
+            Color            #ffff00
+            CntMarkerStyle   3
+            LineStyle        0
+            LineWidth        1.000000
+        END ContourLevel
+        BEGIN ContourLevel
+            Value            3.000000000000e+002
+            Color            #0000ff
+            CntMarkerStyle   3
+            LineStyle        0
+            LineWidth        1.000000
+        END ContourLevel
+    End StaticContours
+    StaticTranslucent    Yes
+    StaticTranslucency   0.500000
+    DynamicTranslucent   Yes
+    DynamicTranslucency  0.500000
+    NNSampleSizeMode     Medium
+    MaxNumSearchPixels   512
+    Begin StaticLegend
+        DrawLegendOnMap    Yes
+        XPixelLocation     370
+        YPixelLocation     10
+        Orientation        VertMinToMax
+        MaxPerCol          10
+        ColorPixelWidth    25
+        ColorPixelHeight   25
+        TextColor          #ffffff
+        BackgroundColor    #000000
+        Title              Coverage Time (sec)
+        Format             %.0f
+    End StaticLegend
+    Begin AnimContours
+        NumContourLevels          0
+    End AnimContours
+    Begin DynamicLegend
+        DrawLegendOnMap    No
+        XPixelLocation     5
+        YPixelLocation     5
+        Orientation        HorizMinToMax
+        MaxPerRow          20
+        ColorPixelWidth    30
+        ColorPixelHeight   30
+        TextColor          #ffffff
+        BackgroundColor    #000000
+        Title              Coverage Time - Dynamic Contours
+        Format             %.0f
+    End DynamicLegend
+    AccumulationType     CurrentOnly
+
+END Graphics
+    END Graphics
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+    
+    BEGIN VO
+    END VO
+
+END Extensions
+
+END FigureOfMerit
+

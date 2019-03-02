@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FBE101F8-727D-4A73-90E0-4FEE04916421}"
+	ProjectSection(SolutionItems) = preProject
+		Attitude Controls.xml = Attitude Controls.xml
+		WSC\example1AttCtrl.m = WSC\example1AttCtrl.m
+		WSC\JScript.Example1.AttitudeController.js = WSC\JScript.Example1.AttitudeController.js
+		WSC\JScript.Example1.AttitudeController.wsc = WSC\JScript.Example1.AttitudeController.wsc
+		WSC\Matlab.Example1.AttitudeController.vbs = WSC\Matlab.Example1.AttitudeController.vbs
+		WSC\Matlab.Example1.AttitudeController.wsc = WSC\Matlab.Example1.AttitudeController.wsc
+		WSC\ReadMe.txt = WSC\ReadMe.txt
+		WSC\VBScript.Example1.AttitudeController.vbs = WSC\VBScript.Example1.AttitudeController.vbs
+		WSC\VBScript.Example1.AttitudeController.wsc = WSC\VBScript.Example1.AttitudeController.wsc
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agi.As.Gator.AttCtrl.Plugin.CSharp.Examples_VS2015", "CSharp\Gen\Agi.As.Gator.AttCtrl.Plugin.CSharp.Examples_VS2015.csproj", "{549DD583-D8CB-4E8A-90C9-4CFF77F3A73C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agi.As.Gator.AttCtrl.Plugin.Cpp.Examples", "CPP\Gen\Agi.As.Gator.AttCtrl.Plugin.Cpp.Examples_VS2015.vcxproj", "{0754CF75-CE12-4856-9002-B984CA6DC156}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{549DD583-D8CB-4E8A-90C9-4CFF77F3A73C}.Debug|x64.ActiveCfg = Debug|x64
+		{549DD583-D8CB-4E8A-90C9-4CFF77F3A73C}.Debug|x64.Build.0 = Debug|x64
+		{549DD583-D8CB-4E8A-90C9-4CFF77F3A73C}.Release|x64.ActiveCfg = Release|x64
+		{549DD583-D8CB-4E8A-90C9-4CFF77F3A73C}.Release|x64.Build.0 = Release|x64
+		{0754CF75-CE12-4856-9002-B984CA6DC156}.Debug|x64.ActiveCfg = Debug|x64
+		{0754CF75-CE12-4856-9002-B984CA6DC156}.Debug|x64.Build.0 = Debug|x64
+		{0754CF75-CE12-4856-9002-B984CA6DC156}.Release|x64.ActiveCfg = Release|x64
+		{0754CF75-CE12-4856-9002-B984CA6DC156}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

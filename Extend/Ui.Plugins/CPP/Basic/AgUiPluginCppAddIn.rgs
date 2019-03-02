@@ -1,0 +1,26 @@
+HKCR
+{
+	AgUiPluginTutorial11.AgUiPluginCppAddIn.1 = s 'AgUiPluginCppAddIn Class'
+	{
+		CLSID = s '{1A673F28-2590-4D2C-9653-BE29564BC341}'
+	}
+	AgUiPluginTutorial11.AgUiPluginCppAddIn = s 'AgUiPluginCppAddIn Class'
+	{
+		CLSID = s '{1A673F28-2590-4D2C-9653-BE29564BC341}'
+		CurVer = s 'AgUiPluginTutorial11.AgUiPluginCppAddIn.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1A673F28-2590-4D2C-9653-BE29564BC341} = s 'AgUiPluginCppAddIn Class'
+		{
+			ProgID = s 'AgUiPluginTutorial11.AgUiPluginCppAddIn.1'
+			VersionIndependentProgID = s 'AgUiPluginTutorial11.AgUiPluginCppAddIn'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{F01417EE-2C55-40EF-B84E-301CAD7467EF}'
+		}
+	}
+}

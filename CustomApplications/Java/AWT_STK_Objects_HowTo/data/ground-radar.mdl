@@ -1,0 +1,382 @@
+################################################################################
+#            COPYRIGHT 1995 Analytical Graphics, Inc.                          #
+#            This data is intended for use with Satellite Tool Kit (TM)        #
+#            products only.  Any other use is expressly forbidden.             #
+################################################################################
+#Model Builder:Jim Poland
+#DOM 21 Mar '98_sc
+#Manufacturer/Contractor:? 
+#Name:Ground Radar
+#Width:2.5 m 
+#Length:3 m 
+#Height:4 m 
+#Articulations:(Yes)
+#All units in meters
+
+Component RadarSide
+	Extrusion
+		FaceColor linen
+		Length 10.0
+		NumVerts 4
+		Data
+			0.0 0.25 -2.0
+			0.0 0.25 2.0
+			0.0 -0.25 2.0
+			0.0 -0.25 -2.0
+	EndExtrusion
+EndComponent
+Component RadarFt
+	Polygon
+		FaceColor linen
+		NumVerts 4
+		Data
+			0.0 0.25 -2.0
+			0.0 0.25 2.0
+			0.0 -0.25 2.0
+			0.0 -0.25 -2.0
+	EndPolygon
+EndComponent
+Component RadarBk
+	Polygon
+		Translate 10.0 0.0 0.0
+		FaceColor linen
+		NumVerts 4
+		Data
+			0.0 0.25 -2.0
+			0.0 0.25 2.0
+			0.0 -0.25 2.0
+			0.0 -0.25 -2.0
+	EndPolygon
+EndComponent
+Component RadRod
+	Revolve
+		FaceColor gray50
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 8
+		NumVerts 4
+		Data
+			0.0 0.005 0.0
+			0.0 0.1 0.0
+			10.4 0.1 0.0
+			10.4 0.005 0.0
+	EndRevolve
+EndComponent
+Component RadHinge
+	Revolve
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 8
+		NumVerts 4
+		Data
+			0.0 0.005 0.0
+			0.0 0.15 0.0
+			10.4 0.15 0.0
+			10.4 0.005 0.0
+	EndRevolve
+EndComponent
+Component RadRodStr
+	Refer
+		Translate -0.2 0.0 0.0
+		Component RadRod
+	EndRefer
+	Refer
+		Translate -0.2 0.0 0.5
+		Component RadRod
+	EndRefer
+	Refer
+		Translate -0.2 0.0 1.0
+		Component RadRod
+	EndRefer
+	Refer
+		Translate -0.2 0.0 1.5
+		Component RadRod
+	EndRefer
+EndComponent
+Component RadarStr
+	Refer
+		Component RadarSide
+	EndRefer
+	Refer
+		Component RadarFt
+	EndRefer
+	Refer
+		Component RadarBk
+	EndRefer
+	Refer
+		Translate 0.0 0.0 0.25
+		Component RadRodStr
+	EndRefer
+	Refer
+		Translate 0.0 0.0 -1.75
+		Component RadRodStr
+	EndRefer
+EndComponent
+Component PlatformBeam1
+	Extrusion
+		FaceColor gray50
+		Length 10.0
+		NumVerts 4
+		Data
+			0.0 0.2 -0.6
+			0.0 0.2 0.6
+			0.0 -0.2 0.6
+			0.0 -0.2 -0.6
+	EndExtrusion
+EndComponent
+Component PlatformBeam2
+	Extrusion
+		FaceColor gray50
+		Length 8.0
+		NumVerts 4
+		Data
+			0.0 0.2 -0.6
+			0.0 0.2 0.6
+			0.0 -0.2 0.6
+			0.0 -0.2 -0.6
+	EndExtrusion
+EndComponent
+Component PlatformBeam3
+	Extrusion
+		FaceColor gray50
+		Length 12.2
+		NumVerts 4
+		Data
+			0.3 0.2 -0.6
+			0.3 0.2 0.6
+			0.3 -0.2 0.6
+			0.3 -0.2 -0.6
+	EndExtrusion
+EndComponent
+Component PlatformBeam4
+	Extrusion
+		Rotate 0.0 90.0 0.0
+		FaceColor gray50
+		Length 2.0
+		NumVerts 4
+		Data
+			0.3 0.2 -0.6
+			0.3 0.2 0.6
+			0.3 -0.2 0.6
+			0.3 -0.2 -0.6
+	EndExtrusion
+EndComponent
+Component Foot
+	Revolve
+		Rotate 0.0 90.0 0.0
+		FaceColor gray20
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 16
+		NumVerts 6
+		Data
+			-0.6 0.15 0.0
+			0.0 0.15 0.0
+			0.0 0.8 0.0
+			0.12 0.5 0.0
+			0.18 0.22 0.0
+			0.2 0.005 0.0
+	EndRevolve
+EndComponent
+Component Beam4Str
+	Refer
+		Component PlatformBeam4
+	EndRefer
+	Refer
+		Translate 0.0 0.0 -2.8
+		Component Foot
+	EndRefer
+EndComponent
+Component RadSprt
+	Extrusion
+		FaceColor gray50
+		Length 0.15
+		NumVerts 4
+		Data
+			0.0 0.0 0.0
+			0.0 1.4 0.0
+			0.0 0.6 4.5
+			0.0 0.0 4.5
+	EndExtrusion
+EndComponent
+Component RadSprtFt
+	Polygon
+		FaceColor gray50
+		NumVerts 4
+		Data
+			0.0 0.0 0.0
+			0.0 1.4 0.0
+			0.0 0.6 4.5
+			0.0 0.0 4.5
+	EndPolygon
+EndComponent
+Component RadSprtBk
+	Polygon
+		Translate 0.15 0.0 0.0
+		FaceColor gray50
+		NumVerts 4
+		Data
+			0.0 0.0 0.0
+			0.0 1.4 0.0
+			0.0 0.6 4.5
+			0.0 0.0 4.5
+	EndPolygon
+EndComponent
+Component RadSprtStr
+	Refer
+		Component RadSprt
+	EndRefer
+	Refer
+		Component RadSprtFt
+	EndRefer
+	Refer
+		Component RadSprtBk
+	EndRefer
+EndComponent
+Component SprtRing
+	Revolve
+		FaceColor gray50
+		StartAngle 0.0
+		EndAngle 359.99
+		NumRevolve 16
+		NumVerts 7
+		Data
+			0.0 0.005 0.0
+			0.0 1.3 0.0
+			0.8 1.3 0.0
+			0.8 1.5 0.0
+			1.0 1.5 0.0
+			1.0 1.1 0.0
+			0.2 0.0 0.0
+	EndRevolve
+EndComponent
+Component RadSprtAssm
+	Refer
+		Rotate 0.0 0.0 180.0
+		Translate 5.5 1.2 1.5
+		Component RadSprtStr
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 180.0
+		Translate 4.5 1.2 1.5
+		Component RadSprtStr
+	EndRefer
+	Refer
+		Rotate 0.0 90.0 0.0
+		Translate 5.0 0.0 1.6
+		Component SprtRing
+	EndRefer
+EndComponent
+Component RdPlatformBeamStr
+	Refer
+		Translate 0.0 3.8 0.0
+		Component PlatformBeam1
+	EndRefer
+	Refer
+		Translate 0.0 -3.8 0.0
+		Component PlatformBeam1
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 90.0
+		Translate 0.2 -4.0 0.0
+		Component PlatformBeam2
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 90.0
+		Translate 9.8 -4.0 0.0
+		Component PlatformBeam2
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 38.66
+		Translate 0.0 -4.0 0.0
+		Component PlatformBeam3
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 -38.66
+		Translate 0.0 4.0 0.0
+		Component PlatformBeam3
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 -38.66
+		Translate 0.0 4.0 0.0
+		Component PlatformBeam3
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 -38.66
+		Translate 0.6 3.4 0.0
+		Component Beam4Str
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 38.66
+		Translate 0.6 -3.4 0.0
+		Component Beam4Str
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 -38.66
+		Translate 9.4 -3.4 0.0
+		Component Beam4Str
+	EndRefer
+	Refer
+		Rotate 0.0 0.0 38.66
+		Translate 9.4 3.4 0.0
+		Component Beam4Str
+	EndRefer
+EndComponent
+Component RadarSubStr
+	Refer
+		Component RadarStr
+	EndRefer
+	Refer
+		Translate 0.0 0.0 4.1
+		Component RadarStr
+	EndRefer
+	Refer
+		Translate -0.2 0.25 2.0
+		Component RadHinge
+	EndRefer
+	Refer
+		Rotate 10.0 0.0 0.0
+		Translate 0.0 0.65 -4.0
+		Component RadSprtAssm
+	EndRefer
+EndComponent
+Component RadarSubAssm
+	Refer
+		Rotate -10.0 0.0 0.0
+		Translate -5.0 0.0 4.0
+		Component RadarSubStr
+	EndRefer
+EndComponent
+Component RadarAssm
+	Articulation Radar
+		zRotate ZRot -180.0 0.0 180.0
+	EndArticulation
+	Refer
+		Component RadarSubAssm
+	EndRefer
+EndComponent
+Component Body
+	Refer
+		Translate 5.0 0.0 0.0
+		Component RadarAssm
+	EndRefer
+	Refer
+		Component RdPlatformBeamStr
+	EndRefer
+EndComponent
+Component GndRADAR
+	Root
+	Refer
+		Component Body
+		UniformScale .3048
+	Translate -1.5 0 .93
+	EndRefer
+EndComponent
+
+#Modified: 16 Jul '97_sc
+################################################################################
+#            COPYRIGHT 1995 Analytical Graphics, Inc.                          #
+#            This data is intended for use with Satellite Tool Kit (TM)        #
+#            products only.  Any other use is expressly forbidden.             #
+################################################################################

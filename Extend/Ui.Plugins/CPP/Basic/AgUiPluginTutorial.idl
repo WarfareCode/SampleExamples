@@ -1,0 +1,34 @@
+// AgUiPluginTutorial.idl : IDL source for AgExtExample
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AgUiPluginTutorial.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(15C1AD1B-952C-46FA-8D91-0E5E7BE58FCB),
+	helpstring("IAgUiPluginCppAddIn Interface"),
+	pointer_default(unique)
+]
+interface IAgUiPluginCppAddIn : IDispatch {
+};
+[
+	uuid(F01417EE-2C55-40EF-B84E-301CAD7467EF),
+	version(1.0),
+	helpstring("AGI AgUiPluginTutorial 11") // "Type Library"
+]
+library AgUiPluginTutorialLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(1A673F28-2590-4D2C-9653-BE29564BC341),
+		helpstring("AgUiPluginCppAddIn Class")
+	]
+	coclass AgUiPluginCppAddIn
+	{
+		[default] interface IAgUiPluginCppAddIn;
+	};
+};

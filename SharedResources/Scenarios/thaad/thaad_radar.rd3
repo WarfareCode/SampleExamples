@@ -1,0 +1,22 @@
+VO_V100
+	ShowBoresight   No
+    Begin GeneralVectorAxes
+        ArrowPointSize          3.00
+        PersistentLineWidth     2.00
+        Scale                   50000.000000
+    End
+    Begin VectorAngle
+        FractionalScale                1.000000
+        SupportingDihedralArcLineWidth 1.00
+        ArcLineWidth                   2.00
+        PixelThreshold                 2.000000
+    End
+    Begin Plane
+    End
+    VolumeSwapDist        -2.5000
+
+    BEGIN VolumesGfx
+
+	Show       Yes
+
+    END VolumesGfx

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CustomApp_Swing_STK_common">
+	<import file="../../../SharedResources/Java/SharedResources/common.xml" />
+
+	<path id="customapp.swing.stk.classpath">
+		<fileset dir="${stk.bin.dir}">
+			<include name="agi.jar" />
+			<include name="agi.core.jar" />
+			<include name="agi.core.swing.jar" />
+			<include name="agi.ntvapp.jar" />
+			<include name="agi.ntvapp.swing.jar" />
+			<include name="agi.ondemand.jar" />
+			<include name="agi.stk.core.jar" />
+			<include name="agi.stk.core.swing.jar" />
+			<include name="agi.stkengine.jar" />
+			<include name="agi.stkengine.swing.jar" />
+			<include name="agi.stkgraphics.jar" />
+			<include name="agi.stkobjects.jar" />
+			<include name="agi.stkobjects.astrogator.jar" />
+			<include name="agi.stkutil.jar" />
+			<include name="agi.stkvgt.jar" />
+			<include name="agi.stkx.jar" />
+			<include name="agi.stkx.initialization.jar" />
+			<include name="agi.stkx.swing.jar" />
+			<include name="agi.swing.jar" />
+		</fileset>
+	</path>
+</project>

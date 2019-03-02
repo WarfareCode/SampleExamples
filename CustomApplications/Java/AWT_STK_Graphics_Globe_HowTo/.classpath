@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CustomApp_AWT_STK_Graphics_Globe_Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CustomApp_Swing_STK"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SharedResources"/>
+	<classpathentry kind="lib" path="/SharedResources/ThirdParty/jsyntaxpane-0.9.4/jsyntaxpane-0.9.4.jar"/>
+	<classpathentry kind="lib" path="/SharedResources/ThirdParty/joda-time-1.6/joda-time-1.6.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Extend_STK_Plugin_Graphics_Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Extend_STK_Plugin_Graphics_CustomImageGlobeOverlay_OpenStreetMap"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Extend_STK_Plugin_Graphics_ProjectionStream_Basic"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Extend_STK_Plugin_Graphics_RasterStream_Basic"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

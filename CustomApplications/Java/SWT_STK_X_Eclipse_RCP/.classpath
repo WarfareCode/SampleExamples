@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.core.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.core.swt.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stk.javadocs.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkengine.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkgraphics.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkobjects.astrogator.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkobjects.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkutil.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkvgt.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkx.initialization.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkx.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.stkx.swt.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/agi.swt.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

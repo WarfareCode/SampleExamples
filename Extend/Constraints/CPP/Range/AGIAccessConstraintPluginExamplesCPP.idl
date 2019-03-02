@@ -1,0 +1,38 @@
+/**********************************************************************/
+/*           Copyright 2007, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(462E36A0-7FC6-47FE-8633-E03ACEAB08EF),
+	helpstring("AGIAccessConstraintPluginExamplesCPP 11"), // "Type Library"
+	custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9, "AGI.Access.Constraint.Plugin.Examples.CPP"),
+	version(1.0),
+	hidden
+]
+library AGIAccessConstraintPluginExamplesCPPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+	importlib("AgInview.tlb");
+    importlib("AgStkPlugin.tlb");
+	importlib("AgStkUtil.tlb");
+	importlib("AgStkObjects.tlb");
+
+	[
+		uuid(319EBB5D-C1BE-4E31-B80D-ABB01F0F3E9F),
+		helpstring("RangeExample Class")
+	]
+	coclass RangeExample
+	{
+		[default] interface IAgAccessConstraintPlugin;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2007, Analytical Graphics, Inc.                */
+/**********************************************************************/

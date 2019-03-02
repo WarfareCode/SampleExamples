@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!-- ===================================================== -->
+<!--  Copyright 2007, Analytical Graphics, Inc.            -->
+<!--                                                       -->
+<!--  Author: Patrick Williams and Jonathan Lowe           -->
+<!-- ===================================================== -->
+<component>
+	<?component error="true" debug="true"?>
+	<registration
+	    description="VBScript.MatlabSearch"
+	    progid="MatlabSearch.WSC"
+	    version="1.00"
+	    classid="{6098C85E-D623-4c2b-A19D-9A621C39178D}"
+	/>
+	<public>
+
+		<!-- ========== -->
+		<!-- Properties -->
+		<!-- ========== -->
+		<property name="Name"	get="GetName"/>
+		<property name="MaxIterations"	get="GetMaxIterations"	put="SetMaxIterations"/>
+		<property name="MaxFunctionEvals"	get="GetMaxFunctionEvals"	put="SetMaxFunctionEvals"/>
+    		<property name="CostTolerance" get="GetCostTolerance" put="SetCostTolerance"/>
+    		<property name="ConstraintTolerance" get="GetConstraintTolerance" put="SetConstraintTolerance"/>
+    		<property name="InputTolerance" get="GetInputTolerance" put="SetInputTolerance"/>
+    		<property name="DiffMaxChange" get="GetDiffMaxChange" put="SetDiffMaxChange"/>
+		<property name="DiffMinChange" get="GetDiffMinChange" put="SetDiffMinChange"/>
+
+		<!-- ======= -->
+		<!-- Methods -->
+		<!-- ======= -->
+		<method name="Init">
+			<parameter name="site"/>
+		</method>
+		<method name="Run">
+			<parameter name="operand"/>
+			<parameter name="testing"/>
+		</method>
+		<method name="GetControlsProgId">
+			<parameter name="controlType"/>
+		</method>
+		<method name="GetResultsProgId"/>
+		<method name="Free"/>
+		<method name="GetPluginConfig">
+			<parameter name="AgAttrBuilder"/>
+		</method>
+		<method name="VerifyPluginConfig">
+			<parameter name="AgUtPluginCfgVerifyResult"/>
+		</method>
+	</public>
+
+	<script language="VBScript" src="MatlabSearch.vbs"/>
+
+</component>
+
+<!-- ===================================================== -->
+<!--  Copyright 2006, Analytical Graphics, Inc.            -->
+<!-- ===================================================== -->

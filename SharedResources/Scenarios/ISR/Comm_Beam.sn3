@@ -1,0 +1,57 @@
+VO_V100
+    Translucency          0.800000
+    IsShowingRadialLines  No
+    RadialLineIncr        4
+    IsShowingBoresight  No
+    IsShowingFill       No
+    FillTranslucency      0.500000
+    FillResolution      4.000000
+    PulseStyle            Box
+    PulseAmplitude        1
+    PulseWavelength       50000
+    PulseFreq             0.333
+    PulseAntiAliased      Yes
+    PulseReversed         No
+    PulseFrameDependent   Yes
+    IsShowingPulse        Yes
+    TranslucentLines        Yes
+    PersistSpaceProjLines   No
+    PersistPartialCBProjLines  Yes
+    UseConstExtensionLength No
+    ExtensionLength         50000000.000000
+    UseSpaceExtLenTimeList  No
+    UseTgtExtLenTimeList    No
+    TargetExtensionLength   0.000000
+    VolumeSwapDist        -2.5000
+    UseRangeCnstrntMinMax   Yes
+    IsShowingCompleteDome   No
+    Inherit2dProjection   No
+    ShowDomesWith2dProjection   No
+    InheritModelPosOffset No
+    UseModelPosOffset     No
+    ModelPosOffset        0.000000 0.000000 0.000000
+    FixVectorAxesScaleToAttSph No
+    Begin GeneralVectorAxes
+        ArrowPointSize          3.00
+        PersistentLineWidth     2.00
+        Scale                   50000.000000
+    End
+    Begin VectorAngle
+        FractionalScale                1.000000
+        SupportingDihedralArcLineWidth 1.00
+        ArcLineWidth                   2.00
+        PixelThreshold                 1.000000
+    End
+    Begin Plane
+    End
+    UseAttachPoint        Yes
+    SensorRadius          0
+    AttachPointName       CtrRod-000000
+    ShowStarsInFOV            No
+    UseDefStarCollection      Yes
+
+    BEGIN VolumesGfx
+
+	Show       Yes
+
+    END VolumesGfx

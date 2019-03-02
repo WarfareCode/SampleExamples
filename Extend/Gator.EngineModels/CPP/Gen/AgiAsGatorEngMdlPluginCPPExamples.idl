@@ -1,0 +1,88 @@
+/**********************************************************************/
+/*           Copyright 2005, Analytical Graphics, Inc.                */
+/**********************************************************************/
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(6E726105-56E4-4ADB-82C0-3CB352DDDCF0),
+	helpstring("C++ Gator Engine Model Plugin Example1 Interface"),
+	pointer_default(unique),
+	dual,
+	nonextensible
+]
+interface IExample1 : IDispatch
+{
+	[propget, id(1), helpstring("Plugin Name")] 
+	HRESULT Name([out, retval] BSTR *pName);
+
+	[propget, id(2), helpstring("property Isp")] 
+	HRESULT Isp([out, retval] DOUBLE* pVal);
+	
+	[propput, id(2), helpstring("property Isp")] 
+	HRESULT Isp([in] DOUBLE newVal);
+	
+	[propget, id(3), helpstring("property T0")] 
+	HRESULT T0([out, retval] DOUBLE* pVal);
+	
+	[propput, id(3), helpstring("property T0")] 
+	HRESULT T0([in] DOUBLE newVal);
+	
+	[propget, id(4), helpstring("property T1")] 
+	HRESULT T1([out, retval] DOUBLE* pVal);
+	
+	[propput, id(4), helpstring("property T1")] 
+	HRESULT T1([in] DOUBLE newVal);
+	
+	[propget, id(5), helpstring("property T2")] 
+	HRESULT T2([out, retval] DOUBLE* pVal);
+	
+	[propput, id(5), helpstring("property T2")] 
+	HRESULT T2([in] DOUBLE newVal);
+	
+	[propget, id(6), helpstring("property Tc")] 
+	HRESULT Tc([out, retval] DOUBLE* pVal);
+	
+	[propput, id(6), helpstring("property Tc")] 
+	HRESULT Tc([in] DOUBLE newVal);
+	
+	[propget, id(7), helpstring("property Ts")] 
+	HRESULT Ts([out, retval] DOUBLE* pVal);
+	
+	[propput, id(7), helpstring("property Ts")] 
+	HRESULT Ts([in] DOUBLE newVal);
+}
+
+[
+	uuid(AF2E8439-DC4B-4C3F-9C1E-22F0B92A9842),
+	helpstring("AgiAsGatorEngMdlPluginCPPExamples 11"), // "Type Library"
+	custom(0F21F359-AB84-41e8-9A78-36D110E6D2F9, "AGI.Astrogator.Plugin.Examples.EngineModeling.CPP"),
+	version(1.0),
+	hidden
+]
+library AgiAsGatorEngMdlPluginCPPExamplesLib
+{
+	importlib("stdole2.tlb");
+
+    importlib("AgAttrAutomation.tlb");
+    importlib("AgUtPlugin.tlb");
+    importlib("AgCrdnPlugin.tlb");
+	importlib("AgGator.tlb");
+	importlib("AgGatorPlugin.tlb");
+    importlib("AgStkPlugin.tlb");
+
+	[
+		uuid(3B9A4881-A954-44FF-BC45-534C60AE1200),
+		helpstring("Example1 Class")
+	]
+	coclass Example1
+	{
+		[default] interface IExample1;
+		interface IAgUtPluginConfig;
+		interface IAgGatorPluginEngineModel;
+	};
+};
+/**********************************************************************/
+/*           Copyright 2005, Analytical Graphics, Inc.                */
+/**********************************************************************/

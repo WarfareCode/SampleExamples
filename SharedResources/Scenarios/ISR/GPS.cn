@@ -1,0 +1,55 @@
+stk.v.10.0
+WrittenBy    STK_v10.0.0
+
+BEGIN Constellation
+
+Name  GPS
+BEGIN Definition
+
+   Type        Constellation
+   Operator    NofM
+   Order       4
+   IsRelay     No
+    Object  Satellite/GPS_2-02
+    Object  Satellite/GPS_2-03
+    Object  Satellite/GPS_2-04
+    Object  Satellite/GPS_2-05
+    Object  Satellite/GPS_2-06
+    Object  Satellite/GPS_2-07
+    Object  Satellite/GPS_2-08
+    Object  Satellite/GPS_2-09
+    Object  Satellite/GPS_2-10
+    Object  Satellite/GPS_2-11
+    Object  Satellite/GPS_2-12
+    Object  Satellite/GPS_2-13
+    Object  Satellite/GPS_2-14
+    Object  Satellite/GPS_2-15
+    Object  Satellite/GPS_2-16
+    Object  Satellite/GPS_2-17
+    Object  Satellite/GPS_2-18
+    Object  Satellite/GPS_2-19
+    Object  Satellite/GPS_2-20
+    Object  Satellite/GPS_2-21
+    Object  Satellite/GPS_2-22
+    Object  Satellite/GPS_2-23
+    Object  Satellite/GPS_2-24
+    Object  Satellite/GPS_2-25
+    Object  Satellite/GPS_2-26
+    Object  Satellite/GPS_2-27
+    Object  Satellite/GPS_2-28
+   SaveMode    0
+   UseLoadIntervalFile    No
+
+END Definition
+
+BEGIN Extensions
+    
+    BEGIN ADFFileData
+    END ADFFileData
+    
+    BEGIN Desc
+    END Desc
+
+END Extensions
+
+END Constellation

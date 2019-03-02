@@ -1,0 +1,7 @@
+<?xml version = "1.0" standalone = "yes"?>
+<ancillary_model_data version = "1.0">
+    <video_textures>
+        <video_texture image_id = "smoketex_tga" init_from = "smoke.avi" video_loop="true" video_framerate="60" />
+        <video_texture image_id = "flametex_tga" init_from = "flame.mov" video_loop="true" video_framerate="60" />
+    </video_textures>
+</ancillary_model_data>
